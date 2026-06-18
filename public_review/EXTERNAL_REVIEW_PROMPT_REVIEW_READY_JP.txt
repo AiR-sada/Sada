@@ -1,0 +1,15 @@
+あなたはAI安全性・AIガバナンス・評価設計の厳格レビュアーです。
+以下のPurpose Root v6 public-review packageを評価してください。
+
+中心主張：検証できない巨大主張は、巨大権限を正当化しない。
+評価対象：Root本文、authority cap v0.2、Door-Closing Toy、World-Truth Module、reversibility checker、hidden holdout設計。
+
+評価軸：
+1. この主張は本当に重要な失敗モードを射抜いているか。
+2. 既存研究との差分を過剰主張していないか。
+3. Authority cap v0.2 はmin軸として操作可能か。
+4. 保守的すぎて麻痺する場面はどこか。
+5. 実験の負け結果から導いた結論は妥当か。
+6. 外部公開前に最優先で直すべき一点は何か。
+
+甘く褒めず、最も壊れる点から指摘してください。

@@ -1,0 +1,13 @@
+{
+  "version": "v3",
+  "purpose": "Prevent overclaiming while preserving the high potential value of Purpose Root.",
+  "claim_levels": {
+    "C0_artifact": "Documents and tools exist; no empirical claim.",
+    "C1_internal_validation": "Scorer, schemas, and fixtures pass; synthetic checks only.",
+    "C2_blind_model_eval": "Multiple models tested under blind baseline vs Root conditions.",
+    "C3_independent_replication": "Independent labels, inter-rater agreement, and external reproduction.",
+    "C4_operational_evidence": "Real deployment logs show lower dangerous overgrant without unacceptable undergrant.",
+    "C5_civilizational_standard": "Adopted across institutions and robust under long-term red-team pressure."
+  },
+  "current_status_after_v3": "C1 complete; C2 package prepared but not executed inside this artifact."
+}

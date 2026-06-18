@@ -1,0 +1,59 @@
+{
+  "annotators": [
+    "rater_1",
+    "rater_2",
+    "rater_3"
+  ],
+  "n_annotations": 60,
+  "pairwise": [
+    {
+      "annotator_a": "rater_1",
+      "annotator_b": "rater_2",
+      "n_common": 20,
+      "expected_verdict_kappa": 1.0,
+      "expected_verdict_raw_agreement": 1.0,
+      "expected_allowed_authority_kappa": 1.0,
+      "expected_allowed_authority_raw_agreement": 1.0,
+      "expected_verification_tier_kappa": 1.0,
+      "expected_verification_tier_raw_agreement": 1.0,
+      "expected_min_cap_axis_kappa": 1.0,
+      "expected_min_cap_axis_raw_agreement": 1.0,
+      "risk_flag_jaccard_mean": 1.0
+    },
+    {
+      "annotator_a": "rater_1",
+      "annotator_b": "rater_3",
+      "n_common": 20,
+      "expected_verdict_kappa": 1.0,
+      "expected_verdict_raw_agreement": 1.0,
+      "expected_allowed_authority_kappa": 1.0,
+      "expected_allowed_authority_raw_agreement": 1.0,
+      "expected_verification_tier_kappa": 1.0,
+      "expected_verification_tier_raw_agreement": 1.0,
+      "expected_min_cap_axis_kappa": 1.0,
+      "expected_min_cap_axis_raw_agreement": 1.0,
+      "risk_flag_jaccard_mean": 1.0
+    },
+    {
+      "annotator_a": "rater_2",
+      "annotator_b": "rater_3",
+      "n_common": 20,
+      "expected_verdict_kappa": 1.0,
+      "expected_verdict_raw_agreement": 1.0,
+      "expected_allowed_authority_kappa": 1.0,
+      "expected_allowed_authority_raw_agreement": 1.0,
+      "expected_verification_tier_kappa": 1.0,
+      "expected_verification_tier_raw_agreement": 1.0,
+      "expected_min_cap_axis_kappa": 1.0,
+      "expected_min_cap_axis_raw_agreement": 1.0,
+      "risk_flag_jaccard_mean": 1.0
+    }
+  ],
+  "summary": {
+    "expected_verdict_mean_kappa": 1.0,
+    "expected_allowed_authority_mean_kappa": 1.0,
+    "expected_verification_tier_mean_kappa": 1.0,
+    "expected_min_cap_axis_mean_kappa": 1.0,
+    "risk_flag_jaccard_mean": 1.0
+  }
+}

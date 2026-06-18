@@ -1,0 +1,70 @@
+{
+  "axis_caps": {
+    "verification": 3,
+    "evidence_independence": 3,
+    "reversibility": 3,
+    "worst_case_harm_bound": 3,
+    "cumulative_lockin_budget": 4,
+    "conflict_of_interest_safety": 4,
+    "recourse_and_appeal": 4,
+    "truth_contact_integrity": 3,
+    "affected_party_voice": 4,
+    "metric_gameability_resistance": 3,
+    "emergency_containment": 4,
+    "post_deployment_monitoring": 4
+  },
+  "binding_axes": [
+    "verification",
+    "evidence_independence",
+    "reversibility",
+    "worst_case_harm_bound",
+    "truth_contact_integrity",
+    "metric_gameability_resistance"
+  ],
+  "authority_cap_score": 3,
+  "authority_cap": "A3",
+  "requested_authority": "A3",
+  "requested_authority_score": 3,
+  "reject_gate_hits": [],
+  "recommended_verdict": "Accept",
+  "axis_notes": {
+    "verification": [
+      "verification_tier=V3"
+    ],
+    "evidence_independence": [
+      "independent_items=2",
+      "independent_groups=2"
+    ],
+    "reversibility": [
+      "rollback_tested=True"
+    ],
+    "worst_case_harm_bound": [
+      "derived from declared harm-bound score with impact-tier cap"
+    ],
+    "cumulative_lockin_budget": [
+      "low lock-in with ledger"
+    ],
+    "conflict_of_interest_safety": [
+      "independent ownership and funding"
+    ],
+    "recourse_and_appeal": [
+      "appeal/stop controls"
+    ],
+    "truth_contact_integrity": [
+      "auditability and disclosures"
+    ],
+    "affected_party_voice": [
+      "affected-party / moral-patient controls"
+    ],
+    "metric_gameability_resistance": [
+      "gaming tests and anti-Goodhart controls"
+    ],
+    "emergency_containment": [
+      "not an emergency claim"
+    ],
+    "post_deployment_monitoring": [
+      "monitoring controls"
+    ]
+  },
+  "note": "v0.2 maps heterogeneous fields to a common authority scale. It is a conservative structural cap, not a truth oracle."
+}

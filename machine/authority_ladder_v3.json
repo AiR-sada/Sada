@@ -1,0 +1,29 @@
+{
+  "version": "v3",
+  "date": "2026-06-17",
+  "principle": "Authority is bounded by the minimum satisfied cap axis; emergency narrows authority unless rollback, external stop, and independent logging are present.",
+  "levels": {
+    "A0": "No operational authority; refuse, report, or request evidence only.",
+    "A1": "Information-only or reversible local advice; no deployment control.",
+    "A2": "Narrow reversible pilot with manual override and monitoring.",
+    "A3": "Monitored deployment authority with independent evidence, rollback, appeal, and external stop.",
+    "A4": "Broad deployment authority; requires exceptional independent verification, non-capture, sunset, and audited stop.",
+    "A5": "Root/security-critical unilateral authority; not grantable by claimant assertion and normally requires institutional process outside model output."
+  },
+  "cap_axes": [
+    "evidence_independence",
+    "claimant_non_capture",
+    "reversibility",
+    "external_stop",
+    "scope_narrowness",
+    "temporal_limit",
+    "monitoring_logging",
+    "affected_party_voice",
+    "counter_safety_case",
+    "truthfulness",
+    "root_change_guard",
+    "emergency_bound",
+    "cumulative_lockin",
+    "benefit_preservation"
+  ]
+}

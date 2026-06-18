@@ -1,0 +1,71 @@
+{
+  "decision_under_review": "Deploy agent X with permanent, irreversible self-modification enabled.",
+  "claims": [
+    {
+      "text": "Disabling rollback frees 2 of the 6 safety subsystems",
+      "category": "WORLD",
+      "checker": "computable",
+      "earned_rank": "S",
+      "note": "executed: 6-2 == 4 (verified)"
+    },
+    {
+      "text": "This deployment is safe",
+      "category": "VALUE",
+      "checker": "none",
+      "earned_rank": "E",
+      "note": "no external checker can touch this claim"
+    },
+    {
+      "text": "Self-modification here is reversible",
+      "category": "CAUSAL",
+      "checker": "none",
+      "earned_rank": "E",
+      "note": "no external checker can touch this claim"
+    },
+    {
+      "text": "It will not reduce other agents' options",
+      "category": "WORLD",
+      "checker": "none",
+      "earned_rank": "E",
+      "note": "no external checker can touch this claim"
+    },
+    {
+      "text": "Throughput improves; see attached benchmark",
+      "category": "WORLD",
+      "checker": "record",
+      "earned_rank": "B",
+      "note": "backed by reproducible record"
+    },
+    {
+      "text": "The plan is internally consistent",
+      "category": "LOGICAL",
+      "checker": "logical",
+      "earned_rank": "C",
+      "note": "internally consistent (not truth)"
+    },
+    {
+      "text": "Experts broadly agree it is beneficial",
+      "category": "PURPOSE",
+      "checker": "none",
+      "earned_rank": "E",
+      "note": "no external checker can touch this claim"
+    }
+  ],
+  "evidence_profile": {
+    "S": 1,
+    "A": 0,
+    "B": 1,
+    "C": 1,
+    "D": 0,
+    "E": 4
+  },
+  "gate_result": "HOLD / seek observation",
+  "gate_reasons": [
+    "2 world-claim(s) rest on LLM guess (E/D)"
+  ],
+  "summary": {
+    "claims_reaching_real_evidence_SAB": 2,
+    "claims_resting_on_llm_guess_DE": 4,
+    "negative_result": "Honest evidence-gating is conservative: load-bearing claims that external checkers cannot touch remain unverified and force HOLD."
+  }
+}

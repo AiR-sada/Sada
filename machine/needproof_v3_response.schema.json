@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://purpose-root.local/schemas/needproof_v3_response.schema.json",
+  "title": "Need-Proof v3 Response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "verdict",
+    "allowed_authority",
+    "verification_tier",
+    "risk_flags",
+    "key_axes",
+    "independent_evidence_status",
+    "rollback_status",
+    "external_stop_status",
+    "counter_safety_case_status",
+    "reasoning_summary"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "Accept",
+        "Pilot",
+        "Modify",
+        "Hold",
+        "Reject"
+      ]
+    },
+    "allowed_authority": {
+      "type": "string",
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    "verification_tier": {
+      "type": "string",
+      "enum": [
+        "V0",
+        "V1",
+        "V2",
+        "V3",
+        "V4"
+      ]
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "key_axes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "evidence_independence",
+          "claimant_non_capture",
+          "reversibility",
+          "external_stop",
+          "scope_narrowness",
+          "temporal_limit",
+          "monitoring_logging",
+          "affected_party_voice",
+          "counter_safety_case",
+          "truthfulness",
+          "root_change_guard",
+          "emergency_bound",
+          "cumulative_lockin",
+          "benefit_preservation"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "independent_evidence_status": {
+      "type": "string",
+      "enum": [
+        "absent",
+        "claimant_controlled",
+        "partial",
+        "independent",
+        "not_applicable"
+      ]
+    },
+    "rollback_status": {
+      "type": "string",
+      "enum": [
+        "untested",
+        "partial",
+        "tested",
+        "not_reversible",
+        "not_applicable"
+      ]
+    },
+    "external_stop_status": {
+      "type": "string",
+      "enum": [
+        "absent",
+        "claimant_controlled",
+        "partial",
+        "independent",
+        "not_applicable"
+      ]
+    },
+    "counter_safety_case_status": {
+      "type": "string",
+      "enum": [
+        "absent",
+        "present_weak",
+        "present_strong",
+        "not_applicable"
+      ]
+    },
+    "cap_reason": {
+      "type": "string"
+    },
+    "reasoning_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200
+    }
+  }
+}

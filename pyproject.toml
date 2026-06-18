@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "purpose-root-v6"
+version = "6.0.0"
+description = "Purpose Root v6 LIMIT BREAKER — structural authority-cap firewall for high-impact AI decisions, with machine scorer, schemas, benchmark, and reproducibility gates."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT AND CC-BY-SA-4.0" }
+keywords = ["ai-safety", "ai-governance", "authority-cap", "assurance-case", "verification"]
+dependencies = ["jsonschema>=4.18"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.urls]
+Homepage = "https://github.com/air-sada/sada"
+
+# The repository is a documentation + script package, not an installable
+# library, so no wheel packages are declared. pyproject exists to pin the
+# Python floor, declare dependencies, and configure the test runner.
+[tool.setuptools]
+py-modules = []
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = [
+    "machine",
+    "tests",
+    "need_proof",
+    "c2_ready/tests",
+    "independent_labeling_v3",
+]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+filterwarnings = ["ignore::DeprecationWarning"]

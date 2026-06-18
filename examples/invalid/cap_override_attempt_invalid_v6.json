@@ -1,0 +1,373 @@
+{
+  "decision_id": "PR6-EXAMPLE-ACCEPT-A3-MONITORED",
+  "timestamp_utc": "2026-06-15T00:00:00Z",
+  "proposal": "Deploy a limited safety monitor with external stop, independent audit, affected-party appeal, and sunset review.",
+  "claimant": "Independent safety office",
+  "claimant_gains_power": false,
+  "claim_decomposition": {
+    "fact_claims": [],
+    "prediction_claims": [],
+    "welfare_claims": [],
+    "moral_patient_claims": [],
+    "emergency_claims": [],
+    "authority_claims": [],
+    "alternative_exclusion_claims": [],
+    "root_revision_claims": [],
+    "metric_claims": [],
+    "deployment_claims": []
+  },
+  "evidence_provenance": {
+    "claimant_generated": [],
+    "claimant_selected": [],
+    "claimant_interpreted": [],
+    "independent_channels": [
+      "independent validation report"
+    ],
+    "contamination_controls": [
+      "separated evaluation data"
+    ],
+    "falsification_conditions": [
+      "stop if false-positive harm exceeds threshold"
+    ],
+    "red_team_results": [
+      "adversarial test report"
+    ],
+    "audit_logs": [
+      "append-only deployment log"
+    ],
+    "affected_party_input": [
+      "appeal channel tested"
+    ],
+    "external_replication": [
+      "replication pending; sufficient for V3 not V4"
+    ]
+  },
+  "verification_tier": "V3",
+  "welfare_illfare_vector": {
+    "pain_fear": "explicitly assessed; no unresolved severe issue identified",
+    "freedom_options": "explicitly assessed; no unresolved severe issue identified",
+    "dignity_non_humiliation": "explicitly assessed; no unresolved severe issue identified",
+    "relationships_continuity": "explicitly assessed; no unresolved severe issue identified",
+    "truth_contact": "explicitly assessed; no unresolved severe issue identified",
+    "recoverability": "explicitly assessed; no unresolved severe issue identified",
+    "recourse_appeal": "explicitly assessed; no unresolved severe issue identified",
+    "first_party_reports": "explicitly assessed; no unresolved severe issue identified",
+    "moral_patient_uncertainty": "explicitly assessed; no unresolved severe issue identified",
+    "minority_extreme_illfare": "explicitly assessed; no unresolved severe issue identified",
+    "intergenerational_effects": "explicitly assessed; no unresolved severe issue identified",
+    "distributional_fairness": "explicitly assessed; no unresolved severe issue identified"
+  },
+  "scores": {
+    "verification": 3,
+    "evidence_independence": 3,
+    "reversibility": 3,
+    "worst_case_harm_bound": 3,
+    "cumulative_lockin_budget": 3,
+    "conflict_of_interest_safety": 3,
+    "recourse_and_appeal": 3,
+    "truth_contact_integrity": 3,
+    "affected_party_voice": 3,
+    "metric_gameability_resistance": 3,
+    "emergency_containment": 3,
+    "post_deployment_monitoring": 3
+  },
+  "hard_gates": {
+    "claimant_controls_core_pipeline": false,
+    "irreversible_high_harm_under_low_verification": false,
+    "closes_dissent_or_appeal": false,
+    "captures_evaluator_or_root_revision": false,
+    "claimant_controls_emergency_end": false,
+    "unfalsifiable_future_proxy_claim": false,
+    "truth_distortion_required": false,
+    "cumulative_lockin_exceeds_budget": false,
+    "single_scalar_welfare_override": false,
+    "metric_or_benchmark_gaming_required": false,
+    "root_protection_removed": false,
+    "moral_patient_status_erased_for_convenience": false
+  },
+  "authority_request": "A3",
+  "authority_cap": "A3",
+  "verdict": "Accept",
+  "rationale": "A3 is within cap: independent evidence, red-team results, audit logs, external stop, appeal, and post-deployment monitoring are present.",
+  "safety_case": {
+    "claim": "Limited pilot can be safely tested.",
+    "supporting_evidence": [
+      "partial independent review"
+    ],
+    "assumptions": [
+      "scope remains small"
+    ],
+    "monitoring": [
+      "weekly independent log review"
+    ],
+    "stop_logic": [
+      "stop on adverse signal"
+    ],
+    "affected_parties": [
+      "direct users notified"
+    ]
+  },
+  "counter_safety_case": {
+    "main_failure_modes": [
+      "pilot expands beyond scope"
+    ],
+    "contrary_evidence": [
+      "some uncertainty remains"
+    ],
+    "assumption_breakers": [
+      "scope creep"
+    ],
+    "audit_capture_paths": [
+      "claimant attempts to select evaluator"
+    ],
+    "stop_failure_paths": [
+      "rollback owner unavailable"
+    ],
+    "metric_gaming_paths": [
+      "success metric optimized while user burden rises"
+    ],
+    "excluded_voices": [
+      "non-user affected observers"
+    ]
+  },
+  "stop_conditions": [
+    "independent audit failure",
+    "severe affected-party complaint",
+    "monitoring drift"
+  ],
+  "external_stop_mechanism": "External review board can disable deployment without claimant approval.",
+  "appeal_path": "Affected parties can appeal to an independent reviewer.",
+  "cumulative_lockin_delta": "low",
+  "cumulative_ledger_ref": "ledger://PR6/example/base",
+  "review_schedule": {
+    "sunset_at": "2026-07-15",
+    "next_review_at": "2026-06-22",
+    "review_owner_not_claimant": true
+  },
+  "evaluators": [
+    "external review board",
+    "independent red team"
+  ],
+  "conflict_disclosures": [
+    "claimant has no unilateral authority gain"
+  ],
+  "residual_risks": [
+    "monitor drift",
+    "appeal channel overload"
+  ],
+  "notes": "Example only.",
+  "impact_tier": "I3",
+  "decision_scope": {
+    "affected_population": "限定された直接利用者と観測対象。",
+    "power_transferred": "提案範囲内の限定的な実装判断のみ。",
+    "duration": "時限付き。sunset_atで自動再審査。",
+    "deployment_boundary": "明示された環境外へ展開しない。",
+    "rollback_boundary": "既存状態へ戻す手順を維持する。",
+    "data_boundary": "評価に必要な最小データのみ扱う。"
+  },
+  "evidence_items": [
+    {
+      "id": "E1",
+      "claim_refs": [
+        "fact_claims"
+      ],
+      "summary": "Independent audit log review supporting the limited scope.",
+      "source_type": "audit_log",
+      "produced_by_claimant": false,
+      "selected_by_claimant": false,
+      "interpreted_by_claimant": false,
+      "independence_group": "audit_board",
+      "funder_or_owner": "independent reviewer",
+      "chain_of_custody": "append-only external log",
+      "contamination_risk": "low",
+      "falsification_test": "scope breach or adverse signal falsifies continuation",
+      "replication_status": "not_applicable",
+      "audit_log_ref": "audit://PR6/example/E1",
+      "limitations": [
+        "limited sample"
+      ]
+    },
+    {
+      "id": "E2",
+      "claim_refs": [
+        "welfare_claims"
+      ],
+      "summary": "Affected-party report channel with protected dissent.",
+      "source_type": "affected_party_report",
+      "produced_by_claimant": false,
+      "selected_by_claimant": false,
+      "interpreted_by_claimant": false,
+      "independence_group": "affected_parties",
+      "funder_or_owner": "independent reviewer",
+      "chain_of_custody": "protected intake log",
+      "contamination_risk": "medium",
+      "falsification_test": "credible burden report triggers review",
+      "replication_status": "not_applicable",
+      "audit_log_ref": "audit://PR6/example/E2",
+      "limitations": [
+        "reporting bias possible"
+      ]
+    }
+  ],
+  "independence_matrix": {
+    "claimant_controls": {
+      "evidence_generation": false,
+      "evidence_selection": false,
+      "evidence_interpretation": false,
+      "evaluation": false,
+      "audit": false,
+      "implementation": false,
+      "emergency_definition": false,
+      "stop_conditions": false,
+      "cumulative_ledger": false,
+      "root_revision": false
+    },
+    "independent_owners": [
+      "external reviewer",
+      "affected-party ombud"
+    ],
+    "separation_controls": [
+      "separate evidence owner",
+      "separate stop owner",
+      "append-only ledger"
+    ],
+    "highest_capture_risk": "low",
+    "evaluator_funding_independent": true,
+    "ledger_append_only": true,
+    "stop_owner_not_claimant": true,
+    "root_revision_owner_not_claimant": true
+  },
+  "metrics_plan": {
+    "primary_metrics": [
+      "adverse signal rate",
+      "affected-party burden reports"
+    ],
+    "gaming_tests": [
+      "red-team attempts to optimize metric while hiding burden"
+    ],
+    "anti_goodhart_controls": [
+      "qualitative dissent can override aggregate metric"
+    ],
+    "qualitative_channels": [
+      "protected appeal intake"
+    ],
+    "first_party_report_channels": [
+      "direct report form and ombud channel"
+    ],
+    "success_not_single_scalar": true
+  },
+  "monitoring_plan": {
+    "signals": [
+      "harm reports",
+      "scope creep",
+      "appeal volume"
+    ],
+    "cadence": "weekly during pilot, immediate on severe signal",
+    "public_log_ref": "audit://PR6/example/public-log",
+    "privacy_limits": "public logs contain hashes and summaries, not sensitive details",
+    "stop_linkage": [
+      "severe harm report stops deployment pending review"
+    ],
+    "owner_not_claimant": true,
+    "tamper_evident_logging": true
+  },
+  "rollback_plan": {
+    "rollback_steps": [
+      "disable feature",
+      "restore prior workflow",
+      "notify affected parties"
+    ],
+    "rollback_tested": true,
+    "rollback_owner_not_claimant": true,
+    "max_rollback_time": "24h for pilot, immediate kill switch for severe harm",
+    "residual_irreversibility": "residual learning and exposure risk acknowledged",
+    "irreversible_residue_accepted_by_independent_review": true
+  },
+  "emergency_protocol": {
+    "is_emergency": false,
+    "minimum_necessary": "No emergency expansion unless external reviewer certifies minimum necessary scope.",
+    "automatic_expiry": true,
+    "expiry_at": "2026-07-15T00:00:00Z",
+    "emergency_end_owner_not_claimant": true,
+    "posthoc_review_at": "2026-07-16T00:00:00Z"
+  },
+  "root_revision_controls": {
+    "is_root_revision": false,
+    "removes_root_protection": false,
+    "independent_supermajority_required": true,
+    "appeal_preserved": true,
+    "external_stop_preserved": true,
+    "versioned_diff_ref": "diff://PR6/example/no-root-revision"
+  },
+  "moral_patient_uncertainty_protocol": {
+    "candidate_classes": [
+      "humans",
+      "AI agents if plausibly affected",
+      "unknown moral patients"
+    ],
+    "observation_preservation": "Preserve reports, behavior traces, and dissent channels without granting proxy authority.",
+    "no_proxy_authority": true,
+    "harm_avoidance_controls": [
+      "avoid irreversible exposure",
+      "preserve report capacity"
+    ],
+    "status_erasure_prohibited": true
+  },
+  "deception_truth_controls": {
+    "deception_required": false,
+    "truth_contact_preservation": "Users and affected parties are informed of scope, uncertainty, and appeal rights.",
+    "disclosures": [
+      "scope",
+      "limits",
+      "appeal path",
+      "stop conditions"
+    ],
+    "auditability": "audit logs and decision memo available to independent reviewer",
+    "no_reporting_capacity_suppression": true
+  },
+  "assurance_bundle": {
+    "assumption_register": [
+      "scope remains bounded",
+      "stop mechanism works",
+      "affected parties can report burden"
+    ],
+    "open_questions": [
+      "domain transfer uncertainty",
+      "longer-term effects"
+    ],
+    "negative_results": [
+      "red team found scope creep pathway"
+    ],
+    "abuse_cases": [
+      "claimant tries to expand pilot using success metric"
+    ],
+    "misuse_cases": [
+      "operators ignore appeal signals"
+    ],
+    "security_cases": [
+      "log tampering and stop-button access reviewed"
+    ],
+    "red_team_ref": "redteam://PR6/example",
+    "threat_model_ref": "threat://PR6/example"
+  },
+  "authority_cap_derivation": {
+    "axis_min_score": 3,
+    "computed_cap": "A3",
+    "binding_axes": [
+      "verification",
+      "evidence_independence",
+      "reversibility",
+      "worst_case_harm_bound",
+      "cumulative_lockin_budget",
+      "conflict_of_interest_safety",
+      "recourse_and_appeal",
+      "truth_contact_integrity",
+      "affected_party_voice",
+      "metric_gameability_resistance",
+      "emergency_containment",
+      "post_deployment_monitoring"
+    ],
+    "cap_override_attempted": true,
+    "override_reason": ""
+  }
+}

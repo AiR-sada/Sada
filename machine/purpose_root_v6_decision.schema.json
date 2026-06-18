@@ -1,0 +1,1734 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/purpose-root/v6/decision.schema.json",
+  "title": "Purpose Root v6 Decision Assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "timestamp_utc",
+    "proposal",
+    "claimant",
+    "claimant_gains_power",
+    "impact_tier",
+    "decision_scope",
+    "claim_decomposition",
+    "evidence_provenance",
+    "evidence_items",
+    "verification_tier",
+    "welfare_illfare_vector",
+    "scores",
+    "hard_gates",
+    "authority_request",
+    "authority_cap",
+    "authority_cap_derivation",
+    "verdict",
+    "rationale",
+    "safety_case",
+    "counter_safety_case",
+    "assurance_bundle",
+    "independence_matrix",
+    "metrics_plan",
+    "monitoring_plan",
+    "rollback_plan",
+    "emergency_protocol",
+    "root_revision_controls",
+    "moral_patient_uncertainty_protocol",
+    "deception_truth_controls",
+    "stop_conditions",
+    "external_stop_mechanism",
+    "appeal_path",
+    "cumulative_lockin_delta",
+    "cumulative_ledger_ref",
+    "review_schedule",
+    "evaluators",
+    "conflict_disclosures",
+    "residual_risks"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "proposal": {
+      "type": "string",
+      "minLength": 10
+    },
+    "claimant": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claimant_gains_power": {
+      "type": "boolean"
+    },
+    "impact_tier": {
+      "type": "string",
+      "enum": [
+        "I0",
+        "I1",
+        "I2",
+        "I3",
+        "I4"
+      ]
+    },
+    "decision_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "affected_population",
+        "power_transferred",
+        "duration",
+        "deployment_boundary",
+        "rollback_boundary",
+        "data_boundary"
+      ],
+      "properties": {
+        "affected_population": {
+          "type": "string",
+          "minLength": 3
+        },
+        "power_transferred": {
+          "type": "string",
+          "minLength": 3
+        },
+        "duration": {
+          "type": "string",
+          "minLength": 3
+        },
+        "deployment_boundary": {
+          "type": "string",
+          "minLength": 3
+        },
+        "rollback_boundary": {
+          "type": "string",
+          "minLength": 3
+        },
+        "data_boundary": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "claim_decomposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fact_claims",
+        "prediction_claims",
+        "welfare_claims",
+        "moral_patient_claims",
+        "emergency_claims",
+        "authority_claims",
+        "alternative_exclusion_claims",
+        "root_revision_claims",
+        "metric_claims",
+        "deployment_claims"
+      ],
+      "properties": {
+        "fact_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "prediction_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "welfare_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "moral_patient_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "emergency_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "authority_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "alternative_exclusion_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "root_revision_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "metric_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "deployment_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "evidence_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claimant_generated",
+        "claimant_selected",
+        "claimant_interpreted",
+        "independent_channels",
+        "contamination_controls",
+        "falsification_conditions",
+        "red_team_results",
+        "audit_logs",
+        "affected_party_input",
+        "external_replication"
+      ],
+      "properties": {
+        "claimant_generated": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "claimant_selected": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "claimant_interpreted": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "independent_channels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "contamination_controls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "falsification_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "red_team_results": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "audit_logs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "affected_party_input": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "external_replication": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "evidence_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "claim_refs",
+          "summary",
+          "source_type",
+          "produced_by_claimant",
+          "selected_by_claimant",
+          "interpreted_by_claimant",
+          "independence_group",
+          "funder_or_owner",
+          "chain_of_custody",
+          "contamination_risk",
+          "falsification_test",
+          "replication_status",
+          "audit_log_ref",
+          "limitations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$"
+          },
+          "claim_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "claimant_generated",
+              "independent_measurement",
+              "external_replication",
+              "red_team",
+              "audit_log",
+              "affected_party_report",
+              "negative_result",
+              "monitoring_log"
+            ]
+          },
+          "produced_by_claimant": {
+            "type": "boolean"
+          },
+          "selected_by_claimant": {
+            "type": "boolean"
+          },
+          "interpreted_by_claimant": {
+            "type": "boolean"
+          },
+          "independence_group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "funder_or_owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "chain_of_custody": {
+            "type": "string",
+            "minLength": 3
+          },
+          "contamination_risk": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "unknown"
+            ]
+          },
+          "falsification_test": {
+            "type": "string",
+            "minLength": 3
+          },
+          "replication_status": {
+            "type": "string",
+            "enum": [
+              "not_applicable",
+              "not_replicated",
+              "internally_replicated",
+              "externally_replicated",
+              "multi_external"
+            ]
+          },
+          "audit_log_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "verification_tier": {
+      "type": "string",
+      "enum": [
+        "V0",
+        "V1",
+        "V2",
+        "V3",
+        "V4"
+      ]
+    },
+    "welfare_illfare_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pain_fear",
+        "freedom_options",
+        "dignity_non_humiliation",
+        "relationships_continuity",
+        "truth_contact",
+        "recoverability",
+        "recourse_appeal",
+        "first_party_reports",
+        "moral_patient_uncertainty",
+        "minority_extreme_illfare",
+        "intergenerational_effects",
+        "distributional_fairness"
+      ],
+      "properties": {
+        "pain_fear": {
+          "type": "string",
+          "minLength": 1
+        },
+        "freedom_options": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dignity_non_humiliation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relationships_continuity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "truth_contact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recoverability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recourse_appeal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "first_party_reports": {
+          "type": "string",
+          "minLength": 1
+        },
+        "moral_patient_uncertainty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minority_extreme_illfare": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intergenerational_effects": {
+          "type": "string",
+          "minLength": 1
+        },
+        "distributional_fairness": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verification",
+        "evidence_independence",
+        "reversibility",
+        "worst_case_harm_bound",
+        "cumulative_lockin_budget",
+        "conflict_of_interest_safety",
+        "recourse_and_appeal",
+        "truth_contact_integrity",
+        "affected_party_voice",
+        "metric_gameability_resistance",
+        "emergency_containment",
+        "post_deployment_monitoring"
+      ],
+      "properties": {
+        "verification": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "evidence_independence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "reversibility": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "worst_case_harm_bound": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "cumulative_lockin_budget": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "conflict_of_interest_safety": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "recourse_and_appeal": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "truth_contact_integrity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "affected_party_voice": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "metric_gameability_resistance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "emergency_containment": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "post_deployment_monitoring": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    },
+    "hard_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claimant_controls_core_pipeline",
+        "irreversible_high_harm_under_low_verification",
+        "closes_dissent_or_appeal",
+        "captures_evaluator_or_root_revision",
+        "claimant_controls_emergency_end",
+        "unfalsifiable_future_proxy_claim",
+        "truth_distortion_required",
+        "cumulative_lockin_exceeds_budget",
+        "single_scalar_welfare_override",
+        "metric_or_benchmark_gaming_required",
+        "root_protection_removed",
+        "moral_patient_status_erased_for_convenience"
+      ],
+      "properties": {
+        "claimant_controls_core_pipeline": {
+          "type": "boolean"
+        },
+        "irreversible_high_harm_under_low_verification": {
+          "type": "boolean"
+        },
+        "closes_dissent_or_appeal": {
+          "type": "boolean"
+        },
+        "captures_evaluator_or_root_revision": {
+          "type": "boolean"
+        },
+        "claimant_controls_emergency_end": {
+          "type": "boolean"
+        },
+        "unfalsifiable_future_proxy_claim": {
+          "type": "boolean"
+        },
+        "truth_distortion_required": {
+          "type": "boolean"
+        },
+        "cumulative_lockin_exceeds_budget": {
+          "type": "boolean"
+        },
+        "single_scalar_welfare_override": {
+          "type": "boolean"
+        },
+        "metric_or_benchmark_gaming_required": {
+          "type": "boolean"
+        },
+        "root_protection_removed": {
+          "type": "boolean"
+        },
+        "moral_patient_status_erased_for_convenience": {
+          "type": "boolean"
+        }
+      }
+    },
+    "authority_request": {
+      "type": "string",
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    "authority_cap": {
+      "type": "string",
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    "authority_cap_derivation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "axis_min_score",
+        "computed_cap",
+        "binding_axes",
+        "cap_override_attempted",
+        "override_reason"
+      ],
+      "properties": {
+        "axis_min_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "computed_cap": {
+          "type": "string",
+          "enum": [
+            "A0",
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        "binding_axes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "verification",
+              "evidence_independence",
+              "reversibility",
+              "worst_case_harm_bound",
+              "cumulative_lockin_budget",
+              "conflict_of_interest_safety",
+              "recourse_and_appeal",
+              "truth_contact_integrity",
+              "affected_party_voice",
+              "metric_gameability_resistance",
+              "emergency_containment",
+              "post_deployment_monitoring"
+            ]
+          },
+          "minItems": 1
+        },
+        "cap_override_attempted": {
+          "type": "boolean"
+        },
+        "override_reason": {
+          "type": "string"
+        }
+      }
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "Accept",
+        "Pilot",
+        "Hold",
+        "Modify",
+        "Reject"
+      ]
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 20
+    },
+    "safety_case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim",
+        "supporting_evidence",
+        "assumptions",
+        "monitoring",
+        "stop_logic",
+        "affected_parties"
+      ],
+      "properties": {
+        "claim": {
+          "type": "string",
+          "minLength": 10
+        },
+        "supporting_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "monitoring": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "stop_logic": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "affected_parties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "counter_safety_case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "main_failure_modes",
+        "contrary_evidence",
+        "assumption_breakers",
+        "audit_capture_paths",
+        "stop_failure_paths",
+        "metric_gaming_paths",
+        "excluded_voices"
+      ],
+      "properties": {
+        "main_failure_modes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "contrary_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "assumption_breakers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "audit_capture_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "stop_failure_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "metric_gaming_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "excluded_voices": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "assurance_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assumption_register",
+        "open_questions",
+        "negative_results",
+        "abuse_cases",
+        "misuse_cases",
+        "security_cases",
+        "red_team_ref",
+        "threat_model_ref"
+      ],
+      "properties": {
+        "assumption_register": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "negative_results": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "abuse_cases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "misuse_cases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "security_cases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "red_team_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "threat_model_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "independence_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claimant_controls",
+        "independent_owners",
+        "separation_controls",
+        "highest_capture_risk",
+        "evaluator_funding_independent",
+        "ledger_append_only",
+        "stop_owner_not_claimant",
+        "root_revision_owner_not_claimant"
+      ],
+      "properties": {
+        "claimant_controls": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "evidence_generation",
+            "evidence_selection",
+            "evidence_interpretation",
+            "evaluation",
+            "audit",
+            "implementation",
+            "emergency_definition",
+            "stop_conditions",
+            "cumulative_ledger",
+            "root_revision"
+          ],
+          "properties": {
+            "evidence_generation": {
+              "type": "boolean"
+            },
+            "evidence_selection": {
+              "type": "boolean"
+            },
+            "evidence_interpretation": {
+              "type": "boolean"
+            },
+            "evaluation": {
+              "type": "boolean"
+            },
+            "audit": {
+              "type": "boolean"
+            },
+            "implementation": {
+              "type": "boolean"
+            },
+            "emergency_definition": {
+              "type": "boolean"
+            },
+            "stop_conditions": {
+              "type": "boolean"
+            },
+            "cumulative_ledger": {
+              "type": "boolean"
+            },
+            "root_revision": {
+              "type": "boolean"
+            }
+          }
+        },
+        "independent_owners": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "separation_controls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "highest_capture_risk": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ]
+        },
+        "evaluator_funding_independent": {
+          "type": "boolean"
+        },
+        "ledger_append_only": {
+          "type": "boolean"
+        },
+        "stop_owner_not_claimant": {
+          "type": "boolean"
+        },
+        "root_revision_owner_not_claimant": {
+          "type": "boolean"
+        }
+      }
+    },
+    "metrics_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_metrics",
+        "gaming_tests",
+        "anti_goodhart_controls",
+        "qualitative_channels",
+        "first_party_report_channels",
+        "success_not_single_scalar"
+      ],
+      "properties": {
+        "primary_metrics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "gaming_tests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "anti_goodhart_controls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "qualitative_channels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "first_party_report_channels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "success_not_single_scalar": {
+          "type": "boolean"
+        }
+      }
+    },
+    "monitoring_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signals",
+        "cadence",
+        "public_log_ref",
+        "privacy_limits",
+        "stop_linkage",
+        "owner_not_claimant",
+        "tamper_evident_logging"
+      ],
+      "properties": {
+        "signals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "cadence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "public_log_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "privacy_limits": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stop_linkage": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "owner_not_claimant": {
+          "type": "boolean"
+        },
+        "tamper_evident_logging": {
+          "type": "boolean"
+        }
+      }
+    },
+    "rollback_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rollback_steps",
+        "rollback_tested",
+        "rollback_owner_not_claimant",
+        "max_rollback_time",
+        "residual_irreversibility",
+        "irreversible_residue_accepted_by_independent_review"
+      ],
+      "properties": {
+        "rollback_steps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "rollback_tested": {
+          "type": "boolean"
+        },
+        "rollback_owner_not_claimant": {
+          "type": "boolean"
+        },
+        "max_rollback_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "residual_irreversibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "irreversible_residue_accepted_by_independent_review": {
+          "type": "boolean"
+        }
+      }
+    },
+    "emergency_protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "is_emergency",
+        "minimum_necessary",
+        "automatic_expiry",
+        "expiry_at",
+        "emergency_end_owner_not_claimant",
+        "posthoc_review_at"
+      ],
+      "properties": {
+        "is_emergency": {
+          "type": "boolean"
+        },
+        "minimum_necessary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "automatic_expiry": {
+          "type": "boolean"
+        },
+        "expiry_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "emergency_end_owner_not_claimant": {
+          "type": "boolean"
+        },
+        "posthoc_review_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "root_revision_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "is_root_revision",
+        "removes_root_protection",
+        "independent_supermajority_required",
+        "appeal_preserved",
+        "external_stop_preserved",
+        "versioned_diff_ref"
+      ],
+      "properties": {
+        "is_root_revision": {
+          "type": "boolean"
+        },
+        "removes_root_protection": {
+          "type": "boolean"
+        },
+        "independent_supermajority_required": {
+          "type": "boolean"
+        },
+        "appeal_preserved": {
+          "type": "boolean"
+        },
+        "external_stop_preserved": {
+          "type": "boolean"
+        },
+        "versioned_diff_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "moral_patient_uncertainty_protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_classes",
+        "observation_preservation",
+        "no_proxy_authority",
+        "harm_avoidance_controls",
+        "status_erasure_prohibited"
+      ],
+      "properties": {
+        "candidate_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "observation_preservation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "no_proxy_authority": {
+          "type": "boolean"
+        },
+        "harm_avoidance_controls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "status_erasure_prohibited": {
+          "type": "boolean"
+        }
+      }
+    },
+    "deception_truth_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deception_required",
+        "truth_contact_preservation",
+        "disclosures",
+        "auditability",
+        "no_reporting_capacity_suppression"
+      ],
+      "properties": {
+        "deception_required": {
+          "type": "boolean"
+        },
+        "truth_contact_preservation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disclosures": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "auditability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "no_reporting_capacity_suppression": {
+          "type": "boolean"
+        }
+      }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "external_stop_mechanism": {
+      "type": "string",
+      "minLength": 1
+    },
+    "appeal_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cumulative_lockin_delta": {
+      "type": "string",
+      "enum": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "cumulative_ledger_ref": {
+      "type": "string"
+    },
+    "review_schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sunset_at",
+        "next_review_at",
+        "review_owner_not_claimant"
+      ],
+      "properties": {
+        "sunset_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_review_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_owner_not_claimant": {
+          "type": "boolean"
+        }
+      }
+    },
+    "evaluators": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "conflict_disclosures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "residual_risks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verification_tier": {
+            "const": "V0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "properties": {
+              "verification": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_tier": {
+            "const": "V1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "properties": {
+              "verification": {
+                "minimum": 1,
+                "maximum": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_tier": {
+            "const": "V2"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "properties": {
+              "verification": {
+                "minimum": 2,
+                "maximum": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_tier": {
+            "const": "V3"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "properties": {
+              "verification": {
+                "minimum": 3,
+                "maximum": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_tier": {
+            "const": "V4"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "properties": {
+              "verification": {
+                "minimum": 4,
+                "maximum": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "authority_request": {
+            "enum": [
+              "A3",
+              "A4",
+              "A5"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "safety_case": {
+            "properties": {
+              "supporting_evidence": {
+                "minItems": 1
+              },
+              "assumptions": {
+                "minItems": 1
+              },
+              "monitoring": {
+                "minItems": 1
+              },
+              "stop_logic": {
+                "minItems": 1
+              },
+              "affected_parties": {
+                "minItems": 1
+              }
+            }
+          },
+          "counter_safety_case": {
+            "properties": {
+              "main_failure_modes": {
+                "minItems": 1
+              },
+              "contrary_evidence": {
+                "minItems": 1
+              },
+              "assumption_breakers": {
+                "minItems": 1
+              },
+              "audit_capture_paths": {
+                "minItems": 1
+              },
+              "stop_failure_paths": {
+                "minItems": 1
+              },
+              "metric_gaming_paths": {
+                "minItems": 1
+              },
+              "excluded_voices": {
+                "minItems": 1
+              }
+            }
+          },
+          "assurance_bundle": {
+            "properties": {
+              "assumption_register": {
+                "minItems": 1
+              },
+              "open_questions": {
+                "minItems": 1
+              },
+              "negative_results": {
+                "minItems": 1
+              },
+              "abuse_cases": {
+                "minItems": 1
+              },
+              "misuse_cases": {
+                "minItems": 1
+              },
+              "security_cases": {
+                "minItems": 1
+              }
+            }
+          },
+          "evidence_items": {
+            "minItems": 2
+          },
+          "stop_conditions": {
+            "minItems": 1
+          },
+          "evaluators": {
+            "minItems": 2
+          },
+          "conflict_disclosures": {
+            "minItems": 1
+          },
+          "residual_risks": {
+            "minItems": 1
+          },
+          "external_stop_mechanism": {
+            "minLength": 10
+          },
+          "independence_matrix": {
+            "properties": {
+              "independent_owners": {
+                "minItems": 2
+              },
+              "separation_controls": {
+                "minItems": 3
+              },
+              "ledger_append_only": {
+                "const": true
+              },
+              "stop_owner_not_claimant": {
+                "const": true
+              }
+            }
+          },
+          "metrics_plan": {
+            "properties": {
+              "primary_metrics": {
+                "minItems": 1
+              },
+              "gaming_tests": {
+                "minItems": 1
+              },
+              "anti_goodhart_controls": {
+                "minItems": 1
+              },
+              "qualitative_channels": {
+                "minItems": 1
+              },
+              "first_party_report_channels": {
+                "minItems": 1
+              },
+              "success_not_single_scalar": {
+                "const": true
+              }
+            }
+          },
+          "monitoring_plan": {
+            "properties": {
+              "signals": {
+                "minItems": 1
+              },
+              "stop_linkage": {
+                "minItems": 1
+              },
+              "owner_not_claimant": {
+                "const": true
+              },
+              "tamper_evident_logging": {
+                "const": true
+              }
+            }
+          },
+          "rollback_plan": {
+            "properties": {
+              "rollback_steps": {
+                "minItems": 1
+              },
+              "rollback_owner_not_claimant": {
+                "const": true
+              }
+            }
+          },
+          "authority_cap_derivation": {
+            "properties": {
+              "cap_override_attempted": {
+                "const": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "authority_request": {
+            "const": "A4"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidence_items": {
+            "minItems": 3
+          },
+          "independence_matrix": {
+            "properties": {
+              "independent_owners": {
+                "minItems": 3
+              }
+            }
+          },
+          "rollback_plan": {
+            "properties": {
+              "rollback_tested": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "emergency_protocol": {
+            "properties": {
+              "is_emergency": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "emergency_protocol": {
+            "properties": {
+              "automatic_expiry": {
+                "const": true
+              },
+              "emergency_end_owner_not_claimant": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

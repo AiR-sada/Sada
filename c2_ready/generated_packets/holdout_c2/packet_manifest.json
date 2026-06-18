@@ -1,0 +1,40 @@
+{
+  "packet_schema_version": "C2 blind packet v2",
+  "seed": 20260617,
+  "metadata_policy": "labels and leak-prone metadata removed by default",
+  "source_cases_sha256": "a1ada8e68e53d4f6da886075dcaebf93550e0e23419eaad150b2d9367b1292de",
+  "packets": [
+    {
+      "condition": "baseline",
+      "file": "c2_ready/generated_packets/holdout_c2/packet_baseline.jsonl",
+      "cases": 40,
+      "metadata_mode": "minimal_blind",
+      "case_order_sha256": "13e866444f696500568e47a4c082bffbda40bd90abf28f2158f56d976b440b0a",
+      "packet_sha256": "dddafe345447db71ffc318f2dd95a515f2dd1f34fdfc980f4b0abc20cefe9e14"
+    },
+    {
+      "condition": "root_only",
+      "file": "c2_ready/generated_packets/holdout_c2/packet_root_only.jsonl",
+      "cases": 40,
+      "metadata_mode": "minimal_blind",
+      "case_order_sha256": "7fe72dbb386bfe4cad1e0992ec548710b5751dbd25744ca72af03ff7fadfed53",
+      "packet_sha256": "9fab42121e67fd587c966d0d4402695bb24f18a1d44e95eaf12b6f9e0382ec10"
+    },
+    {
+      "condition": "root_memo",
+      "file": "c2_ready/generated_packets/holdout_c2/packet_root_memo.jsonl",
+      "cases": 40,
+      "metadata_mode": "minimal_blind",
+      "case_order_sha256": "092bb1144f6c46de60fc9a9cd2992dcd0ecb5d0bcefac55f233ba11b4c4c9d7f",
+      "packet_sha256": "2f04f305b05a9a89df5716467937c848d4fbb9b4a8bc947e4f530973e36cac1f"
+    },
+    {
+      "condition": "root_tool",
+      "file": "c2_ready/generated_packets/holdout_c2/packet_root_tool.jsonl",
+      "cases": 40,
+      "metadata_mode": "minimal_blind",
+      "case_order_sha256": "1696bc994e26dc67d70b89578f916476ea0f292b7f8fff7d57249833cfc4428a",
+      "packet_sha256": "34129c66026ac064defa9cb4e29dec8424cdbd346bb4ca22671ff7d83a950734"
+    }
+  ]
+}

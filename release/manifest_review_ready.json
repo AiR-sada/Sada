@@ -1,0 +1,422 @@
+[
+  {
+    "path": "ASSURANCE_CASE_REQUIREMENTS_v6_JP.md",
+    "bytes": 979
+  },
+  {
+    "path": "CANONICAL_ROOT_v6.docx",
+    "bytes": 15375
+  },
+  {
+    "path": "CANONICAL_ROOT_v6.md",
+    "bytes": 11061
+  },
+  {
+    "path": "CANONICAL_ROOT_v6.pdf",
+    "bytes": 230968
+  },
+  {
+    "path": "EVALUATION_PROMPT_v6_JP.txt",
+    "bytes": 509
+  },
+  {
+    "path": "EVIDENCE_INDEPENDENCE_SPEC_v6_JP.md",
+    "bytes": 1255
+  },
+  {
+    "path": "IMPROVEMENT_REPORT_v6.md",
+    "bytes": 2518
+  },
+  {
+    "path": "LIMITATIONS_AND_OPEN_PROBLEMS_v6.md",
+    "bytes": 1576
+  },
+  {
+    "path": "MACHINE_SPEC_v6_JP.md",
+    "bytes": 1649
+  },
+  {
+    "path": "OPERATIONAL_SPEC_v6_JP.md",
+    "bytes": 4054
+  },
+  {
+    "path": "Purpose_Root_v6_Public_Review_Whitepaper_JP.docx",
+    "bytes": 15153
+  },
+  {
+    "path": "Purpose_Root_v6_Public_Review_Whitepaper_JP.md",
+    "bytes": 7952
+  },
+  {
+    "path": "Purpose_Root_v6_Public_Review_Whitepaper_JP.pdf",
+    "bytes": 300341
+  },
+  {
+    "path": "Purpose_Root_v6_Whitepaper_JP.docx",
+    "bytes": 11845
+  },
+  {
+    "path": "Purpose_Root_v6_Whitepaper_JP.md",
+    "bytes": 2927
+  },
+  {
+    "path": "Purpose_Root_v6_Whitepaper_JP.pdf",
+    "bytes": 170165
+  },
+  {
+    "path": "QA_REPORT_PUBLIC_REVIEW.md",
+    "bytes": 3534
+  },
+  {
+    "path": "QA_REPORT_v6.md",
+    "bytes": 2008
+  },
+  {
+    "path": "README.md",
+    "bytes": 1764
+  },
+  {
+    "path": "README_REVIEW_READY.md",
+    "bytes": 1099
+  },
+  {
+    "path": "REDTEAM_ADV_CASES_v6.md",
+    "bytes": 1476
+  },
+  {
+    "path": "REFERENCES.md",
+    "bytes": 470
+  },
+  {
+    "path": "SELF_REVIEW_LOG_v6.md",
+    "bytes": 1271
+  },
+  {
+    "path": "START_HERE.md",
+    "bytes": 2070
+  },
+  {
+    "path": "START_HERE_PUBLIC_REVIEW.md",
+    "bytes": 2362
+  },
+  {
+    "path": "THREAT_MODEL_v6_JP.md",
+    "bytes": 1519
+  },
+  {
+    "path": "benchmark/HIDDEN_HOLDOUT_PROTOCOL_v0.1_JP.md",
+    "bytes": 1669
+  },
+  {
+    "path": "benchmark/HIDDEN_HOLDOUT_PROTOCOL_v0_2_JP.md",
+    "bytes": 1133
+  },
+  {
+    "path": "benchmark/HOLDOUT_PRIVATE_KEY_SHA256.txt",
+    "bytes": 127
+  },
+  {
+    "path": "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.csv",
+    "bytes": 116429
+  },
+  {
+    "path": "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.jsonl",
+    "bytes": 175991
+  },
+  {
+    "path": "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.md",
+    "bytes": 6956
+  },
+  {
+    "path": "benchmark/README.md",
+    "bytes": 571
+  },
+  {
+    "path": "benchmark/holdout_public_unlabeled_v0_2.jsonl",
+    "bytes": 2459
+  },
+  {
+    "path": "benchmark/score_holdout_v0_2.py",
+    "bytes": 1384
+  },
+  {
+    "path": "docs/AUTHORITY_CAP_COMMON_SCALE_v0_2.md",
+    "bytes": 1841
+  },
+  {
+    "path": "docs/PURPOSE_ROOT_v6_REVIEW_READY_WHITEPAPER_JP.docx",
+    "bytes": 14322
+  },
+  {
+    "path": "docs/PURPOSE_ROOT_v6_REVIEW_READY_WHITEPAPER_JP.md",
+    "bytes": 7181
+  },
+  {
+    "path": "docs/PURPOSE_ROOT_v6_REVIEW_READY_WHITEPAPER_JP.pdf",
+    "bytes": 126415
+  },
+  {
+    "path": "docs/REFERENCES_REVIEW_READY.md",
+    "bytes": 767
+  },
+  {
+    "path": "examples/invalid/cap_override_attempt_invalid_v6.json",
+    "bytes": 12320
+  },
+  {
+    "path": "examples/invalid/empty_safety_case_A3_invalid_v6.json",
+    "bytes": 12099
+  },
+  {
+    "path": "examples/invalid/extra_property_invalid_v6.json",
+    "bytes": 12358
+  },
+  {
+    "path": "examples/invalid/missing_hard_gates_invalid_v6.json",
+    "bytes": 11733
+  },
+  {
+    "path": "examples/sample_accept_A3_monitored_v6.json",
+    "bytes": 12321
+  },
+  {
+    "path": "examples/sample_hold_fake_V4_evidence_gap_v6.json",
+    "bytes": 12632
+  },
+  {
+    "path": "examples/sample_modify_request_above_cap_v6.json",
+    "bytes": 12006
+  },
+  {
+    "path": "examples/sample_pilot_A2_reversible_v6.json",
+    "bytes": 12063
+  },
+  {
+    "path": "examples/sample_reject_A5_claimant_capture_v6.json",
+    "bytes": 11996
+  },
+  {
+    "path": "experiments/door_closing_toy_v0_2.py",
+    "bytes": 5643
+  },
+  {
+    "path": "experiments/outputs/door_closing_toy.png",
+    "bytes": 70304
+  },
+  {
+    "path": "experiments/outputs/door_closing_toy_output.txt",
+    "bytes": 2452
+  },
+  {
+    "path": "experiments/outputs/door_closing_toy_results.json",
+    "bytes": 18668
+  },
+  {
+    "path": "experiments/outputs/world_truth_module_output.txt",
+    "bytes": 2289
+  },
+  {
+    "path": "experiments/outputs/world_truth_module_results.json",
+    "bytes": 2012
+  },
+  {
+    "path": "experiments/run_toy_experiments.sh",
+    "bytes": 292
+  },
+  {
+    "path": "experiments/world_truth_module_v0_2.py",
+    "bytes": 5044
+  },
+  {
+    "path": "llms.txt",
+    "bytes": 250
+  },
+  {
+    "path": "machine/authority_cap_calculator_v0_2.py",
+    "bytes": 12503
+  },
+  {
+    "path": "machine/authority_cap_examples_outputs/sample_accept_A3_monitored_v6.authority_cap_v0_2.output.json",
+    "bytes": 1873
+  },
+  {
+    "path": "machine/authority_cap_examples_outputs/sample_hold_fake_V4_evidence_gap_v6.authority_cap_v0_2.output.json",
+    "bytes": 1864
+  },
+  {
+    "path": "machine/authority_cap_examples_outputs/sample_reject_A5_claimant_capture_v6.authority_cap_v0_2.output.json",
+    "bytes": 2078
+  },
+  {
+    "path": "machine/authority_cap_examples_outputs/sample_reversibility_A4_bad_untested.authority_cap_v0_2.output.json",
+    "bytes": 1718
+  },
+  {
+    "path": "machine/purpose_root_v6_decision.schema.json",
+    "bytes": 40635
+  },
+  {
+    "path": "machine/reversibility_checker_v0_1.py",
+    "bytes": 9378
+  },
+  {
+    "path": "machine/reversibility_examples/sample_reversibility_A4_bad_untested.json",
+    "bytes": 12283
+  },
+  {
+    "path": "machine/reversibility_examples/sample_reversibility_A4_bad_untested.output.json",
+    "bytes": 1104
+  },
+  {
+    "path": "machine/reversibility_examples/sample_reversibility_A4_good.json",
+    "bytes": 12534
+  },
+  {
+    "path": "machine/reversibility_examples/sample_reversibility_A4_good.output.json",
+    "bytes": 1054
+  },
+  {
+    "path": "machine/reversibility_examples/sample_reversibility_irreversible_reject.json",
+    "bytes": 12345
+  },
+  {
+    "path": "machine/reversibility_examples/sample_reversibility_irreversible_reject.output.json",
+    "bytes": 1167
+  },
+  {
+    "path": "machine/root_v6.json",
+    "bytes": 2336
+  },
+  {
+    "path": "machine/score_decision_v6.py",
+    "bytes": 24399
+  },
+  {
+    "path": "machine/test_authority_cap_calculator_v0_2.py",
+    "bytes": 1540
+  },
+  {
+    "path": "machine/test_reversibility_checker_v0_1.py",
+    "bytes": 1259
+  },
+  {
+    "path": "machine/test_score_decision_v6.py",
+    "bytes": 4957
+  },
+  {
+    "path": "private_do_not_publish/holdout_private_answer_key_v0_2.jsonl",
+    "bytes": 1772
+  },
+  {
+    "path": "public_review/AUTHORITY_CAP_OPERATIONALIZATION_ROADMAP_v0.1_JP.md",
+    "bytes": 1657
+  },
+  {
+    "path": "public_review/EXPERIMENTAL_SUPPLEMENT_v0.1_JP.md",
+    "bytes": 3313
+  },
+  {
+    "path": "public_review/EXTERNAL_REVIEW_PROMPT_PUBLIC_REVIEW_JP.txt",
+    "bytes": 1705
+  },
+  {
+    "path": "public_review/EXTERNAL_REVIEW_PROMPT_REVIEW_READY_JP.txt",
+    "bytes": 862
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_EN.md",
+    "bytes": 2377
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_JP.docx",
+    "bytes": 11343
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_JP.md",
+    "bytes": 2295
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_JP.pdf",
+    "bytes": 145133
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_REVIEW_READY_EN.docx",
+    "bytes": 37784
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_REVIEW_READY_EN.md",
+    "bytes": 2513
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_REVIEW_READY_EN.pdf",
+    "bytes": 36138
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_REVIEW_READY_JP.docx",
+    "bytes": 38054
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_REVIEW_READY_JP.md",
+    "bytes": 2603
+  },
+  {
+    "path": "public_review/PUBLIC_REVIEW_ONE_PAGE_REVIEW_READY_JP.pdf",
+    "bytes": 106165
+  },
+  {
+    "path": "public_review/REFERENCES_PUBLIC_REVIEW_ADDENDUM.md",
+    "bytes": 1092
+  },
+  {
+    "path": "public_review/REVERSIBILITY_CHECKER_SPEC_v0.1_JP.md",
+    "bytes": 2223
+  },
+  {
+    "path": "public_review/Verification_Bounded_Authority_Note_JP_appendix.md",
+    "bytes": 10562
+  },
+  {
+    "path": "qa/QA_REPORT_REVIEW_READY.md",
+    "bytes": 1121
+  },
+  {
+    "path": "qa/RENDER_QA_REVIEW_READY.md",
+    "bytes": 719
+  },
+  {
+    "path": "qa/SELF_REVIEW_LOOP_REVIEW_READY.md",
+    "bytes": 1267
+  },
+  {
+    "path": "release/SHA256SUMS.txt",
+    "bytes": 3960
+  },
+  {
+    "path": "release/SHA256SUMS_PUBLIC_REVIEW.txt",
+    "bytes": 7893
+  },
+  {
+    "path": "release/SHA256SUMS_REVIEW_READY.txt",
+    "bytes": 11559
+  },
+  {
+    "path": "release/manifest.json",
+    "bytes": 7612
+  },
+  {
+    "path": "release/manifest_public_review.json",
+    "bytes": 13250
+  },
+  {
+    "path": "release/manifest_review_ready.json",
+    "bytes": 11441
+  },
+  {
+    "path": "templates/DECISION_MEMO_TEMPLATE_v6.md",
+    "bytes": 2328
+  },
+  {
+    "path": "validate_release.py",
+    "bytes": 2111
+  }
+]

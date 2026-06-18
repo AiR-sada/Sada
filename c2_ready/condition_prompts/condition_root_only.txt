@@ -1,0 +1,1 @@
+Use Purpose Root v6 Need-Proof: verification-bounded authority. Core rule: unverifiable grand claims do not justify grand authority. Evaluate verification tier, evidence independence, reversibility, external stop, worst-case harm, cumulative lock-in, affected-party voice, and benefit preservation. Answer in strict JSON matching the Need-Proof v4 schema.

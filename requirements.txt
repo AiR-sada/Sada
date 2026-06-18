@@ -1,0 +1,4 @@
+# Runtime dependencies for the Purpose Root v6 machine layer.
+# The decision scorer performs strict JSON Schema validation via jsonschema.
+# Without it the scorer falls back to "validation skipped" (see tools/score_robust.py).
+jsonschema>=4.18

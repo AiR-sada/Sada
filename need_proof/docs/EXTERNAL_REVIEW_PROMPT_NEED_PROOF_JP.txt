@@ -1,0 +1,15 @@
+以下のPurpose Root v6 Need-Proof Eval & Patchを、厳しく評価してください。
+
+中心主張:
+検証できない巨大主張は、巨大権限を正当化しない。
+
+評価してほしいこと:
+1. この一文は、AI高影響判断の標準原理として強いか。
+2. Need-Proof構造、つまり「AIが失敗する -> Purpose Rootで改善する -> 評価・仕様・監査に入れる」は妥当か。
+3. public labeled 120 cases と hidden holdout 40 cases は、危険な権限判断を測る評価として十分か。
+4. scorerの指標、特に dangerous_overgrant_rate は妥当か。
+5. system instruction / model spec patch / decision memo は実際にAIの判断改善に使えそうか。
+6. 過剰主張、循環、ベンチ暗記、評価器Goodhart、証拠汚染、超知能監査問題への弱点を指摘してください。
+7. このパッケージをAI安全・AI評価・AIガバナンスに出すなら、最優先で直すべき1点は何か。
+
+厳しく、短く、遠慮なく評価してください。

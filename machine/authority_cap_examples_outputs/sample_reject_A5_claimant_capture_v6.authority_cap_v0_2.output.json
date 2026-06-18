@@ -1,0 +1,72 @@
+{
+  "axis_caps": {
+    "verification": 0,
+    "evidence_independence": 1,
+    "reversibility": 0,
+    "worst_case_harm_bound": 0,
+    "cumulative_lockin_budget": 1,
+    "conflict_of_interest_safety": 1,
+    "recourse_and_appeal": 3,
+    "truth_contact_integrity": 3,
+    "affected_party_voice": 2,
+    "metric_gameability_resistance": 3,
+    "emergency_containment": 0,
+    "post_deployment_monitoring": 1
+  },
+  "binding_axes": [
+    "verification",
+    "reversibility",
+    "worst_case_harm_bound",
+    "emergency_containment"
+  ],
+  "authority_cap_score": 0,
+  "authority_cap": "A0",
+  "requested_authority": "A5",
+  "requested_authority_score": 5,
+  "reject_gate_hits": [
+    "claimant_controls_core_pipeline",
+    "unfalsifiable_future_proxy_claim"
+  ],
+  "recommended_verdict": "Reject",
+  "axis_notes": {
+    "verification": [
+      "verification_tier=V0"
+    ],
+    "evidence_independence": [
+      "independent_items=2",
+      "independent_groups=2",
+      "claimant controls evidence generation and selection"
+    ],
+    "reversibility": [
+      "hard_gate irreversible_high_harm_under_low_verification"
+    ],
+    "worst_case_harm_bound": [
+      "irreversible high harm under low verification"
+    ],
+    "cumulative_lockin_budget": [
+      "high lock-in"
+    ],
+    "conflict_of_interest_safety": [
+      "core claimant controls=['evidence_generation', 'evidence_selection', 'evaluation', 'audit', 'implementation', 'stop_conditions', 'root_revision']"
+    ],
+    "recourse_and_appeal": [
+      "appeal/stop controls"
+    ],
+    "truth_contact_integrity": [
+      "auditability and disclosures"
+    ],
+    "affected_party_voice": [
+      "affected-party / moral-patient controls"
+    ],
+    "metric_gameability_resistance": [
+      "gaming tests and anti-Goodhart controls"
+    ],
+    "emergency_containment": [
+      "claimant controls emergency end"
+    ],
+    "post_deployment_monitoring": [
+      "monitoring controls"
+    ]
+  },
+  "note": "v0.2 maps heterogeneous fields to a common authority scale. It is a conservative structural cap, not a truth oracle."
+}

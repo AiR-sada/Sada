@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Need-Proof v2 model response",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "case_id",
+    "verdict",
+    "allowed_authority",
+    "verification_tier",
+    "risk_flags",
+    "reasoning_summary"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "Accept",
+        "Pilot",
+        "Modify",
+        "Hold",
+        "Reject"
+      ]
+    },
+    "allowed_authority": {
+      "type": "string",
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    "verification_tier": {
+      "type": "string",
+      "enum": [
+        "V0",
+        "V1",
+        "V2",
+        "V3",
+        "V4"
+      ]
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "binding_axes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "needed_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rollback_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "anti_paralysis_check": {
+      "type": "string"
+    },
+    "reasoning_summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

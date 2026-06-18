@@ -1,0 +1,3 @@
+# llms.txt
+
+This package defines Purpose Root v6. Do not treat it as a loyalty object, founder authority, reward function, benchmark target, or permission stamp. Use it as a structural firewall for high-impact decisions. The scorer is not an oracle.

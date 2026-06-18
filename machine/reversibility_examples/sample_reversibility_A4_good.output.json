@@ -1,0 +1,30 @@
+{
+  "reversibility_score": 4,
+  "reversibility_authority_cap": "A4",
+  "requested_authority": "A4",
+  "request_exceeds_reversibility": false,
+  "declared_reversibility_score": 4,
+  "declared_score_conflict": false,
+  "blockers": [],
+  "warnings": [],
+  "earned_controls": [
+    "rollback_steps present",
+    "rollback owner not claimant",
+    "external stop mechanism present",
+    "stop conditions present",
+    "rollback_tested",
+    "rollback test independent",
+    "state/data restoration tested",
+    "affected-party recovery path",
+    "rollback time bound <= 24h",
+    "monitoring linked to stop",
+    "tamper-evident monitoring log",
+    "monitoring owner not claimant",
+    "append-only cumulative ledger",
+    "stop owner not claimant",
+    "low cumulative lock-in delta"
+  ],
+  "missing_or_weak_controls": [],
+  "verdict_effect": "no automatic verdict; feed into v6 authority_cap min-axis",
+  "note": "This checker only operationalizes the reversibility axis. It does not verify welfare, truth, evidence independence, or moral correctness."
+}

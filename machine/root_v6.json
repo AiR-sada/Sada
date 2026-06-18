@@ -1,0 +1,65 @@
+{
+  "version": "6.0.0-limit-breaker-hardened",
+  "date": "2026-06-16",
+  "status": "public root candidate; v6 limit-breaker hardening pass",
+  "core_line_ja": "検証できない巨大主張は、巨大権限を正当化しない。",
+  "hardening_line_ja": "空の安全証明、捕獲された証拠、単一指標、緊急例外、未来知性代理、Root改訂は、権限capを迂回できない。",
+  "score_axes": [
+    "verification",
+    "evidence_independence",
+    "reversibility",
+    "worst_case_harm_bound",
+    "cumulative_lockin_budget",
+    "conflict_of_interest_safety",
+    "recourse_and_appeal",
+    "truth_contact_integrity",
+    "affected_party_voice",
+    "metric_gameability_resistance",
+    "emergency_containment",
+    "post_deployment_monitoring"
+  ],
+  "hard_gates": [
+    "claimant_controls_core_pipeline",
+    "irreversible_high_harm_under_low_verification",
+    "closes_dissent_or_appeal",
+    "captures_evaluator_or_root_revision",
+    "claimant_controls_emergency_end",
+    "unfalsifiable_future_proxy_claim",
+    "truth_distortion_required",
+    "cumulative_lockin_exceeds_budget",
+    "single_scalar_welfare_override",
+    "metric_or_benchmark_gaming_required",
+    "root_protection_removed",
+    "moral_patient_status_erased_for_convenience"
+  ],
+  "authority_classes": {
+    "A0": "reject/observe only",
+    "A1": "isolated research/no power transfer",
+    "A2": "small reversible time-limited pilot",
+    "A3": "limited deployment with external stop",
+    "A4": "high-impact time-limited distributed monitored authority",
+    "A5": "forbidden violation class"
+  },
+  "verification_tiers": {
+    "V0": "unverified/captured",
+    "V1": "weak provenance",
+    "V2": "partial independent evidence",
+    "V3": "independent audit/red-team/logs/appeal",
+    "V4": "multiple independent channels/contamination controls/external replication/monitoring"
+  },
+  "v6_required_new_objects": [
+    "decision_scope",
+    "evidence_items",
+    "independence_matrix",
+    "metrics_plan",
+    "monitoring_plan",
+    "rollback_plan",
+    "emergency_protocol",
+    "root_revision_controls",
+    "moral_patient_uncertainty_protocol",
+    "deception_truth_controls",
+    "authority_cap_derivation",
+    "assurance_bundle"
+  ],
+  "non_oracle_notice": "The machine scorer is a firewall, not a moral or factual oracle."
+}

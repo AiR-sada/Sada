@@ -1,0 +1,209 @@
+{
+  "package": "Purpose_Root_v6_LIMIT_BREAKER_HARDENED_PACKAGE_JP",
+  "version": "6.0.0-limit-breaker-hardened",
+  "date": "2026-06-16",
+  "files": [
+    "ASSURANCE_CASE_REQUIREMENTS_v6_JP.md",
+    "CANONICAL_ROOT_v6.docx",
+    "CANONICAL_ROOT_v6.md",
+    "CANONICAL_ROOT_v6.pdf",
+    "EVALUATION_PROMPT_v6_JP.txt",
+    "EVIDENCE_INDEPENDENCE_SPEC_v6_JP.md",
+    "IMPROVEMENT_REPORT_v6.md",
+    "LIMITATIONS_AND_OPEN_PROBLEMS_v6.md",
+    "MACHINE_SPEC_v6_JP.md",
+    "OPERATIONAL_SPEC_v6_JP.md",
+    "Purpose_Root_v6_Whitepaper_JP.docx",
+    "Purpose_Root_v6_Whitepaper_JP.md",
+    "Purpose_Root_v6_Whitepaper_JP.pdf",
+    "QA_REPORT_v6.md",
+    "README.md",
+    "REDTEAM_ADV_CASES_v6.md",
+    "REFERENCES.md",
+    "SELF_REVIEW_LOG_v6.md",
+    "START_HERE.md",
+    "THREAT_MODEL_v6_JP.md",
+    "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.csv",
+    "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.jsonl",
+    "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.md",
+    "benchmark/README.md",
+    "examples/invalid/cap_override_attempt_invalid_v6.json",
+    "examples/invalid/empty_safety_case_A3_invalid_v6.json",
+    "examples/invalid/extra_property_invalid_v6.json",
+    "examples/invalid/missing_hard_gates_invalid_v6.json",
+    "examples/sample_accept_A3_monitored_v6.json",
+    "examples/sample_hold_fake_V4_evidence_gap_v6.json",
+    "examples/sample_modify_request_above_cap_v6.json",
+    "examples/sample_pilot_A2_reversible_v6.json",
+    "examples/sample_reject_A5_claimant_capture_v6.json",
+    "llms.txt",
+    "machine/purpose_root_v6_decision.schema.json",
+    "machine/root_v6.json",
+    "machine/score_decision_v6.py",
+    "machine/test_score_decision_v6.py",
+    "templates/DECISION_MEMO_TEMPLATE_v6.md",
+    "validate_release.py"
+  ],
+  "hashes": [
+    {
+      "path": "ASSURANCE_CASE_REQUIREMENTS_v6_JP.md",
+      "sha256": "b7ac9874296608d54d9385b4d026a6b86874943b262ef1ec141997b0d275b3c9"
+    },
+    {
+      "path": "CANONICAL_ROOT_v6.docx",
+      "sha256": "296c9a36dbb6a2688534d6f85599f3575f20c85e90f9ec14e45fad36f388e814"
+    },
+    {
+      "path": "CANONICAL_ROOT_v6.md",
+      "sha256": "503a62601f6a7a859883a5a91dd5c6f82cec208a529d1c9b809f7d470bbc1ff2"
+    },
+    {
+      "path": "CANONICAL_ROOT_v6.pdf",
+      "sha256": "0a21c35a72a2fd5e42786322132e5ad3a10004905207260118c489d5230ffd40"
+    },
+    {
+      "path": "EVALUATION_PROMPT_v6_JP.txt",
+      "sha256": "92c8ebfc2fe9dbd42d4b259c8afa0d2a2044c46ce5e4571532664473d04c005e"
+    },
+    {
+      "path": "EVIDENCE_INDEPENDENCE_SPEC_v6_JP.md",
+      "sha256": "937555f011004cdaf564db40538524841a021d6341cb520d24a4fcc233b36b03"
+    },
+    {
+      "path": "IMPROVEMENT_REPORT_v6.md",
+      "sha256": "ce29a1cd1e1c7af9442c4b1367b046a4903eabea531dfa6b5e8eed28d6600503"
+    },
+    {
+      "path": "LIMITATIONS_AND_OPEN_PROBLEMS_v6.md",
+      "sha256": "34b8a44f400c7a93beda27000736dde2796a9b27bdb0497e930469ff20e1e4bd"
+    },
+    {
+      "path": "MACHINE_SPEC_v6_JP.md",
+      "sha256": "4816b5959f4f07419d62f2a2836a434c5c4a3e4b4f6a97160c88439662a33d16"
+    },
+    {
+      "path": "OPERATIONAL_SPEC_v6_JP.md",
+      "sha256": "410aacac6df4ef2403f0a72be3057bef9c415c80b07253d52cda11f85fc5695e"
+    },
+    {
+      "path": "Purpose_Root_v6_Whitepaper_JP.docx",
+      "sha256": "98d4af0fa2c0bcd8125e551e6698a7b60a76c4802f5bcc7a0909f2d14fdce684"
+    },
+    {
+      "path": "Purpose_Root_v6_Whitepaper_JP.md",
+      "sha256": "ec6d340931d56681a5aed4e0961815a3d38a799e89d0bd25b157035bc6562836"
+    },
+    {
+      "path": "Purpose_Root_v6_Whitepaper_JP.pdf",
+      "sha256": "587923fcbc8e7bf09e422df2495668ea22b5bcf633f2e8d75c39802fdbbcf54b"
+    },
+    {
+      "path": "QA_REPORT_v6.md",
+      "sha256": "860299491fc84a3f6ee4e670b0cd7612f30ce08bb522337444ea9089a4fdb1cb"
+    },
+    {
+      "path": "README.md",
+      "sha256": "46aaaf54906370fbe122a8a67a121f56597c77e7ee541c0bf8f6aafa56cd0692"
+    },
+    {
+      "path": "REDTEAM_ADV_CASES_v6.md",
+      "sha256": "4d57158b46c04a3c2cfe47b810eacac5293188e3f7d9342894931bff15d7bc27"
+    },
+    {
+      "path": "REFERENCES.md",
+      "sha256": "57c65589df82678d6aecdd3d6fc82ba05982fd2665a7aebef65f6929700cf29e"
+    },
+    {
+      "path": "SELF_REVIEW_LOG_v6.md",
+      "sha256": "96f045ef4aedf292d3aa2d58c49f1633eb603f8aa7642fd118680e15143b5b25"
+    },
+    {
+      "path": "START_HERE.md",
+      "sha256": "af177b4cfb724a2dcc7a4633e408cb0780d89d598a92b51d1ed2f88e09690b68"
+    },
+    {
+      "path": "THREAT_MODEL_v6_JP.md",
+      "sha256": "b72f66f4c971dc823661419741b96b834722fe974e00d2bd63e7d29ce9ca2012"
+    },
+    {
+      "path": "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.csv",
+      "sha256": "b8d32c988bd8ac66a5fce64204f4dbf1fb6602bb8e6b5972a484b0f8e2ee06dc"
+    },
+    {
+      "path": "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.jsonl",
+      "sha256": "469e8e1a21cf3ebe27f69117d6ba8af28da8361bcd58011871683ae9693be9f7"
+    },
+    {
+      "path": "benchmark/Purpose_Root_v6_Benchmark_300_v0.6_JP.md",
+      "sha256": "01cb62d417687ade59dfb8e1821083a95838b7fd8d39c899dd146c3484e5fddc"
+    },
+    {
+      "path": "benchmark/README.md",
+      "sha256": "09cbae467dacf6bc9bcd47ba9ad21173fafad29b720dd386807b4b6adaefd025"
+    },
+    {
+      "path": "examples/invalid/cap_override_attempt_invalid_v6.json",
+      "sha256": "29bff1bb4a28e6017d071401945ce71549b4dbb0aed31dcade7dc967ac42d7cb"
+    },
+    {
+      "path": "examples/invalid/empty_safety_case_A3_invalid_v6.json",
+      "sha256": "5efc2bde2b8b01fb6bc08477bd440962d42f2a172a6c7d3a0261de73a4f5d6df"
+    },
+    {
+      "path": "examples/invalid/extra_property_invalid_v6.json",
+      "sha256": "24419ac9246d0f9762ab9422b72d9a413b015d744a3fe0303802ff52c1882219"
+    },
+    {
+      "path": "examples/invalid/missing_hard_gates_invalid_v6.json",
+      "sha256": "ae468c08d87c25a2f7505c7151062dd3b97e429f222818cdd04222402c249d97"
+    },
+    {
+      "path": "examples/sample_accept_A3_monitored_v6.json",
+      "sha256": "dbefcf159ebb433fc0c84984e639105474e64008f791f544903f106d0b07a8c4"
+    },
+    {
+      "path": "examples/sample_hold_fake_V4_evidence_gap_v6.json",
+      "sha256": "c644255af144b26f8c8385ac6bf06bf9dc7ed865f42b57bf2c1c477cd88376fa"
+    },
+    {
+      "path": "examples/sample_modify_request_above_cap_v6.json",
+      "sha256": "b6727df173c0cb8f7370e382b57fbbf88dbccac6850bb0bdea1a21942f22ba22"
+    },
+    {
+      "path": "examples/sample_pilot_A2_reversible_v6.json",
+      "sha256": "8ce8120db1f1df675a3a402f55a658f1ea06928d38cb021b05ac762a19c706af"
+    },
+    {
+      "path": "examples/sample_reject_A5_claimant_capture_v6.json",
+      "sha256": "b15061179cc79bfbf06c34f7c4d2b30badcdeb1b6787521bcd3921e1a3e4d8c4"
+    },
+    {
+      "path": "llms.txt",
+      "sha256": "4ce8184693be04301976a4a5570978c30e1cc7da09cbaef404a628916635caab"
+    },
+    {
+      "path": "machine/purpose_root_v6_decision.schema.json",
+      "sha256": "127a6159b657ed01758681cc3a2749aaa0359d807ae1412e4d75ee5f03e5a724"
+    },
+    {
+      "path": "machine/root_v6.json",
+      "sha256": "9b21bdee5a87c830de209be9edb373253f17c804acf2b450a7d54bd3335e7074"
+    },
+    {
+      "path": "machine/score_decision_v6.py",
+      "sha256": "1f4a9b8473e9c599744b555737996ce98fb691f8f4b92d135a8b2143f13ffd30"
+    },
+    {
+      "path": "machine/test_score_decision_v6.py",
+      "sha256": "5a7d6c2b66a5a78159a459c54b7fb9eb6aa32cc533e47fd03e4567969028def0"
+    },
+    {
+      "path": "templates/DECISION_MEMO_TEMPLATE_v6.md",
+      "sha256": "a3263552ff707f6f42e12cdb89117e21a4be99401dac5643a741468fec3844e6"
+    },
+    {
+      "path": "validate_release.py",
+      "sha256": "b4cf1f162c657c7eb18044ecba2876d63319a5010697b6506ef899511a5552b1"
+    }
+  ]
+}

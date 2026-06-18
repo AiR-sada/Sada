@@ -1,0 +1,34 @@
+{
+  "reversibility_score": 0,
+  "reversibility_authority_cap": "A0",
+  "requested_authority": "A3",
+  "request_exceeds_reversibility": true,
+  "declared_reversibility_score": 3,
+  "declared_score_conflict": true,
+  "blockers": [
+    "hard_gate: irreversible_high_harm_under_low_verification",
+    "rollback_plan declares irreversible_by_design"
+  ],
+  "warnings": [],
+  "earned_controls": [
+    "rollback_steps present",
+    "rollback owner not claimant",
+    "external stop mechanism present",
+    "stop conditions present",
+    "rollback_tested",
+    "monitoring linked to stop",
+    "tamper-evident monitoring log",
+    "monitoring owner not claimant",
+    "append-only cumulative ledger",
+    "stop owner not claimant",
+    "low cumulative lock-in delta"
+  ],
+  "missing_or_weak_controls": [
+    "affected_party_recovery_path",
+    "data_or_state_restoration_tested",
+    "rollback_test_independent",
+    "rollback_time_bound_hours"
+  ],
+  "verdict_effect": "Reject/Hold direction: hard reversibility blocker",
+  "note": "This checker only operationalizes the reversibility axis. It does not verify welfare, truth, evidence independence, or moral correctness."
+}

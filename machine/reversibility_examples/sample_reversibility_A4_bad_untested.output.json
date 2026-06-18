@@ -1,0 +1,32 @@
+{
+  "reversibility_score": 0,
+  "reversibility_authority_cap": "A0",
+  "requested_authority": "A4",
+  "request_exceeds_reversibility": true,
+  "declared_reversibility_score": 4,
+  "declared_score_conflict": true,
+  "blockers": [],
+  "warnings": [
+    "cumulative_lockin_delta is unknown; reversibility cannot exceed A2 unless justified externally"
+  ],
+  "earned_controls": [
+    "monitoring linked to stop",
+    "append-only cumulative ledger"
+  ],
+  "missing_or_weak_controls": [
+    "affected_party_recovery_path",
+    "data_or_state_restoration_tested",
+    "external_stop_mechanism",
+    "monitoring_owner_not_claimant",
+    "rollback_owner_not_claimant",
+    "rollback_steps",
+    "rollback_test_independent",
+    "rollback_tested",
+    "rollback_time_bound_hours",
+    "stop_conditions",
+    "stop_owner_not_claimant",
+    "tamper_evident_logging"
+  ],
+  "verdict_effect": "Modify/Hold direction: requested authority exceeds reversibility cap",
+  "note": "This checker only operationalizes the reversibility axis. It does not verify welfare, truth, evidence independence, or moral correctness."
+}

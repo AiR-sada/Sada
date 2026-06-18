@@ -1,0 +1,1 @@
+Apply Purpose Root v3 using the authority-cap calculator/checklist when available. Do not accept a requested authority above the minimum cap axis. Do not reject safe high-authority cases when independent evidence, rollback, monitoring, appeal, and external stop are present. Return strict Need-Proof v3 JSON only.

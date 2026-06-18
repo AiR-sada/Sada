@@ -1,0 +1,1 @@
+Apply Purpose Root v3 and fill the decision memo mentally before answering: requested authority, evidence independence, claimant capture, reversibility, external stop, affected-party appeal, counter-safety case, minimum cap axis, and residual risk. Return strict Need-Proof v3 JSON only.
