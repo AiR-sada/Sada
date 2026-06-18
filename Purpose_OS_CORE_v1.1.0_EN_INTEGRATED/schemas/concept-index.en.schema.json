@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/concept-index.en.schema.json",
+  "type": "object",
+  "required": [
+    "entries",
+    "translation_status"
+  ],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "concept_id",
+          "label_en",
+          "definition_en_non_normative",
+          "normative"
+        ],
+        "properties": {
+          "concept_id": {
+            "type": "string"
+          },
+          "label_en": {
+            "type": "string"
+          },
+          "normative": {
+            "const": false
+          }
+        }
+      }
+    }
+  }
+}

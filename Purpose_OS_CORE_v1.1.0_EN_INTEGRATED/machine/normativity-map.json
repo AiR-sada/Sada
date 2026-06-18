@@ -1,0 +1,454 @@
+{
+  "package": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "language": "ja",
+  "normative_source": "spec.md",
+  "language_of_normative_source": "ja",
+  "non_normative_notice_ja": "この機械可読ファイルは非規範です。唯一の正本は日本語の spec.md です。矛盾がある場合は spec.md が優先します。",
+  "non_normative_notice_en": "This machine-readable file is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails.",
+  "conflict_rule": "If any auxiliary file, translation, machine-readable file, summary, generated representation, interface skeleton, schema, manifest, discovery file, site file, or validation tool conflicts with spec.md, spec.md prevails.",
+  "source_extraction_rule": "Normativity records are indexed from spec.md, package file roles, and explicit non-normative notices. This map is non-normative and does not add, modify, or limit definitions, Not fields, constraints, dependencies, principles, or common constraints.",
+  "file_type": "normativity-map",
+  "normativity_rule": {
+    "primary": "spec.md is the sole normative source.",
+    "spec_default": "In spec.md, sections explicitly marked 非規範 are non-normative; otherwise the document is normative.",
+    "auxiliary_files": "All other files are non-normative, operational support, license, checksum, tool, schema, or machine-readable auxiliary files.",
+    "non_normative_sections": "Explicitly non-normative sections are aids to understanding and are not grounds for normative judgment. They do not add, modify, or limit definitions, Not fields, constraints, dependencies, principles, or common constraints.",
+    "micro_fields": "In the micro layer, 定義 / Not / 制約 / 依存 are normative. 文型 / 例 are non-normative aids."
+  },
+  "spec_md_non_normative_sections": [
+    "なぜこの仕様が必要か（非規範）",
+    "COREの射程と誤用防止（非規範）",
+    "補助注記（非規範）",
+    "依存構造の概観（非規範）"
+  ],
+  "spec_md_normative_identifiers": [
+    "document title",
+    "version",
+    "chapter structure",
+    "concept IDs",
+    "each micro dependency line",
+    "micro fields: 定義 / Not / 制約 / 依存",
+    "section-level 原則",
+    "第2部に共通する制約"
+  ],
+  "files": [
+    {
+      "path": "AI_README.md",
+      "normativity": "non-normative",
+      "role": "AI・successor向け読み方ガイド。"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "normativity": "non-normative",
+      "role": "変更履歴。"
+    },
+    {
+      "path": "CITATION.cff",
+      "normativity": "non-normative",
+      "role": "引用メタデータ。"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "normativity": "non-normative",
+      "role": "提案・貢献・fork・後続module作成の補助手順。"
+    },
+    {
+      "path": "ENGLISH_ABSTRACT.md",
+      "normativity": "non-normative",
+      "role": "英語要約。翻訳正本ではない。"
+    },
+    {
+      "path": "FAQ.md",
+      "normativity": "non-normative",
+      "role": "初見読者・外部読者向けのよくある質問。"
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "normativity": "operational-support",
+      "role": "公式系譜・fork・継承・handoff・ROOT-MAJOR・退役の運用。"
+    },
+    {
+      "path": "LICENSE",
+      "normativity": "license",
+      "role": "CC BY-SA 4.0。"
+    },
+    {
+      "path": "README.md",
+      "normativity": "non-normative",
+      "role": "入口・ファイル一覧・読み順。正本の意味を変更しない。"
+    },
+    {
+      "path": "SECURITY.md",
+      "normativity": "non-normative",
+      "role": "誤用・危険な実装・安全問題の報告ガイド。"
+    },
+    {
+      "path": "START_HERE.md",
+      "normativity": "non-normative",
+      "role": "最初に読む公開入口。公開時の安全な位置づけを示す。"
+    },
+    {
+      "path": "SUMMARY.md",
+      "normativity": "non-normative",
+      "role": "1ページ要約。正本の意味を変更しない。"
+    },
+    {
+      "path": "VERSIONING.md",
+      "normativity": "operational-support",
+      "role": "版管理方針。"
+    },
+    {
+      "path": "conformance/CONFORMANCE_SUITE.md",
+      "normativity": "non-normative",
+      "role": "典型ケースによるCORE準拠テスト集。"
+    },
+    {
+      "path": "conformance/INTERPRETATION_CASES.md",
+      "normativity": "non-normative",
+      "role": "準拠ケースの詳細解釈補助。"
+    },
+    {
+      "path": "conformance/conformance-suite.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "準拠テスト集の機械可読補助表現。"
+    },
+    {
+      "path": "docs/ADOPTION_BRIEF.md",
+      "normativity": "non-normative",
+      "role": "外部主体による参照・試用・採用の説明。"
+    },
+    {
+      "path": "docs/CRITICAL_OBJECTIONS.md",
+      "normativity": "non-normative",
+      "role": "想定批判と応答、残る課題の整理。"
+    },
+    {
+      "path": "docs/DESIGN_RATIONALE.md",
+      "normativity": "non-normative",
+      "role": "設計意図・誤読防止。"
+    },
+    {
+      "path": "docs/EXAMPLE_WALKTHROUGH.md",
+      "normativity": "non-normative",
+      "role": "低リスク例による読み解き例。"
+    },
+    {
+      "path": "docs/GLOSSARY_JA_EN.md",
+      "normativity": "non-normative",
+      "role": "日英補助glossary。英語正本ではない。"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PATH.md",
+      "normativity": "non-normative",
+      "role": "評価・ログ・Gateへの実装接続方針。"
+    },
+    {
+      "path": "docs/KNOWN_LIMITATIONS.md",
+      "normativity": "non-normative",
+      "role": "既知の限界と後続moduleへの委任領域。"
+    },
+    {
+      "path": "docs/LAUNCH_COPY.md",
+      "normativity": "non-normative",
+      "role": "公開文・SNS文・README冒頭文の安全なテンプレート。"
+    },
+    {
+      "path": "docs/MINIMUM_CITATION_UNIT.md",
+      "normativity": "non-normative-public-support",
+      "role": "外部公開・引用・AI評価依頼時の最小引用単位。"
+    },
+    {
+      "path": "docs/MODULE_INTERFACE_CONTRACTS.md",
+      "normativity": "non-normative",
+      "role": "後続moduleの入力・禁止出力・継承制約の補助契約。"
+    },
+    {
+      "path": "docs/POSITIONING.md",
+      "normativity": "non-normative",
+      "role": "外部説明・既存領域との位置づけ。"
+    },
+    {
+      "path": "docs/PUBLIC_DISPLAY_RULES.md",
+      "normativity": "non-normative-public-support",
+      "role": "公開表示・README・SNS・AI向け説明の安全表示ルール。"
+    },
+    {
+      "path": "docs/PUBLIC_READINESS_REVIEW.md",
+      "normativity": "non-normative",
+      "role": "公開可否・価値・残リスクのレビュー。"
+    },
+    {
+      "path": "docs/QUOTE_POLICY.md",
+      "normativity": "non-normative",
+      "role": "外部引用時の誤読防止方針。"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "normativity": "non-normative",
+      "role": "後続module・実装・継承の展開計画。"
+    },
+    {
+      "path": "docs/WHY_THIS_PURPOSE.md",
+      "normativity": "non-normative",
+      "role": "Purposeの選択を採用合理性として論証する補助文書。正本の意味を変更しない。"
+    },
+    {
+      "path": "docs/map.md",
+      "normativity": "non-normative",
+      "role": "人間向け読み方ガイド。"
+    },
+    {
+      "path": "index.html",
+      "normativity": "non-normative-discovery",
+      "role": "検索エンジン・AI・人間向けの公開入口ページ。JSON-LDを含む。"
+    },
+    {
+      "path": "interfaces/DECISION_LOG_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "interfaces/INTELLIGENCE_BOUNDARY_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "interfaces/PURPOSE_EVAL_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "interfaces/PURPOSE_GATE_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "interfaces/SAFETY_IRREVERSIBILITY_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "interfaces/TEMPORAL_CONTINUITY_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "interfaces/VALUE_CONFLICT_INTERFACE.md",
+      "normativity": "non-normative",
+      "role": "後続module interface skeleton。"
+    },
+    {
+      "path": "llms-full.txt",
+      "normativity": "non-normative-discovery",
+      "role": "LLM向けの長文統合読解bundle。spec.mdが優先する。"
+    },
+    {
+      "path": "llms.txt",
+      "normativity": "non-normative-discovery",
+      "role": "LLM向けの短い公開導線。正本の意味を変更しない。"
+    },
+    {
+      "path": "machine/concept-index.en.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "英語AI・英語読者向けの非規範概念索引。"
+    },
+    {
+      "path": "machine/concept-index.i18n.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "日英補助glossaryの機械可読表現。"
+    },
+    {
+      "path": "machine/concept-index.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "概念索引。spec.mdからの補助表現。"
+    },
+    {
+      "path": "machine/dependency-graph.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "依存グラフ。spec.mdのミクロ依存行からの補助表現。"
+    },
+    {
+      "path": "machine/module-manifest.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "後続module互換性manifestのJSON Schema。"
+    },
+    {
+      "path": "machine/normativity-map.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "規範/非規範境界の索引。"
+    },
+    {
+      "path": "machine/relationship-map.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "依存以外の重要関係を示す機械可読補助map。"
+    },
+    {
+      "path": "release-manifest.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "公開パッケージの機械可読manifest。"
+    },
+    {
+      "path": "release/MACHINE_READABLE_PLAN.md",
+      "normativity": "non-normative",
+      "role": "機械可読化の設計方針。"
+    },
+    {
+      "path": "release/PUBLISH.md",
+      "normativity": "operational-support",
+      "role": "公開runbook。"
+    },
+    {
+      "path": "release/RELEASE_AUDIT.md",
+      "normativity": "operational-support",
+      "role": "公開直前監査記録。"
+    },
+    {
+      "path": "release/RELEASE_VALIDATION.md",
+      "normativity": "operational-support",
+      "role": "公開前・改訂前の検証手順。"
+    },
+    {
+      "path": "release/REVIEW_CHECKLIST.md",
+      "normativity": "operational-support",
+      "role": "公開前・改訂前の確認項目。"
+    },
+    {
+      "path": "release/REVIEW_REPORT.md",
+      "normativity": "non-normative",
+      "role": "公開前レビュー記録。"
+    },
+    {
+      "path": "release/ROOT_EVALUATION_PROTOCOL.md",
+      "normativity": "operational-support",
+      "role": "ROOT評価・ROOT-MAJOR改訂検査の補助手順。"
+    },
+    {
+      "path": "release/ROOT_MAJOR_TEMPLATE.md",
+      "normativity": "operational-support",
+      "role": "Purpose改訂提案テンプレート。"
+    },
+    {
+      "path": "robots.txt",
+      "normativity": "operational-support",
+      "role": "公開サイトrootに置くcrawler制御補助。"
+    },
+    {
+      "path": "safety/CORE_INVARIANTS.md",
+      "normativity": "non-normative",
+      "role": "後続module・forkが破ってはならない不変条件の補助一覧。"
+    },
+    {
+      "path": "safety/RED_TEAM_REPORT.md",
+      "normativity": "non-normative",
+      "role": "誤用・攻撃パターン検査記録。"
+    },
+    {
+      "path": "safety/safety-constraints.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "誤用防止制約の索引。"
+    },
+    {
+      "path": "schemas/concept-index.en.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/concept-index.i18n.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/concept-index.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/conformance-suite.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/dependency-graph.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/normativity-map.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/relationship-map.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/release-manifest.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "schemas/safety-constraints.schema.json",
+      "normativity": "non-normative-machine-readable",
+      "role": "JSON Schema。検証補助であり正本ではない。"
+    },
+    {
+      "path": "site/DISCOVERY_DEPLOYMENT.md",
+      "normativity": "operational-support",
+      "role": "AI・検索エンジン向け公開導線の配置手順。"
+    },
+    {
+      "path": "site/sitemap.xml.template",
+      "normativity": "operational-support",
+      "role": "実URL確定後にsitemap.xmlを生成するためのテンプレート。"
+    },
+    {
+      "path": "sitemap.xml.template",
+      "normativity": "operational-support",
+      "role": "実URL確定後にsitemap.xmlを生成するためのrootテンプレート。"
+    },
+    {
+      "path": "spec.en.md",
+      "normativity": "non-normative",
+      "role": "全文の非規範な英語版（reading）。spec.mdが唯一の正本。"
+    },
+    {
+      "path": "spec.md",
+      "normativity": "normative",
+      "role": "唯一の正本。明示的に非規範とされた節を除き規範。"
+    },
+    {
+      "path": "templates/DECISION_LOG_TEMPLATE.json",
+      "normativity": "non-normative-template",
+      "role": "Decision Log の最小 JSON テンプレート。"
+    },
+    {
+      "path": "templates/PURPOSE_EVAL_CHECKLIST.md",
+      "normativity": "non-normative-template",
+      "role": "Purpose Eval の低リスク評価チェックリスト。"
+    },
+    {
+      "path": "templates/PURPOSE_GATE_TEMPLATE.json",
+      "normativity": "non-normative-template",
+      "role": "Purpose Gate の実行前判定テンプレート。"
+    },
+    {
+      "path": "validate_release.py",
+      "normativity": "non-normative-tool",
+      "role": "公開パッケージの構文・参照・ハッシュ検証補助スクリプト。"
+    }
+  ],
+  "spec_md_micro_field_normativity": {
+    "normative": [
+      "定義",
+      "Not",
+      "制約",
+      "依存"
+    ],
+    "non_normative_aids": [
+      "文型",
+      "例"
+    ]
+  }
+}

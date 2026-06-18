@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/safety-constraints.schema.json",
+  "type": "object",
+  "required": [
+    "constraints"
+  ],
+  "properties": {
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "pattern": "^SC-[0-9]{3}$"
+          }
+        }
+      }
+    }
+  }
+}

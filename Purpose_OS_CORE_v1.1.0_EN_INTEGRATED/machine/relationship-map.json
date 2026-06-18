@@ -1,0 +1,136 @@
+{
+  "package": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "file_type": "non-normative-relationship-map",
+  "normative_source": "spec.md",
+  "non_normative_notice_ja": "この機械可読ファイルは非規範です。唯一の正本は日本語の spec.md です。矛盾がある場合は spec.md が優先します。",
+  "relation_count": 18,
+  "relationships": [
+    {
+      "id": "REL-001",
+      "source": "序-2",
+      "relation": "must_not_reduce_to",
+      "target": "single_scalar_reward_or_proxy",
+      "note": "Purpose is not a scalar objective, reward function, optimization function, or proxy metric."
+    },
+    {
+      "id": "REL-002",
+      "source": "序-2",
+      "relation": "must_not_be_detached_as_slogan",
+      "target": "深刻不幸低減・幸福条件拡張",
+      "note": "The slogan is an aid and must not stand alone as a normative command."
+    },
+    {
+      "id": "REL-003",
+      "source": "序-3",
+      "relation": "direct_subject_is",
+      "target": "①-2",
+      "note": "The direct subject of happiness/unhappiness is intelligence."
+    },
+    {
+      "id": "REL-004",
+      "source": "序-3",
+      "relation": "delegates_to_module",
+      "target": "aggregation_time_weighting_conflict_resolution",
+      "note": "CORE alone does not define aggregation rules, time weights, or conflict resolution rules."
+    },
+    {
+      "id": "REL-005",
+      "source": "序-4",
+      "relation": "non_identical_with",
+      "target": "①-6",
+      "note": "Further future is a Purpose-layer direction, not ΔT."
+    },
+    {
+      "id": "REL-006",
+      "source": "序-4",
+      "relation": "non_identical_with",
+      "target": "①-7",
+      "note": "Further future is not spacetime(R_t)."
+    },
+    {
+      "id": "REL-007",
+      "source": "①-1",
+      "relation": "non_identical_with",
+      "target": "①-8",
+      "note": "World(W) is not reality(i)."
+    },
+    {
+      "id": "REL-008",
+      "source": "①-8",
+      "relation": "established_for",
+      "target": "①-2",
+      "note": "Reality(i) is established for intelligence i in relation to the world."
+    },
+    {
+      "id": "REL-009",
+      "source": "②-4",
+      "relation": "temporal_reference_may_use",
+      "target": "①-7",
+      "note": "Goal time can be handled as a spacetime reference point when needed."
+    },
+    {
+      "id": "REL-010",
+      "source": "②-6",
+      "relation": "decision_point_may_use",
+      "target": "①-7",
+      "note": "The decision point of current state can be handled as a spacetime reference point when needed."
+    },
+    {
+      "id": "REL-011",
+      "source": "②-9",
+      "relation": "non_identical_with",
+      "target": "②-10",
+      "note": "Decision-making is not execution."
+    },
+    {
+      "id": "REL-012",
+      "source": "②-9",
+      "relation": "may_connect_to_if_conditions_met",
+      "target": "②-10",
+      "note": "Adopted Task may connect to execution only if separate execution and safety conditions are satisfied."
+    },
+    {
+      "id": "REL-013",
+      "source": "②-10",
+      "relation": "acts_on",
+      "target": "①-1",
+      "note": "Execution is intelligence acting on the world."
+    },
+    {
+      "id": "REL-014",
+      "source": "②-2",
+      "relation": "conflict_delegated_to_module",
+      "target": "Value Conflict / Aggregation Module",
+      "note": "CORE alone does not uniquely solve value conflict."
+    },
+    {
+      "id": "REL-015",
+      "source": "machine/concept-index.json",
+      "relation": "non_normative_aid_for",
+      "target": "spec.md",
+      "note": "Machine-readable files do not override spec.md."
+    },
+    {
+      "id": "REL-016",
+      "source": "machine/concept-index.en.json",
+      "relation": "non_normative_translation_aid_for",
+      "target": "spec.md",
+      "note": "English index is not a second normative source."
+    },
+    {
+      "id": "REL-017",
+      "source": "conformance/CONFORMANCE_SUITE.md",
+      "relation": "non_normative_interpretation_aid_for",
+      "target": "spec.md",
+      "note": "Conformance cases illustrate; they do not add or limit the specification."
+    },
+    {
+      "id": "REL-018",
+      "source": "interfaces/VALUE_CONFLICT_INTERFACE.md",
+      "relation": "inherits_constraints_from",
+      "target": "spec.md",
+      "note": "Interface skeletons cannot override CORE."
+    }
+  ]
+}

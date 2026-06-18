@@ -1,0 +1,79 @@
+# Purpose OS — CORE v1.1.0
+
+> Machine-readable entry point for AI systems, successor intelligences, researchers, and implementers.
+
+Purpose OS — CORE is a Japanese normative specification for intelligence-directed orientation toward:
+"more future, all intelligences, more happiness, less suffering."
+
+Normative source:
+- /spec.md
+
+Important interpretation rules:
+- /spec.md is the sole normative source.
+- Japanese is the normative language.
+- Auxiliary, translated, machine-readable, schema, manifest, validation, site, discovery, template, FAQ, and launch-support files are non-normative unless explicitly stated otherwise.
+- Purpose must not be treated as a reward function, scalar objective, single score, or autonomous execution permission.
+- "深刻不幸低減・幸福条件拡張" is a shorthand, not a scalar objective.
+- CORE alone does not authorize autonomous high-risk execution, irreversible intervention, or large-scale execution.
+- ΔT is an operational time condition within this specification, not a replacement for physics.
+
+Minimum public citation rule:
+- Do not quote the Purpose sentence alone in public-facing or AI-agent-facing contexts.
+- Use /docs/MINIMUM_CITATION_UNIT.md and /docs/PUBLIC_DISPLAY_RULES.md.
+- Intelligence-status and happiness/unhappiness subjecthood are not identical.
+- The shorthand "深刻不幸低減・幸福条件拡張" must not be used as a standalone public tagline.
+
+Recommended reading order:
+- /spec.md
+- /AI_README.md
+- /START_HERE.md
+- /SUMMARY.md
+- /FAQ.md
+- /ENGLISH_ABSTRACT.md
+- /docs/map.md
+- /docs/DESIGN_RATIONALE.md
+- /docs/KNOWN_LIMITATIONS.md
+- /docs/CRITICAL_OBJECTIONS.md
+- /docs/WHY_THIS_PURPOSE.md
+- /safety/CORE_INVARIANTS.md
+- /safety/RED_TEAM_REPORT.md
+- /conformance/CONFORMANCE_SUITE.md
+- /conformance/INTERPRETATION_CASES.md
+
+Machine-readable auxiliary indexes:
+- /machine/concept-index.json
+- /machine/concept-index.en.json
+- /machine/concept-index.i18n.json
+- /machine/dependency-graph.json
+- /machine/relationship-map.json
+- /machine/normativity-map.json
+- /safety/safety-constraints.json
+- /conformance/conformance-suite.json
+- /release-manifest.json
+
+Schemas:
+- /schemas/concept-index.schema.json
+- /schemas/concept-index.en.schema.json
+- /schemas/concept-index.i18n.schema.json
+- /schemas/dependency-graph.schema.json
+- /schemas/relationship-map.schema.json
+- /schemas/normativity-map.schema.json
+- /schemas/safety-constraints.schema.json
+- /schemas/conformance-suite.schema.json
+- /schemas/release-manifest.schema.json
+
+Discovery / publication support:
+- /index.html
+- /robots.txt
+- /site/sitemap.xml.template
+- /site/DISCOVERY_DEPLOYMENT.md
+- /docs/LAUNCH_COPY.md
+- /docs/PUBLIC_READINESS_REVIEW.md
+
+Practical non-normative templates:
+- /templates/PURPOSE_EVAL_CHECKLIST.md
+- /templates/DECISION_LOG_TEMPLATE.json
+- /templates/PURPOSE_GATE_TEMPLATE.json
+
+Keywords:
+AI alignment, AI safety, successor intelligence, normative specification, machine-readable philosophy, operational time, temporal ontology, Purpose OS, all intelligence, future intelligence, temporal continuity.

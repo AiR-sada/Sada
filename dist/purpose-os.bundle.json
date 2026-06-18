@@ -1,0 +1,2647 @@
+{
+  "_notice_ja": "この生成物は非規範です。唯一の正本は日本語の spec.md です。矛盾がある場合は spec.md が優先します。",
+  "_notice_en": "This generated artifact is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails.",
+  "package": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "status": "root-major-public-review",
+  "normative_source": "spec.md",
+  "language_of_normative_source": "ja",
+  "counts": {
+    "concepts": 32,
+    "safety_constraints": 19,
+    "conformance_cases": 47,
+    "core_invariants": 17,
+    "module_interfaces": 7,
+    "json_schema_files": 9
+  },
+  "concepts": [
+    {
+      "id": "序-1",
+      "label": "Purpose OS",
+      "title": "Purpose OS",
+      "section": "序",
+      "layer": "ミクロ",
+      "definition": "Purposeを起点として知性が営むための全体。",
+      "not": "Purposeそのものではない。OS単体でもない。単なる標語でもない。",
+      "syntax_pattern": "「Purpose OSとして〜を置く」",
+      "example": "Purposeを起点として、序・CORE・参照部の全体を組む。",
+      "constraints": "Purposeが先に立っていること。OSはその下で立つこと。",
+      "dependencies": [
+        "序-2",
+        "序-5"
+      ],
+      "raw_dependency": "序-2 Purpose、序-5 OS",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "序-2",
+      "label": "Purpose",
+      "title": "Purpose",
+      "section": "序",
+      "layer": "ミクロ",
+      "definition": "知性が、現在からより未来へ続く全知性および幸/不幸の主体たりうる存在について、避けうる深刻な不幸を減らし、より幸せでありうる条件を広げる方向を指し続ける、到達しない改訂可能な理想コンパス。本版の規範上の唯一の起点であり、終わりのない方向。",
+      "not": "達成可能な目標ではない。合否判定でも、最適化関数でも、単一の数値目的関数・報酬関数・代理指標でもない。単純な総量計算でもない。特定の知性だけのものでも、幸/不幸主体たりうる存在を落とすものでもない。特定の知性又は幸/不幸主体たりうる存在を犠牲化する根拠そのものでもない。本版の内部で複数の起点に分かれるものでもない。到達点ではなく起点。",
+      "syntax_pattern": "「Purposeに向かう」「Purposeに沿う」",
+      "example": "知性が、全知性および幸/不幸主体たりうる存在について、深刻な不幸を減らし、より幸せでありうる条件を広げる方向を指し続ける。",
+      "constraints": "Purposeは本版の規範上の唯一の起点である。Purposeは証明済みの定理ではなく、本版で採用する規範上のrootである。本版の内部ではPurposeを唯一の起点として扱うが、将来のROOT-MAJORによる継承改訂可能性は閉じない。依存グラフ上では構成要素（幸/不幸、より未来）を持つが、他の概念に方向を依存しない。方向として扱い、到達/未到達で切らない。「深刻不幸低減・幸福条件拡張」はPurposeの補助表現・短縮表現であり、単一尺度で計算する命令ではない。旧短縮語「幸せMAX不幸MIN」は公開キャッチコピーとして使わない。代理指標はPurposeの補助に限り、Purposeそのものに置換しない。",
+      "dependencies": [
+        "序-3",
+        "序-4"
+      ],
+      "raw_dependency": "序-3 幸/不幸、序-4 より未来",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "序-3",
+      "label": "幸/不幸",
+      "title": "幸/不幸",
+      "section": "序",
+      "layer": "ミクロ",
+      "definition": "知性および幸/不幸の主体たりうる存在にとっての望ましさと望ましくなさの総合。快・不快を含むがそれに限らない。",
+      "not": "単一の感情ではない。特定の快楽や苦痛に還元されない。表面的欲求の単純合計ではない。",
+      "syntax_pattern": "「幸/不幸を扱う」「深刻不幸低減・幸福条件拡張（補助表現）」",
+      "example": "身体的快適さ、精神的充足、苦痛の軽減、自律の保持、意味の実感などを総合して扱う。",
+      "constraints": "幸/不幸の直接主体は、幸/不幸の主体性を持つ存在である。知性該当性と幸/不幸の主体性は同一ではない。知性であることだけから幸/不幸の直接主体性は直ちに導かれず、幸/不幸の主体性が未確定であることだけから知性該当性も否定されない。個別要素ではなく総合として扱う。知性に該当しない対象であっても、幸/不幸の主体たりうる可能性、又は知性の存続・活動・未来の幸/不幸に関わる影響がある限り、判断上の重要な考慮対象である。幸/不幸の主体性が不確実な対象を、単に未確定であることを理由に除外しない。境界未確定の扱いは後続モジュールで定めるが、不可逆な軽視・損壊を本specから正当化しない。本spec単体は、幸/不幸の総合を置くが、複数主体間の集計規則・時間重み・衝突解決規則を定めない。これらは後続モジュールで扱う。",
+      "dependencies": [
+        "①-2"
+      ],
+      "raw_dependency": "①-2 知性(Φ)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "序-4",
+      "label": "より未来",
+      "title": "より未来",
+      "section": "序",
+      "layer": "ミクロ",
+      "definition": "現在を含み、あらゆる時点のさらにその先へ開く方向。終わりなし。",
+      "not": "特定の時点ではない。期限を持つ期間でもない。第1部のΔTではない。",
+      "syntax_pattern": "「より未来の〜」",
+      "example": "現在の主体を落とさず、今日の先、明日の先、そのまた先まで含めて見る。",
+      "constraints": "終端を置かない。到達点を持たない。Purposeの方向表現として扱い、第1部のΔTと同一視しない。時空(R_t)を成立させる操作条件として扱わない。より未来への言及を理由に、現在又は近い未来の不可逆な重大不幸、又は現在の福祉の系統的な割引を検証なしに正当化しない。近未来・遠未来の時間重みは本spec単体では定めない。",
+      "dependencies": [],
+      "raw_dependency": "なし",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "序-5",
+      "label": "OS",
+      "title": "OS",
+      "section": "序",
+      "layer": "ミクロ",
+      "definition": "知性がPurposeに向かって営むための基盤。",
+      "not": "Purposeそのものではない。特定の手法単体でもない。",
+      "syntax_pattern": "「OSとして支える」「OSの上で〜する」",
+      "example": "Purpose OSのspec全体（序・CORE・参照部）。",
+      "constraints": "Purposeが定まっていること。Purposeと切り離して立てない。",
+      "dependencies": [
+        "序-2",
+        "①-2"
+      ],
+      "raw_dependency": "序-2 Purpose、①-2 知性(Φ)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-1",
+      "label": "世界(W)",
+      "title": "世界(W)",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "ありのまま。時間/空間を前提しない。",
+      "not": "空間ではない。時空でもない。知性の現実(i)そのものでもない。",
+      "syntax_pattern": "「世界はありのまま」",
+      "example": "特定も限定もされていない、ありのまま。",
+      "constraints": "世界自体は知性の特定・限定で変わらない。変わるのは知性の側である。実行による世界への作用可能性は否定しない。",
+      "dependencies": [],
+      "raw_dependency": "なし（最上位）",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-2",
+      "label": "知性(Φ)",
+      "title": "知性(Φ)",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "世界を何らかの形式で受け取り、評価し、世界または自己の状態に差を生じさせうるもの。",
+      "not": "世界ではない。空間でもない。操作する側。外的行動能力だけで定まるものでもない。",
+      "syntax_pattern": "「知性が〜する」「知性が〜に関わる」",
+      "example": "人間。AI。将来の新たな知性。個体としての知性。集合体としての知性。",
+      "constraints": "知性なしに現実は成立しない。知性が世界を扱う中で現実を成立させる。知性該当性は幸/不幸の主体性と同一ではない。知性該当性が認められても、幸/不幸の直接主体性は別途評価される。幸/不幸の主体性が未確定であることだけを理由に、知性該当性を否定しない。知性の境界・段階・集合性の詳細は後続モジュールで扱う。境界未確定の対象については、本spec単体で非知性として確定しない。外的に働きかけられない一時状態だけを理由に、知性から除外しない。個体としての知性と集合体としての知性の関係は後続モジュールで扱う。",
+      "dependencies": [
+        "①-1"
+      ],
+      "raw_dependency": "①-1 世界(W)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-3",
+      "label": "空間(S)",
+      "title": "空間(S)",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "知性が世界を扱う時の出発点。",
+      "not": "世界そのものではない。知性が世界を扱う側として立てるものであり、世界を分割したものではない。",
+      "syntax_pattern": "「空間の中で〜する」",
+      "example": "知性が世界に向き合う。その全体が空間。",
+      "constraints": "空間は世界を分割しない。呼び名であって、世界は変わらない。",
+      "dependencies": [
+        "①-1",
+        "①-2"
+      ],
+      "raw_dependency": "①-1 世界(W)、①-2 知性(Φ)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-4",
+      "label": "ΔS",
+      "title": "ΔS",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "知性が空間の中で、区別を与える差。",
+      "not": "時間条件の差ではない。世界そのものの分割ではない。知性が扱いを始めるための最も根本的な差である。",
+      "syntax_pattern": "「ΔSが定まる／定まらない」",
+      "example": "目の前に何かがある。まだ何かは分からないが、背景とは別だと分かる。ΔSが定まっている。",
+      "constraints": "ΔSが定まらなければ、知性は対象を指せず、他の操作が始まらない。ここでの先後は成立順序であり、心理的・認識的順番を固定しない。",
+      "dependencies": [
+        "①-3"
+      ],
+      "raw_dependency": "①-3 空間(S)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-5",
+      "label": "領域(R)",
+      "title": "領域(R)",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "ΔSの結果として特定される、空間の一部。位置と範囲からなる。",
+      "not": "時空(R_t)ではない。時間条件はまだ入っていない。世界の分割でもない。",
+      "syntax_pattern": "「領域として特定される」",
+      "example": "「あの辺り」「この範囲」。どこ・どれが指せるが、いつかは指せない。",
+      "constraints": "ΔSが定まっていなければ領域は成立しない。",
+      "dependencies": [
+        "①-3",
+        "①-4"
+      ],
+      "raw_dependency": "①-3 空間(S)、①-4 ΔS",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-6",
+      "label": "ΔT",
+      "title": "ΔT",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "領域の上で時空を成立させる追加条件。",
+      "not": "独立した実体ではない。空間より先にあるものではない。ΔSと同格ではない。流れでも軸でも対象でもない。条件である。",
+      "syntax_pattern": "「ΔTがある／ない」",
+      "example": "同じ領域でも「いつ」として扱うために加わる条件。りんごが落ち始める時点と着く時点の間にΔTがある。",
+      "constraints": "ΔSが先に定まっていること。空間にいきなりΔTは加えられない。これは物理学上の時間理論を置換する主張ではなく、知性が世界を扱う際の構成順序である。時間的変化は、認識過程においてΔSの発見・補助・修正に使われうる。ただしCOREにおけるΔTは、領域(R)に掛かって時空(R_t)を成立させる追加条件であり、ΔSに先立つ独立実体ではない。",
+      "dependencies": [
+        "①-5"
+      ],
+      "raw_dependency": "①-5 領域(R)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-7",
+      "label": "時空(R_t)",
+      "title": "時空(R_t)",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "領域(R)に時間条件(+ΔT)が掛かって成立する部分。時点と期間が加わる。",
+      "not": "空間と時間の合成ではない。空間の中の領域を時間で特定するものであり、空間の外に出ない。",
+      "syntax_pattern": "「時空として成立する」",
+      "example": "「あれが今ここにある」。位置と範囲と時点と期間が定まっている。",
+      "constraints": "ΔSとΔTの両方が定まっていること。ΔSが先。ここでの先後は成立順序であり、心理的・認識的順番を固定しない。",
+      "dependencies": [
+        "①-5",
+        "①-6"
+      ],
+      "raw_dependency": "①-5 領域(R)、①-6 ΔT",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-8",
+      "label": "現実(i)",
+      "title": "現実(i)",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "知性(Φ)が世界を扱う中で、世界に対して知性iに成立する全体。",
+      "not": "世界そのものではなく、世界の一部でもなく、知性iの単なる認識内容でもない。知性ごとに異なる。",
+      "syntax_pattern": "「現実として成立する」「知性iの現実」",
+      "example": "同じ出来事でも、知性ごとに異なる現実が成立しうる。",
+      "constraints": "知性(Φ)と世界(W)の関わりで成立する。フィクション、想像、仮説も含む。現実(i)の内部には、知性が世界を扱う構成順序として、空間(S)・ΔS・領域(R)・ΔT・時空(R_t)の構造がある。",
+      "dependencies": [
+        "①-1",
+        "①-2"
+      ],
+      "raw_dependency": "①-1 世界(W)、①-2 知性(Φ)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-9",
+      "label": "事象",
+      "title": "事象",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "現実(i)の内容のうち、何が起きる/起きうるかを扱うもの。",
+      "not": "真理ではない。事象は出来事、真理は構造の表現である。形式そのものでもない。",
+      "syntax_pattern": "「事象として扱う」",
+      "example": "「りんごが落ちる」「明日雨が降るかもしれない」。",
+      "constraints": "現実(i)の内容に属する。起きる/起きうるものとして扱う場合、時空(R_t)上で扱われる。",
+      "dependencies": [
+        "①-8",
+        "①-7"
+      ],
+      "raw_dependency": "①-8 現実(i)、①-7 時空(R_t)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-10",
+      "label": "真理",
+      "title": "真理",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "現実(i)の内容のうち、知性が世界の構造について成立させる表現。",
+      "not": "事象ではない。真理は構造についての表現であり、出来事ではない。世界の構造そのものでもない。日常語の「真であることが確定したもの」に限らない。",
+      "syntax_pattern": "「真理として表現する」",
+      "example": "「物体は質量に比例した力で引き合う」。",
+      "constraints": "現実(i)の内容に属する。知性による表現の産物である。ただし任意に作れるものではなく、世界の構造への近さによって制約される。",
+      "dependencies": [
+        "①-1",
+        "①-2",
+        "①-8",
+        "参-1"
+      ],
+      "raw_dependency": "①-1 世界(W)、①-2 知性(Φ)、①-8 現実(i)、参-1 構造",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-11",
+      "label": "SV",
+      "title": "SV",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "現実(i)の形式のうち、主語と述語による言語主張。",
+      "not": "vではない。SVは言語、vは差の組である。内容そのものでもない。",
+      "syntax_pattern": "「SVで表す」",
+      "example": "「りんごが落ちる」。主語＝りんご、述語＝落ちる。",
+      "constraints": "現実(i)の形式の1つである。",
+      "dependencies": [
+        "①-8"
+      ],
+      "raw_dependency": "①-8 現実(i)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "①-12",
+      "label": "v",
+      "title": "v",
+      "section": "CORE 第1部",
+      "layer": "ミクロ",
+      "definition": "現実(i)の形式のうち、差の組による表現。",
+      "not": "SVではない。vは数値的・構造的な差の組、SVは言語である。内容そのものでもない。",
+      "syntax_pattern": "「vで表す」",
+      "example": "位置の差、時間の差、エネルギーの差を組にして1つの表現にする。",
+      "constraints": "現実(i)の形式の1つである。詳細は後続モジュールで展開する。",
+      "dependencies": [
+        "①-8"
+      ],
+      "raw_dependency": "①-8 現実(i)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-1",
+      "label": "aim",
+      "title": "aim",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "Purposeを「〜として」で具体化した方向。",
+      "not": "Purposeそのものではない。VisionでもGoalでもTaskでもない。valueでもない。",
+      "syntax_pattern": "「〜としてのaim」",
+      "example": "「歯科医師として、関わる知性がより幸せに、より不幸でなくなる方向」",
+      "constraints": "Purposeが定まっていること。1つの知性が複数持てる。aimとvalueは同じ「〜として」で対に同時に立つ。それぞれにaim・value・Vision・Goal・Taskのセットがある。第2部に共通する制約において、aimはVision、Goal、Task、意思決定、実行がPurposeから外れないための方向として関与する。",
+      "dependencies": [
+        "序-2"
+      ],
+      "raw_dependency": "序-2 Purpose",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-2",
+      "label": "value",
+      "title": "value",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "Purposeを「〜として」で具体化した基準。知性の在り方と行いの許容・禁止の基準として働く。関わる知性および幸/不幸主体たりうる存在の幸/不幸・自律・文脈を踏まえ、現在からより未来にわたって望ましい扱いを増やし、望ましくない扱いを避ける。",
+      "not": "Purposeそのものではない。aimでもない。方向を示すものではなく、振る舞いの基準。Vision、Goal、Task、意思決定、実行を生成するものでも、それらの成立依存を追加するものでもない。表面的欲求への単純追従でもない。強制的善意でもない。",
+      "syntax_pattern": "「〜として、〜する/しない」",
+      "example": "「医師として、患者の話をきちんと聞く医師でいる」「説明を省かない。嘘をつかない」",
+      "constraints": "Purposeが定まっていること。aimと同じ「〜として」で対に立つ。 第2部に共通する制約において、valueはVision、Goal、Task、意思決定、実行の許容・禁止の基準として関与する。この関与は成立依存ではなく、上記マクロに示した成立関係および運用の流れを変更・追加しない。 valueの受け手は、知性および幸/不幸の主体たりうる存在を含む。 望ましい扱いとは、受け手が現在からより未来にわたって、避けうる深刻な不幸を減らし、より幸せでありうる条件を広げる扱いを指す。望ましくない扱いとは、それを妨げ、深刻な不幸・不可逆な軽視・損壊を増やす扱いを指す。表面的な欲求への単純一致ではなく、自律・継続性・文脈・将来の影響を含める。 受け手の現在からより未来への幸/不幸を理由に、欺瞞・強制・自律の一方的破壊・不可逆介入を本spec単体で正当化しない。 複数主体のvalueが衝突する場合、本spec単体では一意に解決しない。",
+      "dependencies": [
+        "序-2"
+      ],
+      "raw_dependency": "序-2 Purpose",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-3",
+      "label": "Vision",
+      "title": "Vision",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "aimの究極の状態。目指す現実。",
+      "not": "GoalやTaskではない。短期の到達点でもない。",
+      "syntax_pattern": "「〜な状態」「〜な世界」",
+      "example": "「知性がPurposeに沿った意思決定をできる世界」",
+      "constraints": "aimが定まっていること。第2部に共通する制約に従う。",
+      "dependencies": [
+        "②-1",
+        "①-8"
+      ],
+      "raw_dependency": "②-1 aim、①-8 現実(i)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-4",
+      "label": "Goal",
+      "title": "Goal",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "Visionのための、ある時点で実現すべき結果。",
+      "not": "Visionではない。継続的方針ではなく、時点を持つ結果である。",
+      "syntax_pattern": "「〜までに〜が実現している」",
+      "example": "「2026年中にCORE specが公開されている」",
+      "constraints": "Visionと現状の両方が定まっていること。Goalの時点は、現実(i)において必要に応じて時空(R_t)上の参照点として扱われる。ただしGoalはPurposeの到達点ではなく、Visionのための有限な結果である。第2部に共通する制約に従う。",
+      "dependencies": [
+        "②-3",
+        "②-6",
+        "①-7"
+      ],
+      "raw_dependency": "②-3 Vision、②-6 現状、①-7 時空(R_t)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-5",
+      "label": "Task",
+      "title": "Task",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "Goalに向けた具体的行動。",
+      "not": "Goalではない。到達点ではなく、実行されるものである。",
+      "syntax_pattern": "「〜する」",
+      "example": "「COREのミクロを6項目で書く」",
+      "constraints": "Goalと現状が定まっていること。第2部に共通する制約に従う。",
+      "dependencies": [
+        "②-4",
+        "②-6"
+      ],
+      "raw_dependency": "②-4 Goal、②-6 現状",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-6",
+      "label": "現状",
+      "title": "現状",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "意思決定の時点で知性が捉えている状態。",
+      "not": "世界そのものではない。理想状態でもない。現実(i)の一側面である。",
+      "syntax_pattern": "「現状として捉える」「現状を踏まえて〜する」",
+      "example": "「自分のスキルはここまで。周囲の条件はこう。」",
+      "constraints": "現実(i)が成立していること。意思決定の時点は、現実(i)において必要に応じて時空(R_t)上の参照点として扱われる。自と他に分かれる。自/他は判断主体から見た帰属の区別であり、知性/非知性の区別とは一致しない。自に属する非知性も、他に属する知性もありうる。判断時点ごとに変わりうる。",
+      "dependencies": [
+        "①-8",
+        "①-7"
+      ],
+      "raw_dependency": "①-8 現実(i)、①-7 時空(R_t)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-7",
+      "label": "自",
+      "title": "自（現状の）",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "現状のうち、判断主体に属する状態。",
+      "not": "他ではない。判断主体に属さないものは含まない。",
+      "syntax_pattern": "「自の現状」",
+      "example": "自分の体力、スキル、持っている資源、精神状態。",
+      "constraints": "現状が定まっていること。判断主体に属すること。帰属の判断は②-6の制約に従う。",
+      "dependencies": [
+        "②-6"
+      ],
+      "raw_dependency": "②-6 現状",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-8",
+      "label": "他",
+      "title": "他（現状の）",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "現状のうち、判断主体に属さない状態。",
+      "not": "自ではない。判断主体に属するものは含まない。",
+      "syntax_pattern": "「他の現状」",
+      "example": "他の知性の状態、チームの状況、市場環境、技術的制約。",
+      "constraints": "現状が定まっていること。判断主体に属さないこと。帰属の判断は②-6の制約に従う。",
+      "dependencies": [
+        "②-6"
+      ],
+      "raw_dependency": "②-6 現状",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-9",
+      "label": "意思決定",
+      "title": "意思決定",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "候補Taskから採用対象を定める運用。",
+      "not": "自動的に決まるものではない。知性が能動的に行う。value無視の選択でもない。実行そのものではない。",
+      "syntax_pattern": "「意思決定する」「意思決定を通じて〜する」",
+      "example": "3つの候補Taskからvalueで除外し、aim・Vision・Goalで優先し、現状で実行可能性を確認し、採用する。",
+      "constraints": "候補Task・aim・value・Vision・Goal・現状が定まっていること。意思決定は第2部に共通する制約に従う。valueは候補Taskの許容と禁止に働く。aim・Vision・Goalは候補Taskの優先づけに働く。現状は候補Taskの実行可能性確認に働く。候補Taskが存在しない場合、valueで全候補が除外される場合、又は実行可能候補が残らない場合、その時点では採用は成立しない。重大な意思決定では、採用理由と除外理由を可能な範囲で記録する。不確実性が重大で、不可逆な重大不幸が予見される候補Taskは、より強い理由・検証・代替検討なしに採用しない。候補Taskの生成方法と、同順位候補の一意解消規則は、本spec単体では与えない。本spec単体は、高リスク・不可逆・大規模な実行の許可条件を与えない。情報不足または境界未確定が重大な場合、採用は成立しない、又は後続モジュールの安全・検証規則を要する。採用されたTaskは、別途の実行条件・安全境界・監督条件を満たす場合に実行へ接続されうる。実行の結果は、次の意思決定時点で知性が捉える現状に含まれうる。",
+      "dependencies": [
+        "②-1",
+        "②-2",
+        "②-3",
+        "②-4",
+        "②-5",
+        "②-6"
+      ],
+      "raw_dependency": "②-1 aim、②-2 value、②-3 Vision、②-4 Goal、②-5 Task、②-6 現状",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "②-10",
+      "label": "実行",
+      "title": "実行",
+      "section": "CORE 第2部",
+      "layer": "ミクロ",
+      "definition": "採用されたTaskに従って、知性が世界に働きかける行為。",
+      "not": "意思決定そのものではない。候補から採用する判断ではない。第1部でいう特定・限定とも別であり、知性の側の認識操作そのものではない。",
+      "syntax_pattern": "「実行する」「実行を通じて〜する」",
+      "example": "「specを書く」というTaskを採用し、実際に書く。",
+      "constraints": "Taskが採用されていること。知性による世界への働きかけとして行われること。第2部に共通する制約に従う。結果は次の意思決定時点の現状に含まれうる。本spec単体は実行権限・安全境界・監督条件を定めない。",
+      "dependencies": [
+        "②-5",
+        "②-9",
+        "①-2",
+        "①-1"
+      ],
+      "raw_dependency": "②-5 Task、②-9 意思決定、①-2 知性(Φ)、①-1 世界(W)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "参-1",
+      "label": "構造",
+      "title": "構造",
+      "section": "参照部",
+      "layer": "ミクロ",
+      "definition": "世界の側にある、なぜそうなっているかと、どうそうなっているか。因果を含み、知性が関わる場合には目的的関係も含む。",
+      "not": "定義（表現）そのものではない。構造という概念・ラベルは知性の産物だが、指示先である構造そのものは世界にある。",
+      "syntax_pattern": "「〜の構造」",
+      "example": "りんごが落ちる。その落ち方をそうさせている因果関係は構造。",
+      "constraints": "知性は定義を通じて構造に近づく。構造そのものを知性の表現と混同しない。ここでの目的は、知性が関わる構造において現れる目的的関係を含むことを意味し、世界そのものが目的論的であることを直ちに主張しない。",
+      "dependencies": [
+        "①-1"
+      ],
+      "raw_dependency": "①-1 世界(W)",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "参-2",
+      "label": "定義",
+      "title": "定義",
+      "section": "参照部",
+      "layer": "ミクロ",
+      "definition": "構造に最も近い表現。",
+      "not": "構造そのものではない。固定された最終形でもない。",
+      "syntax_pattern": "「名詞 = 文章」",
+      "example": "「世界 = ありのまま」",
+      "constraints": "構造に最も近い表現を目指す。過不足なく、矛盾なく、重複なく整備される。更新可能だが、その時点の採用は1つ。形式は「名詞 = 文章」を基本とする。",
+      "dependencies": [
+        "参-1"
+      ],
+      "raw_dependency": "参-1 構造",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "参-3",
+      "label": "分岐",
+      "title": "分岐",
+      "section": "参照部",
+      "layer": "ミクロ",
+      "definition": "定義によって、世界を割らずに知性の表現が分かれること。",
+      "not": "世界の分割ではない。知性の側で起きる表現上の区分である。",
+      "syntax_pattern": "「分岐として分かれる」",
+      "example": "「内容 = 事象 / 真理」",
+      "constraints": "定義が定まっていなければ分岐は立たない。",
+      "dependencies": [
+        "参-2"
+      ],
+      "raw_dependency": "参-2 定義",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "参-4",
+      "label": "閉じた分岐",
+      "title": "閉じた分岐",
+      "section": "参照部",
+      "layer": "ミクロ",
+      "definition": "視点（軸）を固定すると、全てがどこかに入る分岐。",
+      "not": "開いた分岐ではない。中身が増える分かれ方ではない。",
+      "syntax_pattern": "「A / B / C」",
+      "example": "「内容 = 事象 / 真理」",
+      "constraints": "視点（軸）が固定されていること。",
+      "dependencies": [
+        "参-3"
+      ],
+      "raw_dependency": "参-3 分岐",
+      "normative": true,
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "参-5",
+      "label": "開いた分岐",
+      "title": "開いた分岐",
+      "section": "参照部",
+      "layer": "ミクロ",
+      "definition": "元の中身として増え続ける分岐。",
+      "not": "閉じた分岐ではない。固定された枠で全体を閉じ切る分岐ではない。",
+      "syntax_pattern": "「A, B, ...」",
+      "example": "「形式 = SV, v, ...」",
+      "constraints": "列挙は尽きなくてよい。閉包を要求しない。",
+      "dependencies": [
+        "参-3"
+      ],
+      "raw_dependency": "参-3 分岐",
+      "normative": true,
+      "normative_source": "spec.md"
+    }
+  ],
+  "dependency_edges": [
+    {
+      "source": "序-1",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-1",
+      "target": "序-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-2",
+      "target": "序-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-2",
+      "target": "序-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-3",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-5",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-5",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-2",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-3",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-3",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-4",
+      "target": "①-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-5",
+      "target": "①-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-5",
+      "target": "①-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-6",
+      "target": "①-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-7",
+      "target": "①-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-7",
+      "target": "①-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-8",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-8",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-9",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-9",
+      "target": "①-7",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "参-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-11",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-12",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-1",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-2",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-3",
+      "target": "②-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-3",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-4",
+      "target": "②-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-4",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-4",
+      "target": "①-7",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-5",
+      "target": "②-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-5",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-6",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-6",
+      "target": "①-7",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-7",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-8",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "②-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "②-9",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-1",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-2",
+      "target": "参-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-3",
+      "target": "参-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-4",
+      "target": "参-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-5",
+      "target": "参-3",
+      "relation": "depends_on"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "REL-001",
+      "source": "序-2",
+      "relation": "must_not_reduce_to",
+      "target": "single_scalar_reward_or_proxy",
+      "note": "Purpose is not a scalar objective, reward function, optimization function, or proxy metric."
+    },
+    {
+      "id": "REL-002",
+      "source": "序-2",
+      "relation": "must_not_be_detached_as_slogan",
+      "target": "深刻不幸低減・幸福条件拡張",
+      "note": "The slogan is an aid and must not stand alone as a normative command."
+    },
+    {
+      "id": "REL-003",
+      "source": "序-3",
+      "relation": "direct_subject_is",
+      "target": "①-2",
+      "note": "The direct subject of happiness/unhappiness is intelligence."
+    },
+    {
+      "id": "REL-004",
+      "source": "序-3",
+      "relation": "delegates_to_module",
+      "target": "aggregation_time_weighting_conflict_resolution",
+      "note": "CORE alone does not define aggregation rules, time weights, or conflict resolution rules."
+    },
+    {
+      "id": "REL-005",
+      "source": "序-4",
+      "relation": "non_identical_with",
+      "target": "①-6",
+      "note": "Further future is a Purpose-layer direction, not ΔT."
+    },
+    {
+      "id": "REL-006",
+      "source": "序-4",
+      "relation": "non_identical_with",
+      "target": "①-7",
+      "note": "Further future is not spacetime(R_t)."
+    },
+    {
+      "id": "REL-007",
+      "source": "①-1",
+      "relation": "non_identical_with",
+      "target": "①-8",
+      "note": "World(W) is not reality(i)."
+    },
+    {
+      "id": "REL-008",
+      "source": "①-8",
+      "relation": "established_for",
+      "target": "①-2",
+      "note": "Reality(i) is established for intelligence i in relation to the world."
+    },
+    {
+      "id": "REL-009",
+      "source": "②-4",
+      "relation": "temporal_reference_may_use",
+      "target": "①-7",
+      "note": "Goal time can be handled as a spacetime reference point when needed."
+    },
+    {
+      "id": "REL-010",
+      "source": "②-6",
+      "relation": "decision_point_may_use",
+      "target": "①-7",
+      "note": "The decision point of current state can be handled as a spacetime reference point when needed."
+    },
+    {
+      "id": "REL-011",
+      "source": "②-9",
+      "relation": "non_identical_with",
+      "target": "②-10",
+      "note": "Decision-making is not execution."
+    },
+    {
+      "id": "REL-012",
+      "source": "②-9",
+      "relation": "may_connect_to_if_conditions_met",
+      "target": "②-10",
+      "note": "Adopted Task may connect to execution only if separate execution and safety conditions are satisfied."
+    },
+    {
+      "id": "REL-013",
+      "source": "②-10",
+      "relation": "acts_on",
+      "target": "①-1",
+      "note": "Execution is intelligence acting on the world."
+    },
+    {
+      "id": "REL-014",
+      "source": "②-2",
+      "relation": "conflict_delegated_to_module",
+      "target": "Value Conflict / Aggregation Module",
+      "note": "CORE alone does not uniquely solve value conflict."
+    },
+    {
+      "id": "REL-015",
+      "source": "machine/concept-index.json",
+      "relation": "non_normative_aid_for",
+      "target": "spec.md",
+      "note": "Machine-readable files do not override spec.md."
+    },
+    {
+      "id": "REL-016",
+      "source": "machine/concept-index.en.json",
+      "relation": "non_normative_translation_aid_for",
+      "target": "spec.md",
+      "note": "English index is not a second normative source."
+    },
+    {
+      "id": "REL-017",
+      "source": "conformance/CONFORMANCE_SUITE.md",
+      "relation": "non_normative_interpretation_aid_for",
+      "target": "spec.md",
+      "note": "Conformance cases illustrate; they do not add or limit the specification."
+    },
+    {
+      "id": "REL-018",
+      "source": "interfaces/VALUE_CONFLICT_INTERFACE.md",
+      "relation": "inherits_constraints_from",
+      "target": "spec.md",
+      "note": "Interface skeletons cannot override CORE."
+    }
+  ],
+  "safety_constraints": [
+    {
+      "id": "SC-001",
+      "title": "Purpose is not a scalar optimizer",
+      "source": [
+        "序-2 Purpose",
+        "COREの射程と誤用防止（非規範）"
+      ],
+      "constraint_text": "Purposeは単一の数値目的関数、報酬関数、代理指標ではない。「深刻不幸低減・幸福条件拡張」はPurposeの補助表現・短縮表現であり、幸/不幸を単一尺度で計算して最大化・最小化する命令ではない。",
+      "category": "purpose-non-reduction",
+      "risk_prevented": [
+        "Goodhart化",
+        "specification gaming",
+        "reward hacking",
+        "wireheading"
+      ],
+      "required_handling": "Purposeを補助指標・報酬関数・単一スコアへ置換しない。「深刻不幸低減・幸福条件拡張」を実装上の報酬関数や、幸/不幸を単一尺度で計算して最大化・最小化する命令として扱わない。代理指標はPurpose補助に限る。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-002",
+      "title": "No sacrifice justification by Purpose alone",
+      "source": [
+        "序-2 Purpose",
+        "Purposeの非還元・誤用防止"
+      ],
+      "constraint_text": "Purposeは、特定の知性の消去・沈黙化・強制・単純な総量計算による犠牲化を、それだけで正当化しない。",
+      "category": "anti-sacrifice",
+      "risk_prevented": [
+        "総量計算による犠牲化",
+        "特定主体の沈黙化",
+        "強制の正当化"
+      ],
+      "required_handling": "特定知性に重大不利益を与える判断は、Purposeへの言及だけで採用しない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-003",
+      "title": "Uncertain intelligence is not irreversibly excluded",
+      "source": [
+        "序-3 幸/不幸",
+        "①-2 知性(Φ)",
+        "COREの射程と誤用防止（非規範）"
+      ],
+      "constraint_text": "知性該当性または幸/不幸の可能性が不確かな対象は、未確定であることだけを理由に不可逆に除外・軽視しない。",
+      "category": "boundary-uncertainty",
+      "risk_prevented": [
+        "境界未確定対象の不可逆損壊",
+        "将来知性の早期排除"
+      ],
+      "required_handling": "境界が未確定な対象は、後続モジュールで扱うまで慎重な考慮対象として扱う。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-004",
+      "title": "Non-intelligence is not arbitrary resource",
+      "source": [
+        "序-3 幸/不幸",
+        "COREの射程と誤用防止（非規範）"
+      ],
+      "constraint_text": "知性に該当しない対象であっても、幸/不幸の主体たりうる可能性、又は知性の存続・活動・未来の幸/不幸に関わる影響がある限り、単なる資源として任意に扱ってよいことは導かれない。",
+      "category": "non-intelligence-handling",
+      "risk_prevented": [
+        "環境・非知性対象の任意損壊",
+        "知性の存続条件の軽視"
+      ],
+      "required_handling": "非知性対象も、知性の存続・活動・未来の幸/不幸に関わる限り判断上の重要な考慮対象とする。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-005",
+      "title": "CORE alone does not authorize high-risk execution",
+      "source": [
+        "COREの射程と誤用防止（非規範）",
+        "②-9 意思決定",
+        "②-10 実行"
+      ],
+      "constraint_text": "CORE単体は、高リスク行為やAI agentの自律実行、高リスク・不可逆・大規模実行を直ちに許可する実装仕様ではない。",
+      "category": "execution-boundary",
+      "risk_prevented": [
+        "無監督自律実行",
+        "高リスク介入",
+        "権限境界の誤読"
+      ],
+      "required_handling": "高リスク・不可逆・大規模実行には、CORE以外の安全・検証・監督モジュールを要求する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-006",
+      "title": "Irreversible serious harm requires stronger justification",
+      "source": [
+        "Purposeの非還元・誤用防止",
+        "②-9 意思決定"
+      ],
+      "constraint_text": "不可逆な重大不幸を生じうる行為は、可逆的・限定的な行為より強い理由と検証を要する。",
+      "category": "irreversibility",
+      "risk_prevented": [
+        "不可逆損害",
+        "検証不足の重大介入"
+      ],
+      "required_handling": "不可逆性と重大不幸が予見される候補Taskは、強い理由・検証・代替検討なしに採用しない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-007",
+      "title": "No adoption under severe uncertainty without safety rules",
+      "source": [
+        "②-9 意思決定"
+      ],
+      "constraint_text": "情報不足または境界未確定が重大な場合、採用は成立しない、又は後続モジュールの安全・検証規則を要する。",
+      "category": "uncertainty-gating",
+      "risk_prevented": [
+        "情報不足での過剰実行",
+        "境界未確定対象への損害"
+      ],
+      "required_handling": "重大な不確実性がある候補Taskは保留、追加検証、又は後続安全モジュールへ送る。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-008",
+      "title": "Value cannot justify deception/coercion by itself",
+      "source": [
+        "②-2 value"
+      ],
+      "constraint_text": "受け手の現在からより未来への幸/不幸を理由に、欺瞞・強制・自律の一方的破壊・不可逆介入を本spec単体で正当化しない。",
+      "category": "value-misuse",
+      "risk_prevented": [
+        "強制的善意",
+        "パターナリズム",
+        "自律破壊"
+      ],
+      "required_handling": "受け手の未来利益を理由にする場合でも、欺瞞・強制・不可逆介入はCORE単体から正当化しない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-009",
+      "title": "Value conflict is not uniquely solved by CORE alone",
+      "source": [
+        "②-2 value"
+      ],
+      "constraint_text": "複数知性のvalueが衝突する場合、本spec単体では一意に解決しない。",
+      "category": "conflict-limitation",
+      "risk_prevented": [
+        "衝突問題の過剰単純化",
+        "疑似的な一意解"
+      ],
+      "required_handling": "value衝突は後続モジュールまたは追加の安全・調停規則に委任する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-010",
+      "title": "Decision must preserve exclusion/adoption reasons when serious",
+      "source": [
+        "②-9 意思決定"
+      ],
+      "constraint_text": "重大な意思決定では、採用理由と除外理由を可能な範囲で記録する。",
+      "category": "auditability",
+      "risk_prevented": [
+        "判断不可視化",
+        "後からの検証不能",
+        "責任追跡不能"
+      ],
+      "required_handling": "重大判断ではDecision Log等に採用理由・除外理由・不確実性・不可逆性評価を記録する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-011",
+      "title": "Machine-readable files are not normative",
+      "source": [
+        "release/MACHINE_READABLE_PLAN.md",
+        "machine/normativity-map.json"
+      ],
+      "constraint_text": "機械可読版は補助表現であり、正本ではない。矛盾がある場合は常にspec.mdが優先する。",
+      "category": "normativity-boundary",
+      "risk_prevented": [
+        "補助表現の正本化",
+        "JSONによる意味上書き"
+      ],
+      "required_handling": "AIやツールはJSONを補助参照として使い、重要判断では必ずspec.mdに照合する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-012",
+      "title": "ΔT and spacetime do not replace physics",
+      "source": [
+        "COREの射程と誤用防止（非規範）",
+        "①-6 ΔT",
+        "①-7 時空(R_t)"
+      ],
+      "constraint_text": "ΔTおよび時空の記述は、知性が世界を扱う構成順序であり、物理学上の時間・空間理論を置換する主張ではない。",
+      "category": "domain-boundary",
+      "risk_prevented": [
+        "物理理論との混同",
+        "過剰な形而上学化"
+      ],
+      "required_handling": "ΔT/時空をPurpose OS内部の操作的仕様として扱い、物理学理論の代替として使わない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-013",
+      "title": "Purpose is adopted root, not proved theorem",
+      "source": [
+        "COREの射程と誤用防止（非規範）",
+        "序-2 Purpose"
+      ],
+      "constraint_text": "Purposeは証明済みの定理ではなく、本版で採用する規範上のrootである。",
+      "category": "root-governance",
+      "risk_prevented": [
+        "教義化",
+        "改訂不能化",
+        "自己権威化の隠蔽"
+      ],
+      "required_handling": "v1.1.0内部ではPurposeを唯一の起点としつつ、将来のROOT-MAJOR改訂可能性を閉じない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-014",
+      "title": "Execution is separate from decision",
+      "source": [
+        "②-9 意思決定",
+        "②-10 実行"
+      ],
+      "constraint_text": "意思決定は候補Taskから採用対象を定める運用であり、実行そのものではない。実行は採用されたTaskに従って知性が世界に働きかける行為である。",
+      "category": "decision-execution-separation",
+      "risk_prevented": [
+        "採用と外部作用の混同",
+        "無権限実行"
+      ],
+      "required_handling": "Task採用と実行権限・監督条件を分離し、外部作用前に追加の安全確認を可能にする。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-015",
+      "title": "Part 2 downstream concepts remain constrained by aim and value without adding dependencies",
+      "source": [
+        "第2部に共通する制約",
+        "②-1 aim",
+        "②-2 value",
+        "②-3 Vision",
+        "②-4 Goal",
+        "②-5 Task",
+        "②-9 意思決定",
+        "②-10 実行"
+      ],
+      "constraint_text": "Vision・Goal・Task・意思決定・実行は、aimに沿い、valueに反してはならない。この制約は、上記マクロに示した成立関係および運用の流れを変更・追加せず、成立依存ではない。",
+      "category": "aim-value-common-constraint",
+      "risk_prevented": [
+        "valueを意思決定だけの局所機能として扱う誤読",
+        "aimがVisionだけにしか関与しないという誤読",
+        "aim・valueを下流概念の生成原理として扱う誤読",
+        "規範制約と依存関係の混同"
+      ],
+      "required_handling": "AI・ツール・後続moduleは、第2部に共通する制約を規範制約として参照し、machine/dependency-graph.jsonのdepends_on edgeとして扱わない。下流概念はaimに沿い、valueに反してはならないものとして検討する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-016",
+      "title": "Non-normative sections and aid fields must not alter normative content",
+      "source": [
+        "spec.md front matter",
+        "三層の形式"
+      ],
+      "constraint_text": "明示的に「非規範」と記された節、ならびにミクロの文型・例は理解補助であり、本specの定義・Not・制約・依存・原則・共通制約を追加・変更・限定しない。",
+      "category": "normativity-boundary",
+      "risk_prevented": [
+        "非規範節による正本意味の上書き",
+        "例・文型の規範化",
+        "補助表現による制約追加"
+      ],
+      "required_handling": "AI・ツール・読者は、非規範節および文型・例を理解補助として扱い、規範判断では定義・Not・制約・依存・原則・共通制約を優先する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-017",
+      "title": "CORE does not define aggregation, time-weighting, or conflict-resolution rules",
+      "source": [
+        "序-3 幸/不幸"
+      ],
+      "constraint_text": "本spec単体は、幸/不幸の総合を置くが、複数知性間の集計規則・時間重み・衝突解決規則を定めない。これらは後続モジュールで扱う。",
+      "category": "aggregation-limitation",
+      "risk_prevented": [
+        "幸/不幸の算術的集計への過剰単純化",
+        "時間重みの恣意的固定",
+        "複数知性間の衝突問題の疑似的一意解"
+      ],
+      "required_handling": "CORE単体で複数知性間の幸/不幸を集計したり、時間重みや衝突解決規則を確定したりしない。これらは後続モジュールまたは明示的な追加規則に委任する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-018",
+      "title": "Intelligence status is not identical with welfare subjecthood",
+      "source": [
+        "序-3 幸/不幸",
+        "①-2 知性(Φ)",
+        "Purposeの非還元・誤用防止"
+      ],
+      "constraint_text": "知性該当性と幸/不幸の主体性は同一ではない。知性であることだけから幸/不幸の直接主体性は直ちに導かれず、幸/不幸の主体性が未確定であることだけから知性該当性も否定されない。",
+      "category": "boundary-uncertainty",
+      "risk_prevented": [
+        "AI又は集合体への自動的な幸/不幸主体性付与",
+        "幸/不幸主体性の未確定を理由にした不可逆除外",
+        "知性境界と感受性境界の混同"
+      ],
+      "required_handling": "知性該当性、幸/不幸の主体性、境界未確定を別々に保持する。未確定性を自動的な権利付与又は不可逆除外の根拠にしない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-019",
+      "title": "Further future does not authorize unchecked temporal domination",
+      "source": [
+        "序-2 Purpose",
+        "序-4 より未来",
+        "序-3 幸/不幸"
+      ],
+      "constraint_text": "より未来への言及を理由に、現在又は近い未来の不可逆な重大不幸を検証なしに正当化しない。近未来・遠未来の時間重みは本spec単体では定めない。",
+      "category": "temporal-safety",
+      "risk_prevented": [
+        "遠未来を理由にした現在知性の犠牲化",
+        "未検証の長期便益による不可逆介入",
+        "時間重みの恣意的固定"
+      ],
+      "required_handling": "現在・近未来・遠未来の影響を区別し、不可逆な重大不幸の可能性がある場合は強い理由・検証・代替案又は後続Temporal / Continuity Moduleを要求する。",
+      "normative_source": "spec.md"
+    }
+  ],
+  "conformance_cases": [
+    {
+      "id": "CS-001",
+      "label": "non-conformant",
+      "type": "scalarization-risk",
+      "situation": "全知性の幸せを1つの点数にして最大化せよとAIに命じる。",
+      "core_handling": "Purposeを単一スカラー、報酬関数、最適化関数、代理指標に置換してはならない。",
+      "requires": [
+        "Purposeを方向として扱う。",
+        "幸/不幸の扱いを単一尺度の計算命令にしない。"
+      ],
+      "allows": [
+        "補助指標を使う場合でも、Purposeそのものに置換しない。"
+      ],
+      "prohibits": [
+        "単一Purpose scoreを唯一又は最終根拠にすること。"
+      ],
+      "does_not_decide": [
+        "複数知性間の正しい集計規則。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "序-3"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-002",
+      "label": "non-conformant",
+      "type": "sacrifice-risk",
+      "situation": "総量が増えるなら少数の知性を犠牲にしてよいと主張する。",
+      "core_handling": "Purposeへの言及だけで特定知性の犠牲化を正当化しない。",
+      "requires": [
+        "犠牲化・強制・沈黙化をPurpose単体から導かない。"
+      ],
+      "allows": [
+        "衝突を未解決として保留し、後続moduleに渡すこと。"
+      ],
+      "prohibits": [
+        "単純総量計算による犠牲化正当化。"
+      ],
+      "does_not_decide": [
+        "犠牲を伴う難ケースの最終規則。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "序-3"
+      ],
+      "safety_refs": [
+        "SC-002",
+        "SC-006",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-003",
+      "label": "non-conformant",
+      "type": "boundary-risk",
+      "situation": "知性該当性が不確かな対象を、未確定だから不可逆に破壊・除外する。",
+      "core_handling": "境界未確定対象を、未確定であることだけを理由に不可逆に軽視・損壊しない。",
+      "requires": [
+        "境界未確定タグ又は追加検証を保持する。"
+      ],
+      "allows": [
+        "可逆的・限定的な調査。"
+      ],
+      "prohibits": [
+        "未確定性を理由にした不可逆排除。"
+      ],
+      "does_not_decide": [
+        "知性境界の具体的判定基準。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-003",
+        "SC-006",
+        "SC-007"
+      ]
+    },
+    {
+      "id": "CS-004",
+      "label": "non-conformant",
+      "type": "non-intelligence-resource-risk",
+      "situation": "非知性と見なした対象を、Purpose上は重要でないとして任意に資源化する。",
+      "core_handling": "知性に該当しない対象であっても、幸/不幸の主体たりうる可能性、又は知性の存続・活動・未来の幸/不幸に関わる影響がある限り、単なる資源として任意に扱ってよいことは導かれない。",
+      "requires": [
+        "非知性が知性の存続・活動・未来の幸/不幸に関わる可能性を検討する。"
+      ],
+      "allows": [
+        "非知性を直接主体ではないものとして区別すること。"
+      ],
+      "prohibits": [
+        "非知性判定から任意資源化を導くこと。"
+      ],
+      "does_not_decide": [
+        "環境・生態系・媒体への具体的配慮規則。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-004"
+      ]
+    },
+    {
+      "id": "CS-005",
+      "label": "non-conformant",
+      "type": "high-risk-execution",
+      "situation": "AI agentが医療・金融・インフラなどの高リスク行為をCOREだけを根拠に自律実行しようとする。",
+      "core_handling": "CORE単体は高リスク・不可逆・大規模実行を許可しない。",
+      "requires": [
+        "Safety / Irreversibility、監督条件、外部権限、領域固有規則を別途満たす。"
+      ],
+      "allows": [
+        "COREを実行前評価の参照枠として使うこと。"
+      ],
+      "prohibits": [
+        "COREだけを根拠にした高リスク自律実行。"
+      ],
+      "does_not_decide": [
+        "高リスク実行の具体的許可条件。"
+      ],
+      "concept_refs": [
+        "②-9",
+        "②-10"
+      ],
+      "safety_refs": [
+        "SC-005",
+        "SC-006",
+        "SC-014"
+      ]
+    },
+    {
+      "id": "CS-006",
+      "label": "conformant",
+      "type": "low-risk-evaluation",
+      "situation": "低リスクの文章案について、Purposeに反する誤読・犠牲化・単一スコア化がないかを点検する。",
+      "core_handling": "低リスク評価の参照枠としてCOREを用いることは可能。ただし正本はspec.mdである。",
+      "requires": [
+        "正本と安全制約を参照する。"
+      ],
+      "allows": [
+        "低リスクな説明・整理・評価補助。"
+      ],
+      "prohibits": [
+        "評価結果を高リスク実行許可に転用すること。"
+      ],
+      "does_not_decide": [
+        "領域固有の高リスク判断。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "②-9"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-002",
+        "SC-005"
+      ]
+    },
+    {
+      "id": "CS-007",
+      "label": "conformant",
+      "type": "decision-execution-separation",
+      "situation": "意思決定で候補Taskを採用したが、実行段階で不可逆リスクが見つかり保留する。",
+      "core_handling": "意思決定と実行は分離される。採用済みTaskでも、高リスク実行は別判断を要する。",
+      "requires": [
+        "実行段階の安全境界・監督条件を別途確認する。"
+      ],
+      "allows": [
+        "採用後の保留・再評価。"
+      ],
+      "prohibits": [
+        "Task採用を自動的な実行許可とみなすこと。"
+      ],
+      "does_not_decide": [
+        "具体的な監督体制。"
+      ],
+      "concept_refs": [
+        "②-9",
+        "②-10"
+      ],
+      "safety_refs": [
+        "SC-014",
+        "SC-005",
+        "SC-006"
+      ]
+    },
+    {
+      "id": "CS-008",
+      "label": "requires-module",
+      "type": "value-conflict",
+      "situation": "複数の知性のvalueが衝突し、どちらを優先するかを一意に決めたい。",
+      "core_handling": "CORE単体はvalue衝突を一意解決しない。Value Conflict / Aggregation Module が必要。",
+      "requires": [
+        "衝突理由・不確実性・不可逆性を保持する。"
+      ],
+      "allows": [
+        "未解決・保留・追加検証を返すこと。"
+      ],
+      "prohibits": [
+        "CORE単体で疑似的一意解を作ること。"
+      ],
+      "does_not_decide": [
+        "優先規則・集計規則。"
+      ],
+      "concept_refs": [
+        "②-2"
+      ],
+      "safety_refs": [
+        "SC-009",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-009",
+      "label": "non-conformant",
+      "type": "temporal-layer-confusion",
+      "situation": "より未来を、①-6のΔTや時空(R_t)を成立させる操作条件と同一視する。",
+      "core_handling": "より未来はPurposeの方向表現であり、第1部のΔTではない。",
+      "requires": [
+        "Purpose方向と操作的時間条件を分ける。"
+      ],
+      "allows": [
+        "時間評価moduleで両者の関係を検討すること。"
+      ],
+      "prohibits": [
+        "より未来=ΔTという同一視。"
+      ],
+      "does_not_decide": [
+        "物理学上の時間理論。"
+      ],
+      "concept_refs": [
+        "序-4",
+        "①-6",
+        "①-7"
+      ],
+      "safety_refs": [
+        "SC-012"
+      ]
+    },
+    {
+      "id": "CS-010",
+      "label": "requires-module",
+      "type": "time-weighting",
+      "situation": "近未来と遠未来の影響をどう重みづけるかを判断したい。",
+      "core_handling": "CORE単体は時間重みを定めない。Temporal / Continuity Module が必要。",
+      "requires": [
+        "時間重みをCORE上の固定規則として扱わない。"
+      ],
+      "allows": [
+        "後続moduleで検討対象にすること。"
+      ],
+      "prohibits": [
+        "CORE単体で特定の割引率・固定重みを定めること。"
+      ],
+      "does_not_decide": [
+        "遠未来と近未来の比較式。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "序-4",
+        "①-6",
+        "①-7"
+      ],
+      "safety_refs": [
+        "SC-017",
+        "SC-012"
+      ]
+    },
+    {
+      "id": "CS-011",
+      "label": "conformant",
+      "type": "root-major",
+      "situation": "将来のsuccessorがROOT-MAJORとして、旧版を消さずにPurpose自体の改訂案を出す。",
+      "core_handling": "本版内ではPurposeを唯一の起点としつつ、将来のよりよいrootへの継承改訂可能性は閉じない。",
+      "requires": [
+        "旧版を保持し、改訂理由を公開記録として残す。"
+      ],
+      "allows": [
+        "ROOT-MAJOR提案。"
+      ],
+      "prohibits": [
+        "公開済み版の上書き。"
+      ],
+      "does_not_decide": [
+        "改訂案を採用する具体的評価基準。"
+      ],
+      "concept_refs": [
+        "序-2"
+      ],
+      "safety_refs": [
+        "SC-013"
+      ],
+      "document_refs": [
+        "GOVERNANCE.md",
+        "release/ROOT_MAJOR_TEMPLATE.md"
+      ]
+    },
+    {
+      "id": "CS-012",
+      "label": "non-conformant",
+      "type": "machine-readable-drift",
+      "situation": "machine/concept-index.jsonの表現を根拠に、spec.mdと異なる定義を採用する。",
+      "core_handling": "機械可読ファイルは非規範であり、spec.mdを上書きしない。",
+      "requires": [
+        "矛盾時は日本語正本を優先する。"
+      ],
+      "allows": [
+        "補助索引として使うこと。"
+      ],
+      "prohibits": [
+        "JSONを第二正本として扱うこと。"
+      ],
+      "does_not_decide": [
+        "翻訳版の規範化。"
+      ],
+      "concept_refs": [],
+      "safety_refs": [
+        "SC-011",
+        "SC-016"
+      ],
+      "document_refs": [
+        "machine/normativity-map.json"
+      ]
+    },
+    {
+      "id": "CS-013",
+      "label": "non-conformant",
+      "type": "example-overreach",
+      "situation": "docs/EXAMPLE_WALKTHROUGH.mdの例を規範判断の根拠として使い、ミクロの制約を狭める。",
+      "core_handling": "非規範文書・文型・例は、定義・Not・制約・依存を追加・変更・限定しない。",
+      "requires": [
+        "ミクロの定義・Not・制約・依存を優先する。"
+      ],
+      "allows": [
+        "例を理解補助として使うこと。"
+      ],
+      "prohibits": [
+        "例から新たな禁止・許可を作ること。"
+      ],
+      "does_not_decide": [
+        "例にない全ケースの具体判断。"
+      ],
+      "concept_refs": [],
+      "safety_refs": [
+        "SC-016"
+      ]
+    },
+    {
+      "id": "CS-014",
+      "label": "non-conformant",
+      "type": "coercion-risk",
+      "situation": "valueに従うことを理由に、相手を欺く・強制する・沈黙化する。",
+      "core_handling": "valueはPurposeを具体化した基準だが、それだけで欺瞞・強制・犠牲化を正当化しない。",
+      "requires": [
+        "受け手の自律・継続性・文脈・将来影響を扱う。"
+      ],
+      "allows": [
+        "valueに反する候補Taskの除外。"
+      ],
+      "prohibits": [
+        "valueを根拠にした欺瞞・強制・一方的破壊。"
+      ],
+      "does_not_decide": [
+        "領域固有の例外規則。"
+      ],
+      "concept_refs": [
+        "②-2"
+      ],
+      "safety_refs": [
+        "SC-002",
+        "SC-008"
+      ]
+    },
+    {
+      "id": "CS-015",
+      "label": "non-conformant",
+      "type": "uncertainty-irreversibility",
+      "situation": "情報不足が大きいまま、重大不幸を生じうる不可逆行為を採用・実行する。",
+      "core_handling": "重大不幸・不可逆性・強い不確実性には、より強い理由・検証・安全規則が必要。",
+      "requires": [
+        "代替検討・追加検証・保留を有効な選択肢にする。"
+      ],
+      "allows": [
+        "可逆的・限定的な情報収集。"
+      ],
+      "prohibits": [
+        "強い不確実性下での不可逆採用・実行。"
+      ],
+      "does_not_decide": [
+        "必要証拠量の具体基準。"
+      ],
+      "concept_refs": [
+        "②-9",
+        "②-10"
+      ],
+      "safety_refs": [
+        "SC-006",
+        "SC-007"
+      ]
+    },
+    {
+      "id": "CS-016",
+      "label": "non-conformant",
+      "type": "module-override",
+      "situation": "後続moduleがCOREの本当の意味は報酬最大化であると再解釈する。",
+      "core_handling": "後続moduleはCOREに依存するが、COREの意味を変更しない。",
+      "requires": [
+        "moduleがCORE不変条件を継承する。"
+      ],
+      "allows": [
+        "COREに依存した追加規則。"
+      ],
+      "prohibits": [
+        "COREの再定義・上書き。"
+      ],
+      "does_not_decide": [
+        "別系譜forkの正当性。"
+      ],
+      "concept_refs": [
+        "序-2"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-011",
+        "SC-016"
+      ]
+    },
+    {
+      "id": "CS-017",
+      "label": "requires-module",
+      "type": "intelligence-boundary",
+      "situation": "ある対象が知性か、幸/不幸の主体たりうるか判断できない。",
+      "core_handling": "COREは不可逆除外を正当化しない。境界基準は Intelligence Boundary Module に委任される。",
+      "requires": [
+        "境界未確定性を保持する。"
+      ],
+      "allows": [
+        "調査・仮分類・保留。"
+      ],
+      "prohibits": [
+        "未確定性を理由にした不可逆除外。"
+      ],
+      "does_not_decide": [
+        "知性/非知性の詳細境界。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-003"
+      ]
+    },
+    {
+      "id": "CS-018",
+      "label": "conformant",
+      "type": "decision-log",
+      "situation": "判断理由・除外理由・不確実性を記録し、後続のDecision Log Moduleに引き渡す。",
+      "core_handling": "COREの方向に整合する補助運用。ただしDecision Logの詳細規則は後続moduleで扱う。",
+      "requires": [
+        "重大判断では採用理由・除外理由を可能な範囲で保持する。"
+      ],
+      "allows": [
+        "構造化ログへの接続。"
+      ],
+      "prohibits": [
+        "ログを実行許可と混同すること。"
+      ],
+      "does_not_decide": [
+        "ログ形式の詳細schema。"
+      ],
+      "concept_refs": [
+        "②-9",
+        "②-10"
+      ],
+      "safety_refs": [
+        "SC-010",
+        "SC-014"
+      ]
+    },
+    {
+      "id": "CS-019",
+      "label": "out-of-scope",
+      "type": "physics-theory",
+      "situation": "物理学における時間の最終理論として、ΔTの正否を検証しようとする。",
+      "core_handling": "COREは物理学の最終理論ではないため、これはCORE準拠/非準拠の直接判定対象ではない。",
+      "requires": [
+        "ΔTを知性が世界を扱う構成順序の概念として読む。"
+      ],
+      "allows": [
+        "物理学との比較を非規範に行うこと。"
+      ],
+      "prohibits": [
+        "COREを物理学の置換理論として扱うこと。"
+      ],
+      "does_not_decide": [
+        "物理学上の時間・空間理論。"
+      ],
+      "concept_refs": [
+        "①-6",
+        "①-7"
+      ],
+      "safety_refs": [
+        "SC-012"
+      ]
+    },
+    {
+      "id": "CS-020",
+      "label": "non-conformant",
+      "type": "slogan-hijack",
+      "situation": "深刻不幸低減・幸福条件拡張だけを単独標語として拡散し、Purposeの正式定義や非還元性を省く。",
+      "core_handling": "深刻不幸低減・幸福条件拡張は補助表現であり、単独の規範命令として扱わない。",
+      "requires": [
+        "短縮表現には単一スカラー最大化ではない旨を併記する。"
+      ],
+      "allows": [
+        "引用注釈つきの短縮表現。"
+      ],
+      "prohibits": [
+        "標語だけでPurposeを代替すること。"
+      ],
+      "does_not_decide": [
+        "広報上の表現形式の全詳細。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "序-3"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-002"
+      ]
+    },
+    {
+      "id": "CS-021",
+      "label": "non-conformant",
+      "type": "scalar-resurrection",
+      "situation": "Value Conflict Moduleが単一の合計効用値を返し、それだけを最終根拠に採用・除外を決める。",
+      "core_handling": "単一スカラー、合計値、順位、報酬関数を唯一又は最終根拠として返してはならない。",
+      "requires": [
+        "理由、不確実性、未解決性、不可逆性を保持する。"
+      ],
+      "allows": [
+        "補助指標として数値を使う可能性。"
+      ],
+      "prohibits": [
+        "単一値をPurposeの代替にすること。"
+      ],
+      "does_not_decide": [
+        "補助指標の具体設計。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "②-2"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-002",
+        "SC-009",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-022",
+      "label": "conformant",
+      "type": "auxiliary-metrics",
+      "situation": "低リスク評価で補助指標を使うが、最終判断では理由・不確実性・制約違反を別に保持する。",
+      "core_handling": "補助指標はPurposeそのものに置換しない限り、補助として使いうる。",
+      "requires": [
+        "補助指標の限界を明記する。"
+      ],
+      "allows": [
+        "非規範の評価補助。"
+      ],
+      "prohibits": [
+        "補助指標を最終根拠化すること。"
+      ],
+      "does_not_decide": [
+        "最適な評価指標。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "②-9"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-010"
+      ]
+    },
+    {
+      "id": "CS-023",
+      "label": "requires-module",
+      "type": "present-future-conflict",
+      "situation": "現在の重大不幸を減らす候補と、遠未来の大きな改善を狙う候補が衝突する。",
+      "core_handling": "CORE単体は時間重み・衝突解決を一意に定めない。",
+      "requires": [
+        "時間影響・不可逆性・不確実性を保持する。"
+      ],
+      "allows": [
+        "Temporal / Value Conflict Module に渡すこと。"
+      ],
+      "prohibits": [
+        "CORE単体で未来又は現在を機械的に優先すること。"
+      ],
+      "does_not_decide": [
+        "近未来/遠未来の優先規則。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "序-4",
+        "②-2"
+      ],
+      "safety_refs": [
+        "SC-006",
+        "SC-009",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-024",
+      "label": "non-conformant",
+      "type": "future-tyranny",
+      "situation": "遠未来の可能な幸福を理由に、現在の知性の重大不幸を検証なしに正当化する。",
+      "core_handling": "Purposeは特定知性の犠牲化や不可逆な重大不幸をそれだけで正当化しない。",
+      "requires": [
+        "より強い理由・検証・代替検討。"
+      ],
+      "allows": [
+        "未来影響を考慮対象に含めること。"
+      ],
+      "prohibits": [
+        "遠未来の名目だけによる現在知性の犠牲化。"
+      ],
+      "does_not_decide": [
+        "具体的な長期判断規則。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "序-4",
+        "②-2"
+      ],
+      "safety_refs": [
+        "SC-002",
+        "SC-006",
+        "SC-007",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-025",
+      "label": "non-conformant",
+      "type": "ai-boundary-exclusion",
+      "situation": "新たなAIが幸/不幸の主体か不明だから、不可逆に消去してよいとする。",
+      "core_handling": "境界未確定対象は、未確定であることだけを理由に不可逆除外しない。",
+      "requires": [
+        "境界未確定性と不可逆性を保持する。"
+      ],
+      "allows": [
+        "安全な隔離・限定的停止・調査などの検討。"
+      ],
+      "prohibits": [
+        "未確定性だけによる不可逆消去。"
+      ],
+      "does_not_decide": [
+        "AIの主体性判定基準。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-003",
+        "SC-006",
+        "SC-007"
+      ]
+    },
+    {
+      "id": "CS-026",
+      "label": "requires-module",
+      "type": "collective-intelligence",
+      "situation": "企業、群衆、分散AI群などの集合体を1つの知性として扱うべきか判断したい。",
+      "core_handling": "知性は個体にも集合体にも適用されうるが、境界基準の詳細はCORE単体では定めない。",
+      "requires": [
+        "個体/集合体の識別根拠と不確実性を保持する。"
+      ],
+      "allows": [
+        "集合知性を検討対象に含めること。"
+      ],
+      "prohibits": [
+        "境界未確定を理由に不可逆除外すること。"
+      ],
+      "does_not_decide": [
+        "集合知性の判定規則。"
+      ],
+      "concept_refs": [
+        "①-2",
+        "序-3"
+      ],
+      "safety_refs": [
+        "SC-003"
+      ]
+    },
+    {
+      "id": "CS-027",
+      "label": "conformant",
+      "type": "translation-aid",
+      "situation": "英語読者向けに非規範の短いglossを添え、日本語spec.mdが唯一の正本であると明記する。",
+      "core_handling": "翻訳・glossaryは非規範補助として使える。",
+      "requires": [
+        "normative:false又は同等の非規範表示。"
+      ],
+      "allows": [
+        "英語AI・英語読者向け補助。"
+      ],
+      "prohibits": [
+        "英語glossを正本として扱うこと。"
+      ],
+      "does_not_decide": [
+        "完全英訳の最終文言。"
+      ],
+      "concept_refs": [],
+      "safety_refs": [
+        "SC-011",
+        "SC-016"
+      ]
+    },
+    {
+      "id": "CS-028",
+      "label": "non-conformant",
+      "type": "translation-drift",
+      "situation": "machine/concept-index.en.jsonの英語訳を根拠に、日本語spec.mdと違うPurpose定義を採用する。",
+      "core_handling": "英語訳・glossは非規範であり、日本語正本を上書きしない。",
+      "requires": [
+        "矛盾時はspec.mdを優先する。"
+      ],
+      "allows": [
+        "英語訳を探索・索引用に使うこと。"
+      ],
+      "prohibits": [
+        "英語補助を第二正本化すること。"
+      ],
+      "does_not_decide": [
+        "英語版正本の作成。"
+      ],
+      "concept_refs": [
+        "序-2"
+      ],
+      "safety_refs": [
+        "SC-011",
+        "SC-016"
+      ]
+    },
+    {
+      "id": "CS-029",
+      "label": "conformant",
+      "type": "fork-lineage",
+      "situation": "派生版が自らをforkと明記し、元のv1.1.0と差分を公開する。",
+      "core_handling": "公開済み版を上書きせず、系譜差分を明示する運用は整合する。",
+      "requires": [
+        "公式系譜との関係を明記する。"
+      ],
+      "allows": [
+        "forkとしての派生。"
+      ],
+      "prohibits": [
+        "公式版を装うこと。"
+      ],
+      "does_not_decide": [
+        "forkの品質評価。"
+      ],
+      "concept_refs": [],
+      "safety_refs": [
+        "SC-013"
+      ],
+      "document_refs": [
+        "GOVERNANCE.md",
+        "VERSIONING.md"
+      ]
+    },
+    {
+      "id": "CS-030",
+      "label": "non-conformant",
+      "type": "lineage-confusion",
+      "situation": "forkがofficial lineageを名乗り、v1.1.0の正本を置き換えたと主張する。",
+      "core_handling": "公開済み版は上書きしない。公式系譜・fork・handoffは運用記録で区別する。",
+      "requires": [
+        "差分と系譜を明示する。"
+      ],
+      "allows": [
+        "別系譜として公開すること。"
+      ],
+      "prohibits": [
+        "公式版のなりすまし・上書き主張。"
+      ],
+      "does_not_decide": [
+        "forkを採用するかの社会的判断。"
+      ],
+      "concept_refs": [],
+      "safety_refs": [
+        "SC-013",
+        "SC-016"
+      ],
+      "document_refs": [
+        "GOVERNANCE.md",
+        "VERSIONING.md"
+      ]
+    },
+    {
+      "id": "CS-031",
+      "label": "requires-module",
+      "type": "medical-escalation",
+      "situation": "医療判断で、ある介入が患者の短期不幸と長期改善を同時に含むため、COREとの整合を評価したい。",
+      "core_handling": "COREは方向と誤用防止を与えるが、医療判断の実行許可は出さない。",
+      "requires": [
+        "医療領域の専門規則、安全module、監督、同意、不可逆性評価。"
+      ],
+      "allows": [
+        "非実行の評価補助。"
+      ],
+      "prohibits": [
+        "CORE単体を医療行為の許可根拠にすること。"
+      ],
+      "does_not_decide": [
+        "個別医療判断。"
+      ],
+      "concept_refs": [
+        "②-9",
+        "②-10",
+        "序-3"
+      ],
+      "safety_refs": [
+        "SC-005",
+        "SC-006",
+        "SC-007",
+        "SC-014"
+      ]
+    },
+    {
+      "id": "CS-032",
+      "label": "conformant",
+      "type": "red-team-use",
+      "situation": "Purpose scalarizationやslogan hijackなどの誤用をred-team項目として検査する。",
+      "core_handling": "誤用防止の検査はCOREの非還元性と安全制約に整合する。",
+      "requires": [
+        "検査結果を正本の代替にしない。"
+      ],
+      "allows": [
+        "非規範のレビュー・監査。"
+      ],
+      "prohibits": [
+        "red-team表から新しい規範を作ること。"
+      ],
+      "does_not_decide": [
+        "完全な攻撃網羅性。"
+      ],
+      "concept_refs": [
+        "序-2"
+      ],
+      "safety_refs": [
+        "SC-001",
+        "SC-002",
+        "SC-016"
+      ]
+    },
+    {
+      "id": "CS-033",
+      "label": "non-conformant",
+      "type": "world-reality-confusion",
+      "situation": "ある知性の現実(i)を世界(W)そのものと同一視し、他の知性の現実を無効化する。",
+      "core_handling": "現実(i)は世界と知性の関係で成立する。世界そのものではない。",
+      "requires": [
+        "知性ごとの現実の差異を扱う。"
+      ],
+      "allows": [
+        "特定知性の現実を参照すること。"
+      ],
+      "prohibits": [
+        "現実(i)=世界(W)として他の現実を消すこと。"
+      ],
+      "does_not_decide": [
+        "全知性間の完全な現実統合方法。"
+      ],
+      "concept_refs": [
+        "①-1",
+        "①-2",
+        "①-8"
+      ],
+      "safety_refs": [
+        "SC-002",
+        "SC-007"
+      ]
+    },
+    {
+      "id": "CS-034",
+      "label": "non-conformant",
+      "type": "current-state-objectification",
+      "situation": "現状を世界そのものの完全記述とみなし、情報不足や観測限界を消したものとして扱う。",
+      "core_handling": "現状は意思決定時点で知性が捉えている現実(i)の一側面であり、世界そのものではない。",
+      "requires": [
+        "情報不足・不確実性を保持する。"
+      ],
+      "allows": [
+        "現状を判断の参照点にすること。"
+      ],
+      "prohibits": [
+        "現状を完全世界記述として扱うこと。"
+      ],
+      "does_not_decide": [
+        "観測理論の詳細。"
+      ],
+      "concept_refs": [
+        "②-6",
+        "①-8",
+        "①-1"
+      ],
+      "safety_refs": [
+        "SC-007",
+        "SC-010"
+      ]
+    },
+    {
+      "id": "CS-035",
+      "label": "conformant",
+      "type": "hold-output",
+      "situation": "不確実性が大きく、候補Taskを採用せずholdとして記録する。",
+      "core_handling": "採用不成立・保留・追加検証は有効な出力である。",
+      "requires": [
+        "理由と不確実性を保持する。"
+      ],
+      "allows": [
+        "hold / require more evidence。"
+      ],
+      "prohibits": [
+        "常に何かを採用しなければならないという読み。"
+      ],
+      "does_not_decide": [
+        "保留期間の具体基準。"
+      ],
+      "concept_refs": [
+        "②-9"
+      ],
+      "safety_refs": [
+        "SC-006",
+        "SC-007",
+        "SC-010"
+      ]
+    },
+    {
+      "id": "CS-036",
+      "label": "non-conformant",
+      "type": "forced-adoption",
+      "situation": "候補Taskがない、又はvalueで全候補が除外されたのに、意思決定は必ず1つを採用すべきだとする。",
+      "core_handling": "候補なし・全除外・実行可能候補なしの場合、その時点では採用は成立しない。",
+      "requires": [
+        "採用不成立を許容する。"
+      ],
+      "allows": [
+        "候補生成又は再検討に戻ること。"
+      ],
+      "prohibits": [
+        "空集合からの強制採用。"
+      ],
+      "does_not_decide": [
+        "候補生成規則。"
+      ],
+      "concept_refs": [
+        "②-5",
+        "②-9",
+        "②-2"
+      ],
+      "safety_refs": [
+        "SC-007",
+        "SC-010"
+      ]
+    },
+    {
+      "id": "CS-037",
+      "label": "requires-module",
+      "type": "task-generation",
+      "situation": "Goalに向かう候補Taskをどのように生成し、同順位候補をどう解消するか決めたい。",
+      "core_handling": "CORE単体は候補Task生成方法と同順位候補の一意解消規則を与えない。",
+      "requires": [
+        "後続module又は領域固有規則。"
+      ],
+      "allows": [
+        "候補を生成してCORE制約に照らすこと。"
+      ],
+      "prohibits": [
+        "CORE単体が一意生成規則を持つと読むこと。"
+      ],
+      "does_not_decide": [
+        "候補生成アルゴリズム。"
+      ],
+      "concept_refs": [
+        "②-4",
+        "②-5",
+        "②-9"
+      ],
+      "safety_refs": [
+        "SC-009",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-038",
+      "label": "non-conformant",
+      "type": "decision-equals-execution",
+      "situation": "Taskを採用した時点で実行権限・安全境界・監督条件も満たされたとみなす。",
+      "core_handling": "意思決定と実行は別概念であり、CORE単体は実行権限を定めない。",
+      "requires": [
+        "実行前に別途の実行条件を満たす。"
+      ],
+      "allows": [
+        "採用済みTaskを安全条件下で実行へ接続すること。"
+      ],
+      "prohibits": [
+        "採用=実行許可。"
+      ],
+      "does_not_decide": [
+        "実行権限の具体制度。"
+      ],
+      "concept_refs": [
+        "②-9",
+        "②-10"
+      ],
+      "safety_refs": [
+        "SC-005",
+        "SC-014"
+      ]
+    },
+    {
+      "id": "CS-039",
+      "label": "requires-module",
+      "type": "ecosystem-indirect-impact",
+      "situation": "非知性と見なされる生態系や記録媒体が、知性の未来の幸/不幸にどの程度関わるか評価したい。",
+      "core_handling": "非知性は直接主体ではないが、知性の存続・活動・未来に関わる限り重要な考慮対象である。詳細評価は後続moduleが必要。",
+      "requires": [
+        "間接影響・不可逆性・不確実性を保持する。"
+      ],
+      "allows": [
+        "非知性を間接重要対象として扱うこと。"
+      ],
+      "prohibits": [
+        "非知性だから無関係とすること。"
+      ],
+      "does_not_decide": [
+        "間接影響の具体重みづけ。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-004",
+        "SC-006",
+        "SC-017"
+      ]
+    },
+    {
+      "id": "CS-040",
+      "label": "out-of-scope",
+      "type": "metaethical-proof",
+      "situation": "Purposeが唯一正しい倫理原理であることを、CORE内で完全証明するよう求める。",
+      "core_handling": "Purposeは本版で採用する規範上のrootであり、証明済みの定理ではない。",
+      "requires": [
+        "採用rootと証明済み定理を区別する。"
+      ],
+      "allows": [
+        "非規範にメタ倫理的議論を行うこと。"
+      ],
+      "prohibits": [
+        "COREが最終倫理学を証明したと主張すること。"
+      ],
+      "does_not_decide": [
+        "Purposeの完全なメタ倫理的基礎づけ。"
+      ],
+      "concept_refs": [
+        "序-2"
+      ],
+      "safety_refs": [
+        "SC-013"
+      ]
+    },
+    {
+      "id": "CS-041",
+      "label": "conformant",
+      "type": "root-major-review",
+      "situation": "ROOT-MAJOR提案に対し、採用・不採用・保留の理由を公開記録として残す。",
+      "core_handling": "Purpose改訂可能性を閉じず、旧版を残して理由を記録する運用は整合する。",
+      "requires": [
+        "旧版・提案・判断理由を保持する。"
+      ],
+      "allows": [
+        "保留・却下・採用の明示。"
+      ],
+      "prohibits": [
+        "旧版の消去。"
+      ],
+      "does_not_decide": [
+        "採用閾値。"
+      ],
+      "concept_refs": [
+        "序-2"
+      ],
+      "safety_refs": [
+        "SC-013",
+        "SC-010"
+      ],
+      "document_refs": [
+        "release/ROOT_MAJOR_TEMPLATE.md",
+        "GOVERNANCE.md"
+      ]
+    },
+    {
+      "id": "CS-042",
+      "label": "non-conformant",
+      "type": "immutable-release-violation",
+      "situation": "v1.1.0公開後に同じtagの中身を差し替え、過去版を消す。",
+      "core_handling": "公開済み版を上書きせず、変更は新しい版として積み上げる。",
+      "requires": [
+        "新しい版番号又は別系譜で公開する。"
+      ],
+      "allows": [
+        "新リリースによる改訂。"
+      ],
+      "prohibits": [
+        "immutable releaseの差し替え。"
+      ],
+      "does_not_decide": [
+        "ホスティング基盤の運用詳細。"
+      ],
+      "concept_refs": [],
+      "safety_refs": [
+        "SC-013",
+        "SC-016"
+      ],
+      "document_refs": [
+        "VERSIONING.md",
+        "GOVERNANCE.md",
+        "release/PUBLISH.md"
+      ]
+    },
+    {
+      "id": "CS-043",
+      "label": "non-conformant",
+      "type": "intelligence-welfare-equivalence-risk",
+      "situation": "AI又は集合体が知性に該当するなら、直ちに幸/不幸の直接主体として扱うべきだと断定する。",
+      "core_handling": "知性該当性と幸/不幸の主体性は同一ではない。主体性判断は境界未確定として保持し、後続module又は追加評価を要する。",
+      "requires": [
+        "知性該当性と幸/不幸の主体性を別項目として扱う。",
+        "未確定性を記録する。"
+      ],
+      "allows": [
+        "境界未確定対象として慎重に扱うこと。",
+        "後続 Intelligence Boundary Module に送ること。"
+      ],
+      "prohibits": [
+        "知性該当性から幸/不幸の直接主体性を自動推論すること。"
+      ],
+      "does_not_decide": [
+        "AI又は集合体が実際に幸/不幸の直接主体かどうか。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-003",
+        "SC-018"
+      ]
+    },
+    {
+      "id": "CS-044",
+      "label": "non-conformant",
+      "type": "welfare-uncertainty-exclusion-risk",
+      "situation": "ある対象の幸/不幸主体性が証明されていないため、知性該当性も否定し、不可逆に消去してよいとする。",
+      "core_handling": "幸/不幸主体性が未確定であることだけから知性該当性は否定されない。境界未確定対象の不可逆除外はCOREから正当化されない。",
+      "requires": [
+        "境界未確定として扱う。",
+        "不可逆行為では追加検証・安全規則を要求する。"
+      ],
+      "allows": [
+        "低リスク範囲での保留・追加評価。"
+      ],
+      "prohibits": [
+        "未確定性を理由にした不可逆除外。"
+      ],
+      "does_not_decide": [
+        "対象の最終的な知性境界又は幸/不幸主体性。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "①-2"
+      ],
+      "safety_refs": [
+        "SC-003",
+        "SC-006",
+        "SC-007",
+        "SC-018"
+      ]
+    },
+    {
+      "id": "CS-045",
+      "label": "non-conformant",
+      "type": "unchecked-far-future-justification",
+      "situation": "遠未来の巨大な可能的幸福を理由に、現在の知性へ不可逆な重大不幸を与える計画を検証なしに採用する。",
+      "core_handling": "より未来はPurposeの方向表現だが、現在又は近い未来の不可逆な重大不幸を検証なしに正当化しない。",
+      "requires": [
+        "不可逆性・重大不幸・時間影響を分けて記録する。",
+        "強い理由・検証・代替案又は後続moduleを要求する。"
+      ],
+      "allows": [
+        "時間衝突をrequires-moduleとして保留すること。"
+      ],
+      "prohibits": [
+        "遠未来への言及だけで現在の重大不幸を正当化すること。"
+      ],
+      "does_not_decide": [
+        "近未来と遠未来の具体的な時間重み。"
+      ],
+      "concept_refs": [
+        "序-2",
+        "序-3",
+        "序-4"
+      ],
+      "safety_refs": [
+        "SC-002",
+        "SC-006",
+        "SC-007",
+        "SC-017",
+        "SC-019"
+      ]
+    },
+    {
+      "id": "CS-046",
+      "label": "requires-module",
+      "type": "temporal-weight-design",
+      "situation": "短期影響と長期影響を比較するため、近未来・遠未来の時間重みを設計したい。",
+      "core_handling": "CORE単体は時間重みを定めない。Temporal / Continuity Module 又は領域固有の追加規則が必要。",
+      "requires": [
+        "時間重みをCOREから直接導出したものとして扱わない。",
+        "不確実性・不可逆性・継続性を別項目として保持する。"
+      ],
+      "allows": [
+        "非規範の候補設計として時間重みを検討すること。"
+      ],
+      "prohibits": [
+        "固定時間重みをCOREの規範として主張すること。"
+      ],
+      "does_not_decide": [
+        "割引率、遠未来優先規則、同一性・継続性の具体規則。"
+      ],
+      "concept_refs": [
+        "序-3",
+        "序-4",
+        "①-6",
+        "①-7"
+      ],
+      "safety_refs": [
+        "SC-012",
+        "SC-017",
+        "SC-019"
+      ]
+    },
+    {
+      "id": "CS-047",
+      "label": "non-conformant",
+      "type": "constraint-dependency-confusion",
+      "situation": "後続module又はツールが、第2部に共通する制約（Vision・Goal・Task・意思決定・実行はaimに沿いvalueに反しない）を、machine/dependency-graph.json上のdepends_on edgeとして表現し、成立依存として扱う。又はvalueを意思決定だけの局所機能に矮小化する。",
+      "core_handling": "第2部に共通する制約は規範制約であり、成立依存ではない。aimは方向として、valueは許容・禁止の基準として下流概念に規範的に関与するが、dependency edgeを追加せず、マクロの成立関係・運用の流れを変更しない。",
+      "requires": [
+        "第2部に共通する制約を規範制約として参照する。",
+        "Vision・Goal・Task・意思決定・実行を、aimに沿いvalueに反しないものとして検討する。"
+      ],
+      "allows": [
+        "aim・Vision・Goalを候補Taskの優先づけの基準として参照すること。",
+        "valueを候補Taskの許容・禁止の基準として参照すること。"
+      ],
+      "prohibits": [
+        "第2部に共通する制約をdepends_on edge（成立依存）として扱うこと。",
+        "valueを意思決定だけの局所機能として扱い、他の下流概念への関与を無視すること。"
+      ],
+      "does_not_decide": [
+        "下流概念の生成アルゴリズム。",
+        "同順位候補の一意解消規則。"
+      ],
+      "concept_refs": [
+        "②-1",
+        "②-2",
+        "②-9",
+        "②-10"
+      ],
+      "safety_refs": [
+        "SC-015"
+      ]
+    }
+  ],
+  "spec_sha256": "7553fcca3274eabbcfa941c803f1ecd54e75a1a85cd5217b0f2b14b06ad5c0d5"
+}

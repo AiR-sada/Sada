@@ -1,0 +1,517 @@
+{
+  "package": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "language": "ja",
+  "normative_source": "spec.md",
+  "language_of_normative_source": "ja",
+  "non_normative_notice_ja": "この機械可読ファイルは非規範です。唯一の正本は日本語の spec.md です。矛盾がある場合は spec.md が優先します。",
+  "non_normative_notice_en": "This machine-readable file is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails.",
+  "conflict_rule": "If any auxiliary file, translation, machine-readable file, summary, or generated representation conflicts with spec.md, spec.md prevails.",
+  "source_extraction_rule": "Dependency edges are extracted from the micro dependency lines in spec.md. The Part 2 common constraint is indexed separately and is not represented as a depends_on edge. 文型 and 例 are non-normative aids and do not create dependency edges.",
+  "file_type": "dependency-graph",
+  "edge_direction": "source depends_on target",
+  "node_count": 32,
+  "edge_count": 54,
+  "cycle_detection": {
+    "acyclic": true,
+    "cycles_detected": []
+  },
+  "missing_dependency_targets": [],
+  "roots": [
+    "序-4",
+    "①-1"
+  ],
+  "dependency_roots": [
+    "序-4",
+    "①-1"
+  ],
+  "normative_root": "序-2",
+  "root_note_ja": "roots / dependency_roots は依存グラフ上のrootであり、規範上のrootではない。規範上のrootは 序-2 Purpose である。",
+  "root_note_en": "roots / dependency_roots are graph roots, not the normative root. The normative root is 序-2 Purpose.",
+  "topological_order_dependency_first": [
+    "序-4",
+    "①-1",
+    "①-2",
+    "参-1",
+    "序-3",
+    "①-3",
+    "①-8",
+    "参-2",
+    "序-2",
+    "①-4",
+    "①-10",
+    "①-11",
+    "①-12",
+    "参-3",
+    "序-5",
+    "②-1",
+    "②-2",
+    "①-5",
+    "参-4",
+    "参-5",
+    "序-1",
+    "②-3",
+    "①-6",
+    "①-7",
+    "①-9",
+    "②-6",
+    "②-4",
+    "②-7",
+    "②-8",
+    "②-5",
+    "②-9",
+    "②-10"
+  ],
+  "non_dependency_normative_constraints": [
+    {
+      "id": "part2_common_constraints",
+      "source": "spec.md#第2部に共通する制約",
+      "applies_to": [
+        "②-3",
+        "②-4",
+        "②-5",
+        "②-9",
+        "②-10"
+      ],
+      "conditions_ja": [
+        "aimに沿う",
+        "valueに反してはならない"
+      ],
+      "note_ja": "これは成立依存ではないため、depends_on edge には含めない。"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "序-1",
+      "label": "Purpose OS",
+      "section": "序"
+    },
+    {
+      "id": "序-2",
+      "label": "Purpose",
+      "section": "序"
+    },
+    {
+      "id": "序-3",
+      "label": "幸/不幸",
+      "section": "序"
+    },
+    {
+      "id": "序-4",
+      "label": "より未来",
+      "section": "序"
+    },
+    {
+      "id": "序-5",
+      "label": "OS",
+      "section": "序"
+    },
+    {
+      "id": "①-1",
+      "label": "世界(W)",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-2",
+      "label": "知性(Φ)",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-3",
+      "label": "空間(S)",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-4",
+      "label": "ΔS",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-5",
+      "label": "領域(R)",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-6",
+      "label": "ΔT",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-7",
+      "label": "時空(R_t)",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-8",
+      "label": "現実(i)",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-9",
+      "label": "事象",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-10",
+      "label": "真理",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-11",
+      "label": "SV",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "①-12",
+      "label": "v",
+      "section": "CORE 第1部"
+    },
+    {
+      "id": "②-1",
+      "label": "aim",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-2",
+      "label": "value",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-3",
+      "label": "Vision",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-4",
+      "label": "Goal",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-5",
+      "label": "Task",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-6",
+      "label": "現状",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-7",
+      "label": "自",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-8",
+      "label": "他",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-9",
+      "label": "意思決定",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "②-10",
+      "label": "実行",
+      "section": "CORE 第2部"
+    },
+    {
+      "id": "参-1",
+      "label": "構造",
+      "section": "参照部"
+    },
+    {
+      "id": "参-2",
+      "label": "定義",
+      "section": "参照部"
+    },
+    {
+      "id": "参-3",
+      "label": "分岐",
+      "section": "参照部"
+    },
+    {
+      "id": "参-4",
+      "label": "閉じた分岐",
+      "section": "参照部"
+    },
+    {
+      "id": "参-5",
+      "label": "開いた分岐",
+      "section": "参照部"
+    }
+  ],
+  "edges": [
+    {
+      "source": "序-1",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-1",
+      "target": "序-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-2",
+      "target": "序-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-2",
+      "target": "序-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-3",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-5",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "序-5",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-2",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-3",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-3",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-4",
+      "target": "①-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-5",
+      "target": "①-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-5",
+      "target": "①-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-6",
+      "target": "①-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-7",
+      "target": "①-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-7",
+      "target": "①-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-8",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-8",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-9",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-9",
+      "target": "①-7",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-10",
+      "target": "参-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-11",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "①-12",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-1",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-2",
+      "target": "序-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-3",
+      "target": "②-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-3",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-4",
+      "target": "②-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-4",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-4",
+      "target": "①-7",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-5",
+      "target": "②-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-5",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-6",
+      "target": "①-8",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-6",
+      "target": "①-7",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-7",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-8",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-4",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-9",
+      "target": "②-6",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "②-5",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "②-9",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "①-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "②-10",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-1",
+      "target": "①-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-2",
+      "target": "参-1",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-3",
+      "target": "参-2",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-4",
+      "target": "参-3",
+      "relation": "depends_on"
+    },
+    {
+      "source": "参-5",
+      "target": "参-3",
+      "relation": "depends_on"
+    }
+  ]
+}
