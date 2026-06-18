@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Purpose OS — CORE を参照する場合は、この CITATION.cff の preferred-citation を用いてください。正本は日本語の spec.md です。"
+title: "Purpose OS — CORE"
+version: "1.1.0"
+authors:
+  - name: "AiR"
+abstract: "Purpose OS の基盤モジュールである CORE の正本付き公開パッケージ。Purpose OS は、現在からより未来へ続く全知性および幸/不幸の主体たりうる存在について、避けうる深刻な不幸を減らし、より幸せでありうる条件を広げる方向を本版の規範上の唯一の起点として、世界と現実の構造および Purpose に向かう運用を定義する哲学仕様。正本は日本語の spec.md のみ。"
+license: "CC-BY-SA-4.0"
+keywords:
+  - "Purpose OS"
+  - "normative specification"
+  - "philosophy of intelligence"
+  - "AI alignment"
+  - "哲学仕様"
+preferred-citation:
+  type: report
+  title: "Purpose OS — CORE spec"
+  version: "1.1.0"
+  authors:
+    - name: "AiR"
+  abstract: "Purpose OS の基盤モジュール CORE を定義する正本仕様。序（Purpose の宣言）、第1部（世界と現実）、第2部（Purpose の目指し方）、参照部（定義の道具）から成り、32 概念で構成される。"
+  languages:
+    - ja
+  license: "CC-BY-SA-4.0"
+  notes: "Japanese normative specification. spec.md is the sole normative source. All package files other than spec.md are auxiliary, operational, machine-readable, license, checksum, or metadata files and do not supersede spec.md."

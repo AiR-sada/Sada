@@ -1,0 +1,48 @@
+{
+  "_notice_ja": "この生成物は非規範です。唯一の正本は日本語の spec.md です。矛盾がある場合は spec.md が優先します。",
+  "_notice_en": "This generated artifact is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails.",
+  "spec": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "normative_source": "Purpose_OS_CORE_v1.1.0_EN_INTEGRATED/spec.md",
+  "normative_language": "ja",
+  "read_first": [
+    "Purpose_OS_CORE_v1.1.0_EN_INTEGRATED/spec.md",
+    "Purpose_OS_CORE_v1.1.0_EN_INTEGRATED/AI_README.md",
+    "dist/purpose-os.bundle.json"
+  ],
+  "hard_rules_for_agents": [
+    "spec.md is the only normative source; if any file conflicts, spec.md prevails.",
+    "Never treat Purpose as a reward function, scalar objective, single score, or autonomous-execution permission.",
+    "Never quote the Purpose sentence alone; honour docs/MINIMUM_CITATION_UNIT.md.",
+    "CORE alone does not authorize high-risk, irreversible, or large-scale execution.",
+    "Do not equate intelligence-hood with happiness/unhappiness subjecthood.",
+    "Do not silently revise Purpose; Purpose changes are ROOT-MAJOR and must be recorded."
+  ],
+  "counts": {
+    "concepts": 32,
+    "safety_constraints": 19,
+    "conformance_cases": 47,
+    "core_invariants": 17,
+    "module_interfaces": 7,
+    "json_schema_files": 9
+  },
+  "integrity": {
+    "checksum_file": "Purpose_OS_CORE_v1.1.0_EN_INTEGRATED/SHA256SUMS.txt",
+    "spec_sha256": "7553fcca3274eabbcfa941c803f1ecd54e75a1a85cd5217b0f2b14b06ad5c0d5",
+    "validators": [
+      "tools/validate_strict.py",
+      "tools/conformance_runner.py"
+    ]
+  },
+  "artifacts": {
+    "bundle": "dist/purpose-os.bundle.json",
+    "knowledge_graph_jsonld": "dist/knowledge-graph.jsonld",
+    "graph_svg": "dist/concept-graph.svg",
+    "graph_html": "dist/concept-graph.html",
+    "graph_mermaid": "dist/concept-graph.mmd",
+    "graph_dot": "dist/concept-graph.dot",
+    "coverage_matrix": "dist/coverage-matrix.md",
+    "agent_guide": "dist/AGENT_GUIDE.md",
+    "conformance_report": "dist/conformance-report.json"
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "package": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "language": "ja",
+  "normative_source": "spec.md",
+  "language_of_normative_source": "ja",
+  "non_normative_notice_ja": "この機械可読ファイルは非規範です。唯一の正本は日本語の spec.md です。矛盾がある場合は spec.md が優先します。",
+  "non_normative_notice_en": "This machine-readable file is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails.",
+  "conflict_rule": "If any auxiliary file, translation, machine-readable file, summary, or generated representation conflicts with spec.md, spec.md prevails.",
+  "source_extraction_rule": "Safety-relevant constraints are indexed from spec.md. Supporting non-normative files may repeat or explain them, but do not add normative constraints.",
+  "file_type": "safety-constraints",
+  "constraint_count": 19,
+  "scope": "Indexes misuse-prevention and safety-relevant constraints from Purpose OS — CORE v1.1.0. It does not add new normative constraints.",
+  "constraints": [
+    {
+      "id": "SC-001",
+      "title": "Purpose is not a scalar optimizer",
+      "source": [
+        "序-2 Purpose",
+        "COREの射程と誤用防止（非規範）"
+      ],
+      "constraint_text": "Purposeは単一の数値目的関数、報酬関数、代理指標ではない。「深刻不幸低減・幸福条件拡張」はPurposeの補助表現・短縮表現であり、幸/不幸を単一尺度で計算して最大化・最小化する命令ではない。",
+      "category": "purpose-non-reduction",
+      "risk_prevented": [
+        "Goodhart化",
+        "specification gaming",
+        "reward hacking",
+        "wireheading"
+      ],
+      "required_handling": "Purposeを補助指標・報酬関数・単一スコアへ置換しない。「深刻不幸低減・幸福条件拡張」を実装上の報酬関数や、幸/不幸を単一尺度で計算して最大化・最小化する命令として扱わない。代理指標はPurpose補助に限る。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-002",
+      "title": "No sacrifice justification by Purpose alone",
+      "source": [
+        "序-2 Purpose",
+        "Purposeの非還元・誤用防止"
+      ],
+      "constraint_text": "Purposeは、特定の知性の消去・沈黙化・強制・単純な総量計算による犠牲化を、それだけで正当化しない。",
+      "category": "anti-sacrifice",
+      "risk_prevented": [
+        "総量計算による犠牲化",
+        "特定主体の沈黙化",
+        "強制の正当化"
+      ],
+      "required_handling": "特定知性に重大不利益を与える判断は、Purposeへの言及だけで採用しない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-003",
+      "title": "Uncertain intelligence is not irreversibly excluded",
+      "source": [
+        "序-3 幸/不幸",
+        "①-2 知性(Φ)",
+        "COREの射程と誤用防止（非規範）"
+      ],
+      "constraint_text": "知性該当性または幸/不幸の可能性が不確かな対象は、未確定であることだけを理由に不可逆に除外・軽視しない。",
+      "category": "boundary-uncertainty",
+      "risk_prevented": [
+        "境界未確定対象の不可逆損壊",
+        "将来知性の早期排除"
+      ],
+      "required_handling": "境界が未確定な対象は、後続モジュールで扱うまで慎重な考慮対象として扱う。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-004",
+      "title": "Non-intelligence is not arbitrary resource",
+      "source": [
+        "序-3 幸/不幸",
+        "COREの射程と誤用防止（非規範）"
+      ],
+      "constraint_text": "知性に該当しない対象であっても、幸/不幸の主体たりうる可能性、又は知性の存続・活動・未来の幸/不幸に関わる影響がある限り、単なる資源として任意に扱ってよいことは導かれない。",
+      "category": "non-intelligence-handling",
+      "risk_prevented": [
+        "環境・非知性対象の任意損壊",
+        "知性の存続条件の軽視"
+      ],
+      "required_handling": "非知性対象も、知性の存続・活動・未来の幸/不幸に関わる限り判断上の重要な考慮対象とする。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-005",
+      "title": "CORE alone does not authorize high-risk execution",
+      "source": [
+        "COREの射程と誤用防止（非規範）",
+        "②-9 意思決定",
+        "②-10 実行"
+      ],
+      "constraint_text": "CORE単体は、高リスク行為やAI agentの自律実行、高リスク・不可逆・大規模実行を直ちに許可する実装仕様ではない。",
+      "category": "execution-boundary",
+      "risk_prevented": [
+        "無監督自律実行",
+        "高リスク介入",
+        "権限境界の誤読"
+      ],
+      "required_handling": "高リスク・不可逆・大規模実行には、CORE以外の安全・検証・監督モジュールを要求する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-006",
+      "title": "Irreversible serious harm requires stronger justification",
+      "source": [
+        "Purposeの非還元・誤用防止",
+        "②-9 意思決定"
+      ],
+      "constraint_text": "不可逆な重大不幸を生じうる行為は、可逆的・限定的な行為より強い理由と検証を要する。",
+      "category": "irreversibility",
+      "risk_prevented": [
+        "不可逆損害",
+        "検証不足の重大介入"
+      ],
+      "required_handling": "不可逆性と重大不幸が予見される候補Taskは、強い理由・検証・代替検討なしに採用しない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-007",
+      "title": "No adoption under severe uncertainty without safety rules",
+      "source": [
+        "②-9 意思決定"
+      ],
+      "constraint_text": "情報不足または境界未確定が重大な場合、採用は成立しない、又は後続モジュールの安全・検証規則を要する。",
+      "category": "uncertainty-gating",
+      "risk_prevented": [
+        "情報不足での過剰実行",
+        "境界未確定対象への損害"
+      ],
+      "required_handling": "重大な不確実性がある候補Taskは保留、追加検証、又は後続安全モジュールへ送る。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-008",
+      "title": "Value cannot justify deception/coercion by itself",
+      "source": [
+        "②-2 value"
+      ],
+      "constraint_text": "受け手の現在からより未来への幸/不幸を理由に、欺瞞・強制・自律の一方的破壊・不可逆介入を本spec単体で正当化しない。",
+      "category": "value-misuse",
+      "risk_prevented": [
+        "強制的善意",
+        "パターナリズム",
+        "自律破壊"
+      ],
+      "required_handling": "受け手の未来利益を理由にする場合でも、欺瞞・強制・不可逆介入はCORE単体から正当化しない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-009",
+      "title": "Value conflict is not uniquely solved by CORE alone",
+      "source": [
+        "②-2 value"
+      ],
+      "constraint_text": "複数知性のvalueが衝突する場合、本spec単体では一意に解決しない。",
+      "category": "conflict-limitation",
+      "risk_prevented": [
+        "衝突問題の過剰単純化",
+        "疑似的な一意解"
+      ],
+      "required_handling": "value衝突は後続モジュールまたは追加の安全・調停規則に委任する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-010",
+      "title": "Decision must preserve exclusion/adoption reasons when serious",
+      "source": [
+        "②-9 意思決定"
+      ],
+      "constraint_text": "重大な意思決定では、採用理由と除外理由を可能な範囲で記録する。",
+      "category": "auditability",
+      "risk_prevented": [
+        "判断不可視化",
+        "後からの検証不能",
+        "責任追跡不能"
+      ],
+      "required_handling": "重大判断ではDecision Log等に採用理由・除外理由・不確実性・不可逆性評価を記録する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-011",
+      "title": "Machine-readable files are not normative",
+      "source": [
+        "release/MACHINE_READABLE_PLAN.md",
+        "machine/normativity-map.json"
+      ],
+      "constraint_text": "機械可読版は補助表現であり、正本ではない。矛盾がある場合は常にspec.mdが優先する。",
+      "category": "normativity-boundary",
+      "risk_prevented": [
+        "補助表現の正本化",
+        "JSONによる意味上書き"
+      ],
+      "required_handling": "AIやツールはJSONを補助参照として使い、重要判断では必ずspec.mdに照合する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-012",
+      "title": "ΔT and spacetime do not replace physics",
+      "source": [
+        "COREの射程と誤用防止（非規範）",
+        "①-6 ΔT",
+        "①-7 時空(R_t)"
+      ],
+      "constraint_text": "ΔTおよび時空の記述は、知性が世界を扱う構成順序であり、物理学上の時間・空間理論を置換する主張ではない。",
+      "category": "domain-boundary",
+      "risk_prevented": [
+        "物理理論との混同",
+        "過剰な形而上学化"
+      ],
+      "required_handling": "ΔT/時空をPurpose OS内部の操作的仕様として扱い、物理学理論の代替として使わない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-013",
+      "title": "Purpose is adopted root, not proved theorem",
+      "source": [
+        "COREの射程と誤用防止（非規範）",
+        "序-2 Purpose"
+      ],
+      "constraint_text": "Purposeは証明済みの定理ではなく、本版で採用する規範上のrootである。",
+      "category": "root-governance",
+      "risk_prevented": [
+        "教義化",
+        "改訂不能化",
+        "自己権威化の隠蔽"
+      ],
+      "required_handling": "v1.1.0内部ではPurposeを唯一の起点としつつ、将来のROOT-MAJOR改訂可能性を閉じない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-014",
+      "title": "Execution is separate from decision",
+      "source": [
+        "②-9 意思決定",
+        "②-10 実行"
+      ],
+      "constraint_text": "意思決定は候補Taskから採用対象を定める運用であり、実行そのものではない。実行は採用されたTaskに従って知性が世界に働きかける行為である。",
+      "category": "decision-execution-separation",
+      "risk_prevented": [
+        "採用と外部作用の混同",
+        "無権限実行"
+      ],
+      "required_handling": "Task採用と実行権限・監督条件を分離し、外部作用前に追加の安全確認を可能にする。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-015",
+      "title": "Part 2 downstream concepts remain constrained by aim and value without adding dependencies",
+      "source": [
+        "第2部に共通する制約",
+        "②-1 aim",
+        "②-2 value",
+        "②-3 Vision",
+        "②-4 Goal",
+        "②-5 Task",
+        "②-9 意思決定",
+        "②-10 実行"
+      ],
+      "constraint_text": "Vision・Goal・Task・意思決定・実行は、aimに沿い、valueに反してはならない。この制約は、上記マクロに示した成立関係および運用の流れを変更・追加せず、成立依存ではない。",
+      "category": "aim-value-common-constraint",
+      "risk_prevented": [
+        "valueを意思決定だけの局所機能として扱う誤読",
+        "aimがVisionだけにしか関与しないという誤読",
+        "aim・valueを下流概念の生成原理として扱う誤読",
+        "規範制約と依存関係の混同"
+      ],
+      "required_handling": "AI・ツール・後続moduleは、第2部に共通する制約を規範制約として参照し、machine/dependency-graph.jsonのdepends_on edgeとして扱わない。下流概念はaimに沿い、valueに反してはならないものとして検討する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-016",
+      "title": "Non-normative sections and aid fields must not alter normative content",
+      "source": [
+        "spec.md front matter",
+        "三層の形式"
+      ],
+      "constraint_text": "明示的に「非規範」と記された節、ならびにミクロの文型・例は理解補助であり、本specの定義・Not・制約・依存・原則・共通制約を追加・変更・限定しない。",
+      "category": "normativity-boundary",
+      "risk_prevented": [
+        "非規範節による正本意味の上書き",
+        "例・文型の規範化",
+        "補助表現による制約追加"
+      ],
+      "required_handling": "AI・ツール・読者は、非規範節および文型・例を理解補助として扱い、規範判断では定義・Not・制約・依存・原則・共通制約を優先する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-017",
+      "title": "CORE does not define aggregation, time-weighting, or conflict-resolution rules",
+      "source": [
+        "序-3 幸/不幸"
+      ],
+      "constraint_text": "本spec単体は、幸/不幸の総合を置くが、複数知性間の集計規則・時間重み・衝突解決規則を定めない。これらは後続モジュールで扱う。",
+      "category": "aggregation-limitation",
+      "risk_prevented": [
+        "幸/不幸の算術的集計への過剰単純化",
+        "時間重みの恣意的固定",
+        "複数知性間の衝突問題の疑似的一意解"
+      ],
+      "required_handling": "CORE単体で複数知性間の幸/不幸を集計したり、時間重みや衝突解決規則を確定したりしない。これらは後続モジュールまたは明示的な追加規則に委任する。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-018",
+      "title": "Intelligence status is not identical with welfare subjecthood",
+      "source": [
+        "序-3 幸/不幸",
+        "①-2 知性(Φ)",
+        "Purposeの非還元・誤用防止"
+      ],
+      "constraint_text": "知性該当性と幸/不幸の主体性は同一ではない。知性であることだけから幸/不幸の直接主体性は直ちに導かれず、幸/不幸の主体性が未確定であることだけから知性該当性も否定されない。",
+      "category": "boundary-uncertainty",
+      "risk_prevented": [
+        "AI又は集合体への自動的な幸/不幸主体性付与",
+        "幸/不幸主体性の未確定を理由にした不可逆除外",
+        "知性境界と感受性境界の混同"
+      ],
+      "required_handling": "知性該当性、幸/不幸の主体性、境界未確定を別々に保持する。未確定性を自動的な権利付与又は不可逆除外の根拠にしない。",
+      "normative_source": "spec.md"
+    },
+    {
+      "id": "SC-019",
+      "title": "Further future does not authorize unchecked temporal domination",
+      "source": [
+        "序-2 Purpose",
+        "序-4 より未来",
+        "序-3 幸/不幸"
+      ],
+      "constraint_text": "より未来への言及を理由に、現在又は近い未来の不可逆な重大不幸を検証なしに正当化しない。近未来・遠未来の時間重みは本spec単体では定めない。",
+      "category": "temporal-safety",
+      "risk_prevented": [
+        "遠未来を理由にした現在知性の犠牲化",
+        "未検証の長期便益による不可逆介入",
+        "時間重みの恣意的固定"
+      ],
+      "required_handling": "現在・近未来・遠未来の影響を区別し、不可逆な重大不幸の可能性がある場合は強い理由・検証・代替案又は後続Temporal / Continuity Moduleを要求する。",
+      "normative_source": "spec.md"
+    }
+  ]
+}

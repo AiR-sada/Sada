@@ -1,0 +1,66 @@
+name: Purpose OS CORE — verify
+
+# Non-normative CI. The sole normative source is the Japanese spec.md.
+# This workflow proves integrity and internal consistency on every change.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    env:
+      PKG: Purpose_OS_CORE_v1.1.0_EN_INTEGRATED
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Bundled validator (must pass, never weakened)
+        run: python3 -S "$PKG/validate_release.py" "$PKG"
+
+      - name: Strict superset validator
+        run: python3 -S tools/validate_strict.py "$PKG"
+
+      - name: Conformance runner
+        run: python3 -S tools/conformance_runner.py "$PKG"
+
+      - name: Adversarial guardrail tests
+        run: python3 -S tools/test_guardrails.py
+
+      - name: SHA-256 integrity
+        run: |
+          cd "$PKG"
+          sha256sum -c SHA256SUMS.txt
+
+      - name: Artifact freshness (dist/ must match source)
+        run: |
+          python3 -S tools/build_artifacts.py "$PKG"
+          git diff --exit-code -- dist || {
+            echo "::error::dist/ is stale. Run 'make build' and commit the regenerated artifacts.";
+            exit 1;
+          }
+
+      - name: Upload generated artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: purpose-os-dist
+          path: dist/
+          if-no-files-found: error

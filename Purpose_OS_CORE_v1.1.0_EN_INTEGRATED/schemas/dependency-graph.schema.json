@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/dependency-graph.schema.json",
+  "type": "object",
+  "required": [
+    "nodes",
+    "edges",
+    "cycle_detection"
+  ],
+  "properties": {
+    "nodes": {
+      "type": "array"
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "target"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cycle_detection": {
+      "type": "object"
+    }
+  }
+}

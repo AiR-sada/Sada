@@ -1,0 +1,79 @@
+{
+  "template": "Purpose OS CORE Decision Log",
+  "non_normative_notice": "This template is non-normative. spec.md is the sole normative source. CORE alone does not authorize high-risk execution.",
+  "version_referenced": "1.1.0",
+  "decision_id": "",
+  "timestamp": "",
+  "actor": {
+    "name": "",
+    "type": "human | AI | organization | collective | other",
+    "role": ""
+  },
+  "context": {
+    "summary": "",
+    "domain": "",
+    "risk_level": "low | medium | high | critical",
+    "is_high_risk_domain": false
+  },
+  "purpose_structure": {
+    "aim": "",
+    "value": "",
+    "vision": "",
+    "goal": ""
+  },
+  "current_state": {
+    "self": [],
+    "other": [],
+    "known_limits": [],
+    "uncertainties": []
+  },
+  "affected_intelligences": [
+    {
+      "id": "",
+      "description": "",
+      "intelligence_status": "clear | uncertain | not_assessed",
+      "welfare_subjecthood": "clear | uncertain | not_assessed",
+      "notes": ""
+    }
+  ],
+  "candidate_tasks": [],
+  "value_filter": {
+    "removed_by_value": [],
+    "reason_summary": ""
+  },
+  "priority_check": {
+    "prioritized_by_aim_vision_goal": [],
+    "reason_summary": ""
+  },
+  "feasibility_check": {
+    "feasible_candidates": [],
+    "infeasible_candidates": [],
+    "reason_summary": ""
+  },
+  "uncertainty_check": {
+    "major_uncertainties": [],
+    "requires_more_information": false,
+    "reason_summary": ""
+  },
+  "irreversibility_check": {
+    "potential_irreversible_serious_unhappiness": false,
+    "stronger_reason_required": false,
+    "verification_required": false,
+    "alternatives_required": false,
+    "reason_summary": ""
+  },
+  "execution_boundary": {
+    "decision_is_execution_permission": false,
+    "requires_supervision": false,
+    "requires_module_review": false,
+    "requires_domain_expert_review": false,
+    "execution_allowed_by_this_log": false
+  },
+  "adopted_task": null,
+  "rejected_tasks": [],
+  "held_tasks": [],
+  "gate_recommendation": "allow | allow_with_log | require_more_information | require_human_or_steward_review | require_module_review | block",
+  "reason_summary": "",
+  "required_followup": [],
+  "reviewer": ""
+}

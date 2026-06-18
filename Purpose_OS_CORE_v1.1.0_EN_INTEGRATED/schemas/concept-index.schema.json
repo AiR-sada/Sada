@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/concept-index.schema.json",
+  "type": "object",
+  "required": [
+    "package",
+    "version",
+    "normative_source",
+    "concepts"
+  ],
+  "properties": {
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "definition",
+          "not",
+          "constraints",
+          "dependencies",
+          "normative_source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "not": {
+            "type": "string"
+          },
+          "constraints": {
+            "type": "string"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "normative_source": {
+            "const": "spec.md"
+          }
+        }
+      }
+    }
+  }
+}

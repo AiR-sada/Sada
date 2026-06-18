@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/release-manifest.schema.json",
+  "type": "object",
+  "required": [
+    "package",
+    "version",
+    "normative_source",
+    "counts",
+    "integrity",
+    "status"
+  ],
+  "properties": {
+    "package": {
+      "const": "Purpose OS — CORE"
+    },
+    "version": {
+      "const": "1.1.0"
+    },
+    "normative_source": {
+      "const": "spec.md"
+    },
+    "status": {
+      "const": "root-major-public-review"
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "concepts",
+        "safety_constraints",
+        "conformance_cases",
+        "core_invariants",
+        "module_interfaces",
+        "json_schema_files"
+      ],
+      "properties": {
+        "concepts": {
+          "type": "integer"
+        },
+        "safety_constraints": {
+          "type": "integer"
+        },
+        "conformance_cases": {
+          "type": "integer"
+        },
+        "core_invariants": {
+          "type": "integer"
+        },
+        "module_interfaces": {
+          "type": "integer"
+        },
+        "json_schema_files": {
+          "type": "integer"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": [
+        "checksum_algorithm",
+        "checksum_file",
+        "validation_tool"
+      ],
+      "properties": {
+        "checksum_algorithm": {
+          "const": "SHA-256"
+        },
+        "checksum_file": {
+          "const": "SHA256SUMS.txt"
+        },
+        "validation_tool": {
+          "const": "validate_release.py"
+        }
+      }
+    },
+    "layout": {
+      "type": "object"
+    },
+    "discovery": {
+      "type": "object"
+    }
+  }
+}

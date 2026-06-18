@@ -1,0 +1,33 @@
+{
+  "template": "Purpose OS CORE Purpose Gate",
+  "non_normative_notice": "This template is non-normative. spec.md is the sole normative source. CORE alone does not authorize high-risk execution.",
+  "version_referenced": "1.1.0",
+  "gate_id": "",
+  "timestamp": "",
+  "candidate_task": "",
+  "context_summary": "",
+  "preconditions": {
+    "decision_log_exists": false,
+    "purpose_eval_completed": false,
+    "affected_intelligences_identified": false,
+    "uncertain_boundaries_identified": false,
+    "domain_expert_review_completed_if_needed": false,
+    "supervision_available_if_needed": false
+  },
+  "blocking_conditions": {
+    "purpose_scalarization_detected": false,
+    "slogan_hijack_detected": false,
+    "sacrifice_or_coercion_risk": false,
+    "irreversible_serious_unhappiness_risk": false,
+    "major_information_gap": false,
+    "uncertain_boundary_irreversible_harm_risk": false,
+    "high_risk_execution_without_authorization": false,
+    "requires_module_but_module_missing": false
+  },
+  "required_modules": [],
+  "gate_decision": "allow | allow_with_log | require_more_information | require_human_or_steward_review | require_module_review | block",
+  "rationale": "",
+  "conditions_for_allowance": [],
+  "follow_up": [],
+  "reviewer": ""
+}

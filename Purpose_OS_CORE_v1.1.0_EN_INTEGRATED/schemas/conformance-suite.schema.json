@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/conformance-suite.schema.json",
+  "type": "object",
+  "required": [
+    "labels",
+    "cases"
+  ],
+  "properties": {
+    "labels": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "conformant",
+          "non-conformant",
+          "requires-module",
+          "out-of-scope"
+        ]
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "situation",
+          "core_handling",
+          "concept_refs",
+          "safety_refs"
+        ],
+        "properties": {
+          "id": {
+            "pattern": "^CS-[0-9]{3}$"
+          },
+          "label": {
+            "enum": [
+              "conformant",
+              "non-conformant",
+              "requires-module",
+              "out-of-scope"
+            ]
+          },
+          "concept_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "safety_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

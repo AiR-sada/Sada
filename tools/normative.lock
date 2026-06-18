@@ -1,0 +1,7 @@
+{
+  "_purpose": "ROOT-MAJOR anchor for the normative source. Per GOVERNANCE.md / VERSIONING.md, spec.md is the sole normative source and must not be changed silently. CI enforces this hash; changing it requires a deliberate, recorded ROOT-MAJOR (旧版を消さず公開記録を残す).",
+  "normative_source": "spec.md",
+  "package_version": "1.1.0",
+  "algorithm": "SHA-256",
+  "sha256": "7553fcca3274eabbcfa941c803f1ecd54e75a1a85cd5217b0f2b14b06ad5c0d5"
+}

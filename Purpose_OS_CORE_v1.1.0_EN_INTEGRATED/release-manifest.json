@@ -1,0 +1,92 @@
+{
+  "package": "Purpose OS — CORE",
+  "package_id": "Purpose_OS_CORE_v1.1.0_ROOT_MAJOR_v0.5",
+  "version": "1.1.0",
+  "status": "root-major-public-review",
+  "language": "ja",
+  "normative_source": "spec.md",
+  "language_of_normative_source": "ja",
+  "non_normative_notice_ja": "このmanifestは非規範です。唯一の正本は日本語のspec.mdです。矛盾がある場合はspec.mdが優先します。",
+  "counts": {
+    "concepts": 32,
+    "safety_constraints": 19,
+    "conformance_cases": 47,
+    "core_invariants": 17,
+    "module_interfaces": 7,
+    "json_schema_files": 9
+  },
+  "hardening_ids": {
+    "intelligence_subjecthood_separation": [
+      "SC-018",
+      "CS-043",
+      "CS-044",
+      "INV-016"
+    ],
+    "temporal_misuse_prevention": [
+      "SC-017",
+      "SC-019",
+      "CS-045",
+      "CS-046",
+      "INV-017"
+    ],
+    "root_revision_openness": [
+      "序-2",
+      "VERSIONING.md",
+      "GOVERNANCE.md",
+      "release/ROOT_MAJOR_TEMPLATE.md"
+    ]
+  },
+  "integrity": {
+    "checksum_algorithm": "SHA-256",
+    "checksum_file": "SHA256SUMS.txt",
+    "checksum_scope": "all public files except SHA256SUMS.txt",
+    "validation_tool": "validate_release.py",
+    "recommended_commands": [
+      "python3 -S validate_release.py .",
+      "sha256sum -c SHA256SUMS.txt"
+    ]
+  },
+  "normativity_rule": {
+    "primary": "spec.md is the sole normative source.",
+    "conflict_resolution": "If any auxiliary file, translation, machine-readable file, schema, manifest, audit record, or validation tool conflicts with spec.md, spec.md prevails.",
+    "template_rule": "Templates are auxiliary and must not be treated as execution authorization or as superseding spec.md."
+  },
+  "layout": {
+    "root": "entrypoint, normative source, citation/license, governance/versioning, verification, and discovery files",
+    "docs": "human-readable auxiliary explanations",
+    "machine": "machine-readable non-normative indexes",
+    "safety": "safety constraints, invariants, and red-team support",
+    "conformance": "conformance cases and interpretation support",
+    "release": "publication, review, audit, validation, and ROOT-MAJOR support",
+    "interfaces": "downstream module interface skeletons",
+    "schemas": "JSON schemas for validation support",
+    "site": "public discovery deployment templates",
+    "templates": "non-normative practical templates for Purpose Eval, Decision Log, and Purpose Gate"
+  },
+  "discovery": {
+    "llms_txt": "llms.txt",
+    "llms_full_txt": "llms-full.txt",
+    "landing_page": "index.html",
+    "robots_template": "robots.txt",
+    "sitemap_template": "site/sitemap.xml.template",
+    "deployment_guide": "site/DISCOVERY_DEPLOYMENT.md",
+    "json_ld_page": "index.html",
+    "note": "sitemap.xml requires the final public base URL and should be generated from site/sitemap.xml.template before deployment."
+  },
+  "public_readiness_support": {
+    "start_here": "START_HERE.md",
+    "faq": "FAQ.md",
+    "critical_objections": "docs/CRITICAL_OBJECTIONS.md",
+    "why_this_purpose": "docs/WHY_THIS_PURPOSE.md",
+    "launch_copy": "docs/LAUNCH_COPY.md",
+    "public_readiness_review": "docs/PUBLIC_READINESS_REVIEW.md",
+    "security_misuse_reporting": "SECURITY.md",
+    "contributing": "CONTRIBUTING.md"
+  },
+  "practical_templates": {
+    "purpose_eval_checklist": "templates/PURPOSE_EVAL_CHECKLIST.md",
+    "decision_log_template": "templates/DECISION_LOG_TEMPLATE.json",
+    "purpose_gate_template": "templates/PURPOSE_GATE_TEMPLATE.json",
+    "note": "All templates are non-normative and do not authorize high-risk execution."
+  }
+}

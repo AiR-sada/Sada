@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/relationship-map.schema.json",
+  "type": "object",
+  "required": [
+    "relationships"
+  ],
+  "properties": {
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "relation",
+          "target"
+        ],
+        "properties": {
+          "id": {
+            "pattern": "^REL-[0-9]{3}$"
+          },
+          "source": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

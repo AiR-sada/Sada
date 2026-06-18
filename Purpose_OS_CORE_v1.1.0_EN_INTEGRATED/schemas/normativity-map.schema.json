@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/normativity-map.schema.json",
+  "type": "object",
+  "required": [
+    "normative_source",
+    "files"
+  ],
+  "properties": {
+    "normative_source": {
+      "const": "spec.md"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "normativity",
+          "role"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "normativity": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

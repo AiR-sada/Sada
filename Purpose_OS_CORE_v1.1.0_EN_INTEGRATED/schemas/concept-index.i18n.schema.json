@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Purpose_OS_CORE/concept-index.i18n.schema.json",
+  "type": "object",
+  "required": [
+    "entries",
+    "translation_status"
+  ],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "concept_id",
+          "label_ja",
+          "label_en",
+          "gloss_en"
+        ],
+        "properties": {
+          "concept_id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

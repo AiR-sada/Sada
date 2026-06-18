@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:purpose-os:core:v1.1.0:machine/module-manifest.schema.json",
+  "title": "Purpose OS module compatibility manifest",
+  "description": "Non-normative JSON Schema for declaring compatibility of a downstream module with Purpose OS — CORE v1.1.0. spec.md remains the sole normative source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "module_id",
+    "module_title",
+    "module_version",
+    "depends_on_core_version",
+    "normative_source",
+    "compatibility_claim",
+    "changed_core_concepts",
+    "new_concepts",
+    "deprecated_concepts",
+    "known_limits"
+  ],
+  "properties": {
+    "module_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$",
+      "description": "Stable identifier for the downstream module."
+    },
+    "module_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+([+-][A-Za-z0-9_.-]+)?$"
+    },
+    "language": {
+      "type": "string",
+      "default": "ja"
+    },
+    "depends_on_core_version": {
+      "type": "string",
+      "const": "1.1.0",
+      "description": "This schema is for modules depending on Purpose OS — CORE v1.1.0."
+    },
+    "depends_on_modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "module_id",
+          "module_version"
+        ],
+        "properties": {
+          "module_id": {
+            "type": "string"
+          },
+          "module_version": {
+            "type": "string"
+          }
+        }
+      },
+      "default": []
+    },
+    "normative_source": {
+      "type": "string",
+      "description": "Path to the module's own normative source, if any."
+    },
+    "core_concepts_referenced": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "CORE concept IDs referenced without redefining them."
+    },
+    "changed_core_concepts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Must be empty for a CORE-compatible downstream module. Non-empty means the module changes CORE and cannot claim ordinary compatibility."
+    },
+    "new_concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "definition",
+          "depends_on"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "deprecated_concepts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Concepts deprecated by the module. CORE concepts should not be deprecated by downstream modules."
+    },
+    "compatibility_claim": {
+      "type": "string",
+      "enum": [
+        "compatible-with-core-v1.1.0",
+        "extends-core-v1.1.0-without-redefining-core",
+        "incompatible-or-root-major-required"
+      ]
+    },
+    "known_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "non_normative_notice": {
+      "type": "string",
+      "default": "This machine-readable file is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "compatibility_claim": {
+            "enum": [
+              "compatible-with-core-v1.1.0",
+              "extends-core-v1.1.0-without-redefining-core"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "changed_core_concepts": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

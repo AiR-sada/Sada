@@ -1,0 +1,14 @@
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: *
+Allow: /
+
+# After the public site URL is fixed, add the deployed sitemap URL, for example:
+# Sitemap: https://YOUR_DOMAIN_OR_GITHUB_PAGES_URL/sitemap.xml

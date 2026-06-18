@@ -1,0 +1,266 @@
+{
+  "package": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "file_type": "non-normative-i18n-concept-glossary",
+  "language": "ja-en",
+  "normative_source": "spec.md",
+  "translation_status": "non-normative aid; not a full translation; does not modify spec.md",
+  "entries": [
+    {
+      "concept_id": "序-1",
+      "label_ja": "Purpose OS",
+      "label_en": "Purpose OS",
+      "gloss_en": "whole system grounded in Purpose",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "序-2",
+      "label_ja": "Purpose",
+      "label_en": "Purpose",
+      "gloss_en": "unreachable revisable root compass for intelligences and possible welfare subjects",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "序-3",
+      "label_ja": "幸/不幸",
+      "label_en": "happiness / unhappiness",
+      "gloss_en": "overall desirability and undesirability for intelligences and possible welfare subjects",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "序-4",
+      "label_ja": "より未来",
+      "label_en": "further future",
+      "gloss_en": "present-inclusive unending further-future direction, not ΔT",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "序-5",
+      "label_ja": "OS",
+      "label_en": "OS",
+      "gloss_en": "basis for intelligence to operate toward Purpose",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-1",
+      "label_ja": "世界(W)",
+      "label_en": "world (W)",
+      "gloss_en": "what is as-is, prior to time and space assumptions",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-2",
+      "label_ja": "知性(Φ)",
+      "label_en": "intelligence (Φ)",
+      "gloss_en": "that which recognizes world as reality and can affect world or self-state",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-3",
+      "label_ja": "空間(S)",
+      "label_en": "space (S)",
+      "gloss_en": "starting field when intelligence handles world",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-4",
+      "label_ja": "ΔS",
+      "label_en": "distinction difference (ΔS)",
+      "gloss_en": "difference that enables pointing-out within space",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-5",
+      "label_ja": "領域(R)",
+      "label_en": "region (R)",
+      "gloss_en": "part of space specified by ΔS",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-6",
+      "label_ja": "ΔT",
+      "label_en": "temporal condition (ΔT)",
+      "gloss_en": "additional condition by which spacetime is established on a region",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-7",
+      "label_ja": "時空(R_t)",
+      "label_en": "spacetime (R_t)",
+      "gloss_en": "region established with an added temporal condition",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-8",
+      "label_ja": "現実(i)",
+      "label_en": "reality(i)",
+      "gloss_en": "whole established for intelligence i in relation to the world",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-9",
+      "label_ja": "事象",
+      "label_en": "event",
+      "gloss_en": "what happens or may happen within reality",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-10",
+      "label_ja": "真理",
+      "label_en": "truth",
+      "gloss_en": "expression that attempts to align with world structure",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-11",
+      "label_ja": "SV",
+      "label_en": "SV",
+      "gloss_en": "subject-predicate linguistic claim form",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "①-12",
+      "label_ja": "v",
+      "label_en": "v",
+      "gloss_en": "tuple of differences under a reference frame",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-1",
+      "label_ja": "aim",
+      "label_en": "aim",
+      "gloss_en": "direction concretized from Purpose as a role",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-2",
+      "label_ja": "value",
+      "label_en": "value",
+      "gloss_en": "criterion concretized from Purpose as a role",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-3",
+      "label_ja": "Vision",
+      "label_en": "Vision",
+      "gloss_en": "ultimate state of aim; target reality",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-4",
+      "label_ja": "Goal",
+      "label_en": "Goal",
+      "gloss_en": "result to realize at a given time for Vision",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-5",
+      "label_ja": "Task",
+      "label_en": "Task",
+      "gloss_en": "concrete action toward Goal",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-6",
+      "label_ja": "現状",
+      "label_en": "current state",
+      "gloss_en": "state recognized by intelligence at the decision point",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-7",
+      "label_ja": "自",
+      "label_en": "self-side state",
+      "gloss_en": "current state belonging to the deciding subject",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-8",
+      "label_ja": "他",
+      "label_en": "other-side state",
+      "gloss_en": "current state not belonging to the deciding subject",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-9",
+      "label_ja": "意思決定",
+      "label_en": "decision-making",
+      "gloss_en": "operation that determines adoption among candidate Tasks",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "②-10",
+      "label_ja": "実行",
+      "label_en": "execution",
+      "gloss_en": "act of affecting the world according to adopted Task",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "参-1",
+      "label_ja": "構造",
+      "label_en": "structure",
+      "gloss_en": "why and how something is so, including cause and purpose",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "参-2",
+      "label_ja": "定義",
+      "label_en": "definition",
+      "gloss_en": "expression closest to structure",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "参-3",
+      "label_ja": "分岐",
+      "label_en": "branch",
+      "gloss_en": "division of intelligent expression by defining a noun",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "参-4",
+      "label_ja": "閉じた分岐",
+      "label_en": "closed branch",
+      "gloss_en": "branch where all cases fit somewhere once an axis is fixed",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    },
+    {
+      "concept_id": "参-5",
+      "label_ja": "開いた分岐",
+      "label_en": "open branch",
+      "gloss_en": "branch whose contents can continue increasing",
+      "translation_note": "Non-normative short gloss. Use spec.md for normative meaning.",
+      "normative_source": "spec.md"
+    }
+  ]
+}
