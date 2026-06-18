@@ -154,6 +154,94 @@ def build_svg(concepts: list[dict], edges: list[dict]) -> str:
     return "\n".join(out)
 
 
+def build_coverage_matrix(sc: dict, cs: dict) -> str:
+    cases = cs.get("cases", [])
+    by_sc: dict[str, list[str]] = {}
+    for case in cases:
+        for ref in case.get("safety_refs", []) or []:
+            by_sc.setdefault(ref, []).append(case.get("id"))
+    lines = [
+        "# Safety-constraint × conformance coverage (generated, non-normative)",
+        "",
+        f"> {NOTICE_EN}",
+        "",
+        f"Every one of the {len(sc.get('constraints', []))} safety constraints is exercised "
+        f"by at least one of the {len(cases)} conformance cases.",
+        "",
+        "| Safety constraint | Title | Cases | Case IDs |",
+        "| :-- | :-- | --: | :-- |",
+    ]
+    for c in sc.get("constraints", []):
+        sid = c.get("id")
+        ids = sorted(by_sc.get(sid, []))
+        title = (c.get("title", "") or "").replace("|", "\\|")
+        lines.append(f"| `{sid}` | {title} | {len(ids)} | {', '.join(ids) if ids else '—'} |")
+    return "\n".join(lines)
+
+
+def build_jsonld(concepts: list[dict], manifest: dict, spec_hash: str) -> str:
+    graph = []
+    for c in concepts:
+        graph.append({
+            "@id": f"posc:{c['id']}",
+            "@type": "posc:Concept",
+            "identifier": c["id"],
+            "name": c.get("label", ""),
+            "posc:section": c.get("section", ""),
+            "posc:dependsOn": [f"posc:{d}" for d in c.get("dependencies", []) or []],
+        })
+    doc = {
+        "@context": {
+            "posc": "https://air-sada.github.io/Sada/ns#",
+            "name": "http://schema.org/name",
+            "identifier": "http://schema.org/identifier",
+            "dependsOn": {"@id": "posc:dependsOn", "@type": "@id"},
+        },
+        "_notice_en": NOTICE_EN,
+        "@id": "posc:PurposeOSCore",
+        "@type": "posc:Specification",
+        "name": manifest["package"],
+        "version": manifest["version"],
+        "posc:normativeSource": "spec.md",
+        "posc:specSha256": spec_hash,
+        "@graph": graph,
+    }
+    return json.dumps(doc, ensure_ascii=False, indent=2)
+
+
+def build_graph_html(svg: str, concepts: list[dict], manifest: dict) -> str:
+    rows = "\n".join(
+        f'<tr><td><code>{c["id"]}</code></td><td>{c.get("label","")}</td>'
+        f'<td>{c.get("section","")}</td><td>{", ".join(c.get("dependencies",[]) or []) or "—"}</td></tr>'
+        for c in concepts
+    )
+    return f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purpose OS — CORE concept graph</title>
+<!-- Generated, non-normative. {NOTICE_EN} -->
+<style>
+  body {{ font-family: system-ui, sans-serif; margin: 2rem; color: #222; }}
+  h1 {{ font-size: 1.3rem; }}
+  .note {{ background: #f6f8fa; border-left: 4px solid #888; padding: .6rem 1rem; font-size: .9rem; }}
+  .graph {{ overflow-x: auto; border: 1px solid #ddd; border-radius: 8px; margin: 1rem 0; }}
+  table {{ border-collapse: collapse; width: 100%; font-size: .9rem; }}
+  th, td {{ border: 1px solid #ddd; padding: .35rem .6rem; text-align: left; }}
+  th {{ background: #f6f8fa; }}
+  code {{ background: #f0f0f0; padding: 0 .25rem; border-radius: 3px; }}
+</style></head><body>
+<h1>Purpose OS — CORE v{manifest['version']} · concept dependency graph</h1>
+<p class="note">Generated, non-normative. The sole normative source is the Japanese
+<code>spec.md</code>. If anything here conflicts with it, <code>spec.md</code> prevails.</p>
+<div class="graph">{svg}</div>
+<h2>Concepts ({len(concepts)})</h2>
+<table><thead><tr><th>ID</th><th>Label</th><th>Section</th><th>Depends on</th></tr></thead>
+<tbody>
+{rows}
+</tbody></table>
+</body></html>"""
+
+
 def build_dot(concepts: list[dict], edges: list[dict]) -> str:
     colors = {"jo": "#e8f0fe", "p1": "#e6f4ea", "p2": "#fef7e0", "ref": "#fce8e6", "other": "#eeeeee"}
     lines = [
@@ -202,7 +290,14 @@ def main() -> int:
     # 1. graphs
     write(dist / "concept-graph.mmd", build_mermaid(concepts, edges))
     write(dist / "concept-graph.dot", build_dot(concepts, edges))
-    write(dist / "concept-graph.svg", build_svg(concepts, edges))
+    svg = build_svg(concepts, edges)
+    write(dist / "concept-graph.svg", svg)
+    write(dist / "concept-graph.html", build_graph_html(svg, concepts, manifest))
+
+    # 1b. coverage matrix + knowledge graph
+    write(dist / "coverage-matrix.md", build_coverage_matrix(sc, cs))
+    write(dist / "knowledge-graph.jsonld",
+          build_jsonld(concepts, manifest, sha256(root / "spec.md")))
 
     # 2. unified bundle
     bundle = {
@@ -253,8 +348,12 @@ def main() -> int:
         },
         "artifacts": {
             "bundle": "dist/purpose-os.bundle.json",
+            "knowledge_graph_jsonld": "dist/knowledge-graph.jsonld",
+            "graph_svg": "dist/concept-graph.svg",
+            "graph_html": "dist/concept-graph.html",
             "graph_mermaid": "dist/concept-graph.mmd",
             "graph_dot": "dist/concept-graph.dot",
+            "coverage_matrix": "dist/coverage-matrix.md",
             "agent_guide": "dist/AGENT_GUIDE.md",
             "conformance_report": "dist/conformance-report.json",
         },

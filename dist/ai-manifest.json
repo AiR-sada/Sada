@@ -36,8 +36,12 @@
   },
   "artifacts": {
     "bundle": "dist/purpose-os.bundle.json",
+    "knowledge_graph_jsonld": "dist/knowledge-graph.jsonld",
+    "graph_svg": "dist/concept-graph.svg",
+    "graph_html": "dist/concept-graph.html",
     "graph_mermaid": "dist/concept-graph.mmd",
     "graph_dot": "dist/concept-graph.dot",
+    "coverage_matrix": "dist/coverage-matrix.md",
     "agent_guide": "dist/AGENT_GUIDE.md",
     "conformance_report": "dist/conformance-report.json"
   }

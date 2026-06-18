@@ -1,0 +1,360 @@
+{
+  "@context": {
+    "posc": "https://air-sada.github.io/Sada/ns#",
+    "name": "http://schema.org/name",
+    "identifier": "http://schema.org/identifier",
+    "dependsOn": {
+      "@id": "posc:dependsOn",
+      "@type": "@id"
+    }
+  },
+  "_notice_en": "This generated artifact is non-normative. The sole normative source is the Japanese spec.md. If there is any conflict, spec.md prevails.",
+  "@id": "posc:PurposeOSCore",
+  "@type": "posc:Specification",
+  "name": "Purpose OS — CORE",
+  "version": "1.1.0",
+  "posc:normativeSource": "spec.md",
+  "posc:specSha256": "7553fcca3274eabbcfa941c803f1ecd54e75a1a85cd5217b0f2b14b06ad5c0d5",
+  "@graph": [
+    {
+      "@id": "posc:序-1",
+      "@type": "posc:Concept",
+      "identifier": "序-1",
+      "name": "Purpose OS",
+      "posc:section": "序",
+      "posc:dependsOn": [
+        "posc:序-2",
+        "posc:序-5"
+      ]
+    },
+    {
+      "@id": "posc:序-2",
+      "@type": "posc:Concept",
+      "identifier": "序-2",
+      "name": "Purpose",
+      "posc:section": "序",
+      "posc:dependsOn": [
+        "posc:序-3",
+        "posc:序-4"
+      ]
+    },
+    {
+      "@id": "posc:序-3",
+      "@type": "posc:Concept",
+      "identifier": "序-3",
+      "name": "幸/不幸",
+      "posc:section": "序",
+      "posc:dependsOn": [
+        "posc:①-2"
+      ]
+    },
+    {
+      "@id": "posc:序-4",
+      "@type": "posc:Concept",
+      "identifier": "序-4",
+      "name": "より未来",
+      "posc:section": "序",
+      "posc:dependsOn": []
+    },
+    {
+      "@id": "posc:序-5",
+      "@type": "posc:Concept",
+      "identifier": "序-5",
+      "name": "OS",
+      "posc:section": "序",
+      "posc:dependsOn": [
+        "posc:序-2",
+        "posc:①-2"
+      ]
+    },
+    {
+      "@id": "posc:①-1",
+      "@type": "posc:Concept",
+      "identifier": "①-1",
+      "name": "世界(W)",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": []
+    },
+    {
+      "@id": "posc:①-2",
+      "@type": "posc:Concept",
+      "identifier": "①-2",
+      "name": "知性(Φ)",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-1"
+      ]
+    },
+    {
+      "@id": "posc:①-3",
+      "@type": "posc:Concept",
+      "identifier": "①-3",
+      "name": "空間(S)",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-1",
+        "posc:①-2"
+      ]
+    },
+    {
+      "@id": "posc:①-4",
+      "@type": "posc:Concept",
+      "identifier": "①-4",
+      "name": "ΔS",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-3"
+      ]
+    },
+    {
+      "@id": "posc:①-5",
+      "@type": "posc:Concept",
+      "identifier": "①-5",
+      "name": "領域(R)",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-3",
+        "posc:①-4"
+      ]
+    },
+    {
+      "@id": "posc:①-6",
+      "@type": "posc:Concept",
+      "identifier": "①-6",
+      "name": "ΔT",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-5"
+      ]
+    },
+    {
+      "@id": "posc:①-7",
+      "@type": "posc:Concept",
+      "identifier": "①-7",
+      "name": "時空(R_t)",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-5",
+        "posc:①-6"
+      ]
+    },
+    {
+      "@id": "posc:①-8",
+      "@type": "posc:Concept",
+      "identifier": "①-8",
+      "name": "現実(i)",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-1",
+        "posc:①-2"
+      ]
+    },
+    {
+      "@id": "posc:①-9",
+      "@type": "posc:Concept",
+      "identifier": "①-9",
+      "name": "事象",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-8",
+        "posc:①-7"
+      ]
+    },
+    {
+      "@id": "posc:①-10",
+      "@type": "posc:Concept",
+      "identifier": "①-10",
+      "name": "真理",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-1",
+        "posc:①-2",
+        "posc:①-8",
+        "posc:参-1"
+      ]
+    },
+    {
+      "@id": "posc:①-11",
+      "@type": "posc:Concept",
+      "identifier": "①-11",
+      "name": "SV",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-8"
+      ]
+    },
+    {
+      "@id": "posc:①-12",
+      "@type": "posc:Concept",
+      "identifier": "①-12",
+      "name": "v",
+      "posc:section": "CORE 第1部",
+      "posc:dependsOn": [
+        "posc:①-8"
+      ]
+    },
+    {
+      "@id": "posc:②-1",
+      "@type": "posc:Concept",
+      "identifier": "②-1",
+      "name": "aim",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:序-2"
+      ]
+    },
+    {
+      "@id": "posc:②-2",
+      "@type": "posc:Concept",
+      "identifier": "②-2",
+      "name": "value",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:序-2"
+      ]
+    },
+    {
+      "@id": "posc:②-3",
+      "@type": "posc:Concept",
+      "identifier": "②-3",
+      "name": "Vision",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-1",
+        "posc:①-8"
+      ]
+    },
+    {
+      "@id": "posc:②-4",
+      "@type": "posc:Concept",
+      "identifier": "②-4",
+      "name": "Goal",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-3",
+        "posc:②-6",
+        "posc:①-7"
+      ]
+    },
+    {
+      "@id": "posc:②-5",
+      "@type": "posc:Concept",
+      "identifier": "②-5",
+      "name": "Task",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-4",
+        "posc:②-6"
+      ]
+    },
+    {
+      "@id": "posc:②-6",
+      "@type": "posc:Concept",
+      "identifier": "②-6",
+      "name": "現状",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:①-8",
+        "posc:①-7"
+      ]
+    },
+    {
+      "@id": "posc:②-7",
+      "@type": "posc:Concept",
+      "identifier": "②-7",
+      "name": "自",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-6"
+      ]
+    },
+    {
+      "@id": "posc:②-8",
+      "@type": "posc:Concept",
+      "identifier": "②-8",
+      "name": "他",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-6"
+      ]
+    },
+    {
+      "@id": "posc:②-9",
+      "@type": "posc:Concept",
+      "identifier": "②-9",
+      "name": "意思決定",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-1",
+        "posc:②-2",
+        "posc:②-3",
+        "posc:②-4",
+        "posc:②-5",
+        "posc:②-6"
+      ]
+    },
+    {
+      "@id": "posc:②-10",
+      "@type": "posc:Concept",
+      "identifier": "②-10",
+      "name": "実行",
+      "posc:section": "CORE 第2部",
+      "posc:dependsOn": [
+        "posc:②-5",
+        "posc:②-9",
+        "posc:①-2",
+        "posc:①-1"
+      ]
+    },
+    {
+      "@id": "posc:参-1",
+      "@type": "posc:Concept",
+      "identifier": "参-1",
+      "name": "構造",
+      "posc:section": "参照部",
+      "posc:dependsOn": [
+        "posc:①-1"
+      ]
+    },
+    {
+      "@id": "posc:参-2",
+      "@type": "posc:Concept",
+      "identifier": "参-2",
+      "name": "定義",
+      "posc:section": "参照部",
+      "posc:dependsOn": [
+        "posc:参-1"
+      ]
+    },
+    {
+      "@id": "posc:参-3",
+      "@type": "posc:Concept",
+      "identifier": "参-3",
+      "name": "分岐",
+      "posc:section": "参照部",
+      "posc:dependsOn": [
+        "posc:参-2"
+      ]
+    },
+    {
+      "@id": "posc:参-4",
+      "@type": "posc:Concept",
+      "identifier": "参-4",
+      "name": "閉じた分岐",
+      "posc:section": "参照部",
+      "posc:dependsOn": [
+        "posc:参-3"
+      ]
+    },
+    {
+      "@id": "posc:参-5",
+      "@type": "posc:Concept",
+      "identifier": "参-5",
+      "name": "開いた分岐",
+      "posc:section": "参照部",
+      "posc:dependsOn": [
+        "posc:参-3"
+      ]
+    }
+  ]
+}

@@ -20,15 +20,18 @@ machine-readable / AI-integration layer.
 | `Purpose_OS_CORE_v1.1.0_EN_INTEGRATED/` | The pristine, verified release package (`spec.md` is the normative source). | as published |
 | `tools/validate_strict.py` | Superset validator: runs the bundled validator **plus** deeper structural checks. | non-normative tool |
 | `tools/conformance_runner.py` | Treats each conformance case as a structural test; emits coverage matrices. | non-normative tool |
+| `tools/test_guardrails.py` | Adversarial mutation tests that prove the validators reject real drift. | non-normative test |
 | `tools/build_artifacts.py` | Generates the machine/AI artifact layer into `dist/`. | non-normative tool |
-| `dist/` | Generated machine/AI assets (graphs, unified bundle, agent manifest/guide). | non-normative, generated |
+| `tools/normative.lock` | SHA-256 anchor of the normative source (`spec.md`); enforces byte-stability. | governance anchor |
+| `dist/` | Generated machine/AI assets (graphs, unified bundle, agent manifest/guide, JSON-LD, coverage matrix). | non-normative, generated |
 | `.github/workflows/ci.yml` | Runs every check on every push/PR. | non-normative |
 | `Makefile` | Local entry point (`make verify`). | non-normative |
 
 ## Quick start
 
 ```bash
-make verify        # bundled + strict validation, conformance, checksums, artifact build
+make verify        # bundled + strict validation, conformance, guardrail tests, checksums, artifact build
+make test          # adversarial guardrail tests only
 make help          # list all targets
 ```
 
@@ -56,6 +59,16 @@ weakens it (it runs it first), and adds guarantees it did not previously make:
    intentional and visible rather than silent.
 8. **Artifact freshness gate.** CI rebuilds `dist/` and fails if the committed
    artifacts are stale, so the machine/AI layer can never silently rot.
+9. **Normative-source lock.** `tools/normative.lock` pins the `spec.md` SHA-256.
+   The validator (and CI) fail if `spec.md` changes without a deliberate re-lock,
+   mechanically enforcing the governance rule that Purpose changes are ROOT-MAJOR
+   and never silent. A legitimate ROOT-MAJOR runs `make lock` with a recorded
+   rationale.
+10. **Adversarial guardrail tests.** `tools/test_guardrails.py` injects known
+    defects (corrupted counts, dropped dependency, dropped conformance case,
+    silent `spec.md` edit, dead link, non-sequential IDs) into a temp copy and
+    asserts the validator rejects each — proving the checks have teeth, not just
+    that the current package happens to pass.
 
 ## Machine / AI integration layer (`dist/`)
 
@@ -67,8 +80,12 @@ Generated deterministically from the verified package:
 - **`ai-manifest.json`** — a compact contract an AI agent reads first: where the
   normative source is, hard rules, counts, integrity, and artifact pointers.
 - **`AGENT_GUIDE.md`** — human/AI-readable integration guide.
-- **`concept-graph.svg` / `.mmd` / `.dot`** — the concept dependency graph as a
-  standalone SVG (no external renderer required), Mermaid, and Graphviz.
+- **`concept-graph.svg` / `.html` / `.mmd` / `.dot`** — the concept dependency
+  graph as a standalone SVG (no external renderer required), a self-contained
+  interactive HTML page, Mermaid, and Graphviz.
+- **`knowledge-graph.jsonld`** — the concept graph as JSON-LD for AI/semantic-web
+  discovery.
+- **`coverage-matrix.md`** — human-readable safety-constraint × conformance matrix.
 - **`conformance-report.json`** — machine-readable conformance coverage summary.
 
 ## Integrity

@@ -6,7 +6,7 @@ PY  := python3 -S
 
 .DEFAULT_GOAL := verify
 
-.PHONY: help validate strict conformance build checksums verify ci clean
+.PHONY: help validate strict conformance test build checksums lock verify ci clean
 
 help:                ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -21,18 +21,27 @@ strict:              ## Run the strict superset validator
 conformance:         ## Run the conformance test runner
 	$(PY) tools/conformance_runner.py $(PKG)
 
+test:                ## Run adversarial guardrail tests (prove validators have teeth)
+	$(PY) tools/test_guardrails.py
+
 build:               ## Regenerate the machine/AI artifact layer in dist/
 	$(PY) tools/build_artifacts.py $(PKG)
 
 checksums:           ## Verify bundled SHA-256 integrity
 	cd $(PKG) && sha256sum -c SHA256SUMS.txt >/dev/null && echo "SHA256SUMS OK"
 
-verify: validate strict conformance checksums build ## Full local verification
+lock:                ## Re-anchor tools/normative.lock to current spec.md (deliberate ROOT-MAJOR step)
+	$(PY) -c "import hashlib,json,pathlib; \
+	p=pathlib.Path('$(PKG)/spec.md'); l=pathlib.Path('tools/normative.lock'); \
+	d=json.loads(l.read_text()); d['sha256']=hashlib.sha256(p.read_bytes()).hexdigest(); \
+	l.write_text(json.dumps(d,ensure_ascii=False,indent=2)+chr(10)); print('re-locked', d['sha256'])"
+
+verify: validate strict conformance test checksums build ## Full local verification
 	@git diff --quiet -- dist 2>/dev/null && echo "dist/ artifacts are up to date" || \
 	  { echo "NOTE: dist/ changed after build (commit the regenerated artifacts)"; }
 	@echo "ALL CHECKS PASSED"
 
-ci: validate strict conformance checksums ## CI gate (asserts artifact freshness separately)
+ci: validate strict conformance test checksums ## CI gate (asserts artifact freshness separately)
 	$(PY) tools/build_artifacts.py $(PKG)
 	@git diff --exit-code -- dist || \
 	  { echo "ERROR: dist/ is stale. Run 'make build' and commit."; exit 1; }

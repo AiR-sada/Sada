@@ -21,6 +21,7 @@ Exit codes: 0 = OK, 1 = hard errors, 2 = bad invocation.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -95,6 +96,33 @@ def dep_ids_from_line(text: str) -> list[str]:
 # --------------------------------------------------------------------------- #
 # checks
 # --------------------------------------------------------------------------- #
+
+def check_normative_lock(root: Path, r: Report) -> None:
+    """Enforce byte-stability of the normative source against tools/normative.lock.
+
+    This mechanically enforces the package governance: spec.md is the sole
+    normative source and must never change silently. A legitimate ROOT-MAJOR
+    deliberately updates the lock (with a recorded rationale); an accidental or
+    silent edit is caught here and in CI.
+    """
+    lock_path = Path(__file__).resolve().parent / "normative.lock"
+    if not lock_path.exists():
+        r.warn("tools/normative.lock missing; normative-source byte-stability is not anchored")
+        return
+    lock = load_json(lock_path, r)
+    if not isinstance(lock, dict):
+        return
+    spec = root / lock.get("normative_source", "spec.md")
+    actual = hashlib.sha256(spec.read_bytes()).hexdigest()
+    r.facts["spec_sha256"] = actual
+    expected = lock.get("sha256")
+    if expected and actual != expected:
+        r.err(
+            "NORMATIVE SOURCE CHANGED: spec.md sha256 != tools/normative.lock. "
+            "If this is an intentional ROOT-MAJOR, update the lock with a recorded "
+            f"rationale (GOVERNANCE.md). expected={expected} actual={actual}"
+        )
+
 
 def run_bundled_validator(root: Path, r: Report) -> None:
     script = root / "validate_release.py"
@@ -320,6 +348,7 @@ def main() -> int:
                    if isinstance(c, dict)}
     concept_ids.discard(None)
 
+    check_normative_lock(root, r)
     run_bundled_validator(root, r)
     check_declared_counts(root, r)
     check_spec_dependency_sync(root, r)

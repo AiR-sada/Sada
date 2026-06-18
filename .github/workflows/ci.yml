@@ -19,6 +19,10 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
     env:
       PKG: Purpose_OS_CORE_v1.1.0_EN_INTEGRATED
     steps:
@@ -26,7 +30,7 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
 
       - name: Bundled validator (must pass, never weakened)
         run: python3 -S "$PKG/validate_release.py" "$PKG"
@@ -36,6 +40,9 @@ jobs:
 
       - name: Conformance runner
         run: python3 -S tools/conformance_runner.py "$PKG"
+
+      - name: Adversarial guardrail tests
+        run: python3 -S tools/test_guardrails.py
 
       - name: SHA-256 integrity
         run: |
