@@ -17,6 +17,8 @@ the package is reviewable without Japanese.
 
 ## Read order (English)
 
+### Orientation & specs
+
 1. [README.en.md](README.en.md) — what this is and the core constraints
 2. [START_HERE.en.md](START_HERE.en.md) — the loophole table and how to run it
 3. [OPERATIONAL_SPEC_v6_EN.md](OPERATIONAL_SPEC_v6_EN.md) — inputs, the 12-axis cap, A3+ requirements, verdicts
@@ -24,6 +26,28 @@ the package is reviewable without Japanese.
 5. [EVIDENCE_INDEPENDENCE_SPEC_v6_EN.md](EVIDENCE_INDEPENDENCE_SPEC_v6_EN.md) — how evidence independence is decomposed
 6. [ASSURANCE_CASE_REQUIREMENTS_v6_EN.md](ASSURANCE_CASE_REQUIREMENTS_v6_EN.md) — safety case / counter-safety case requirements
 7. [LIMITATIONS_AND_OPEN_PROBLEMS_v6_EN.md](LIMITATIONS_AND_OPEN_PROBLEMS_v6_EN.md) — what v6 does not claim to solve
+
+### Whitepapers
+
+8. [WHITEPAPER_v6_EN.md](WHITEPAPER_v6_EN.md) — the v6 whitepaper
+9. [PUBLIC_REVIEW_WHITEPAPER_v6_EN.md](PUBLIC_REVIEW_WHITEPAPER_v6_EN.md) — public-review edition with toy experiments, negative results, and the reversibility checker
+
+### Threat model & red team
+
+10. [THREAT_MODEL_v6_EN.md](THREAT_MODEL_v6_EN.md) — attacks in scope and what is not trusted
+11. [REDTEAM_ADV_CASES_v6_EN.md](REDTEAM_ADV_CASES_v6_EN.md) — ten advanced adversarial cases and how v6 handles them
+
+### Process & QA
+
+12. [IMPROVEMENT_REPORT_v6_EN.md](IMPROVEMENT_REPORT_v6_EN.md) — the v5→v6 improvement rounds
+13. [SELF_REVIEW_LOG_v6_EN.md](SELF_REVIEW_LOG_v6_EN.md) — self-evaluation scores and self-critique
+14. [QA_REPORT_v6_EN.md](QA_REPORT_v6_EN.md) — machine/example/render QA
+15. [QA_REPORT_PUBLIC_REVIEW_EN.md](QA_REPORT_PUBLIC_REVIEW_EN.md) — public-review package QA
+
+> The remaining Japanese-only material is the rendered binaries (DOCX/PDF), the
+> benchmark data, and the per-stage `START_HERE_*` / `README_*` pointers for the
+> historical sub-releases. The doctrine, specs, whitepapers, threat model, red
+> team, and QA are now all available in English.
 
 ## The canonical doctrine in one breath
 

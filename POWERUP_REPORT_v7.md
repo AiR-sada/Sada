@@ -101,10 +101,19 @@ text and all pinned release files remain byte-identical and verify cleanly.
   the Japanese canonical text on any conflict.
 - `REPO_GUIDE.md` — bilingual top-level entry point.
 
-> Remaining Japanese-only material (THREAT_MODEL, REDTEAM_ADV_CASES, the
-> whitepapers, and the per-stage QA reports) is intentionally left canonical;
-> `docs/en/INDEX.md` points to it. These are candidates for a future translation
-> pass.
+- **i18n pass 2 (added):** English renderings of the threat model, the ten
+  advanced red-team cases, both whitepapers (v6 + public-review empirical), the
+  improvement report, the self-review log, and both QA reports:
+  `THREAT_MODEL_v6_EN.md`, `REDTEAM_ADV_CASES_v6_EN.md`, `WHITEPAPER_v6_EN.md`,
+  `PUBLIC_REVIEW_WHITEPAPER_v6_EN.md`, `IMPROVEMENT_REPORT_v6_EN.md`,
+  `SELF_REVIEW_LOG_v6_EN.md`, `QA_REPORT_v6_EN.md`,
+  `QA_REPORT_PUBLIC_REVIEW_EN.md`. The doctrine, specs, whitepapers, threat
+  model, red team, and QA are now all readable in English.
+
+> The only remaining Japanese-only material is the rendered binaries (DOCX/PDF),
+> the benchmark data rows, and the per-stage `START_HERE_*` / `README_*`
+> pointers for historical sub-releases. Each English doc defers to its Japanese
+> source and the SHA256-committed canonical text on any conflict.
 
 ---
 
